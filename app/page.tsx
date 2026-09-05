@@ -203,7 +203,7 @@ export default function Home() {
                   {project.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      src={`${BASE_PATH}${project.image}`}
+                      src={`${BASE_PATH}${project.homeImage ?? project.image}`}
                       alt={project.title}
                       loading="lazy"
                       decoding="async"

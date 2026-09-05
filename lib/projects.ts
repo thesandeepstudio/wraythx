@@ -5,6 +5,7 @@ export type Project = {
   tools: string;
   summary: string;
   image?: string;
+  homeImage?: string;
   link: string;
   cover: string;
   badge: string;
@@ -19,6 +20,7 @@ export const projects: Project[] = [
     summary:
       "Motion language and brand film for a lifestyle real-estate brand.",
     image: "/assets/project-thumbnails/Lakes & Hill Realty.jpg",
+    homeImage: "/assets/project-thumbnails/Lakes & Hill Realty v2.jpg",
     link: "https://www.behance.net/gallery/251462951/Motion-Design-for-Lakes-Hill-Realty",
     cover:
       "h-[460px] bg-[linear-gradient(160deg,_#2dd4bf_0%,_#0f766e_50%,_#0c4a3e_100%)]",
