@@ -19,6 +19,7 @@ const ScrollReveal = ({
   textClassName = "",
   rotationEnd = "bottom bottom",
   wordAnimationEnd = "bottom bottom",
+  highlightedWords = [],
 }: {
   children: React.ReactNode;
   scrollContainerRef?: React.RefObject<HTMLElement | null>;
@@ -30,20 +31,30 @@ const ScrollReveal = ({
   textClassName?: string;
   rotationEnd?: string;
   wordAnimationEnd?: string;
+  highlightedWords?: string[];
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
+
+  const highlightedSet = useMemo(
+    () => new Set((highlightedWords ?? []).map((w) => w.toLowerCase())),
+    [highlightedWords],
+  );
 
   const splitText = useMemo(() => {
     const text = typeof children === "string" ? children : "";
     return text.split(/(\s+)/).map((word, index) => {
       if (word.match(/^\s+$/)) return word;
+      const normalized = word.replace(/[^A-Za-z0-9']/g, "").toLowerCase();
       return (
-        <span className="word" key={index}>
+        <span
+          className={highlightedSet.has(normalized) ? "word word--hl" : "word"}
+          key={index}
+        >
           {word}
         </span>
       );
     });
-  }, [children]);
+  }, [children, highlightedSet]);
 
   useEffect(() => {
     const el = containerRef.current;

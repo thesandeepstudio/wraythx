@@ -11,3 +11,8 @@
   display: inline-block;
   white-space: pre;
 }
+
+.word--hl {
+  color: #059669;
+  font-weight: 700;
+}

@@ -170,6 +170,21 @@ export default function Home() {
               blurStrength={6}
               containerClassName="text-center"
               textClassName="mt-7 text-xl font-medium uppercase leading-[1.35] tracking-[-0.03em] text-zinc-900 md:text-2xl"
+              highlightedWords={[
+                "bold",
+                "thoughtful",
+                "expressive",
+                "identities",
+                "digital",
+                "interfaces",
+                "visual",
+                "systems",
+                "clear",
+                "distinctive",
+                "made",
+                "to",
+                "last",
+              ]}
             >
               I&apos;m a graphic and visual designer focused on turning bold
               ideas into thoughtful, expressive experiences. I shape
