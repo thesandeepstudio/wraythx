@@ -132,7 +132,7 @@ export default function Home() {
       <main className="min-h-screen bg-white text-zinc-900">
         <section className="relative overflow-hidden bg-white">
           <div className="relative mx-auto max-w-[1280px] py-7">
-            <SiteNav />
+            <SiteNav revealOnScroll />
 
             <div className="grid min-h-[70vh] items-center gap-8 py-16 lg:grid-cols-[1fr_1.2fr_1fr] lg:py-20">
               <div className="hidden lg:flex lg:items-center lg:justify-start">
