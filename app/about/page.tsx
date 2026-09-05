@@ -64,7 +64,7 @@ export default function AboutPage() {
             <SiteNav />
 
             <div className="py-16 md:py-20">
-              <div className="flex items-baseline justify-between text-xs uppercase tracking-[0.2em] text-zinc-500">
+              <div className="flex items-baseline justify-end text-xs uppercase tracking-[0.2em] text-zinc-500">
                 <span>Est. 2020</span>
               </div>
 
