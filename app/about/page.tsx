@@ -19,7 +19,7 @@ const focusAreas = [
 
 const experience = [
   {
-    period: "2023 — Present",
+    period: "2022 — Present",
     role: "Independent Visual Designer",
     place: "Studio wraithx",
     note: "Identity, interface, and motion work for startups and creative studios.",
