@@ -61,7 +61,7 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/50 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
               {project.badge && (
-                <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-zinc-900">
+                <span className="absolute left-4 top-4 rounded-none bg-white/90 px-3 py-1 text-xs font-medium text-zinc-900">
                   Featured
                 </span>
               )}

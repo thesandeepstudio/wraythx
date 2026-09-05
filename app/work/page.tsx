@@ -67,7 +67,7 @@ export default function WorkPage() {
                 </p>
                 <a
                   href="mailto:wraythx@gmail.com"
-                  className="mt-6 inline-flex w-fit rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
+                  className="mt-6 inline-flex w-fit rounded-none bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
                 >
                   wraythx@gmail.com
                 </a>
