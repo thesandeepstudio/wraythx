@@ -22,25 +22,22 @@ export default function SiteFooter() {
           </a>
           <div className="flex gap-6 text-zinc-600">
             <a
-              href="#"
+              href="https://www.behance.net/daboistudio"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Behance profile"
               className="transition duration-300 hover:text-emerald-600"
             >
               Behance
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/wraythx/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram profile"
               className="transition duration-300 hover:text-emerald-600"
             >
               Instagram
-            </a>
-            <a
-              href="#"
-              aria-label="LinkedIn profile"
-              className="transition duration-300 hover:text-emerald-600"
-            >
-              LinkedIn
             </a>
           </div>
           <p className="mt-2 text-xs text-zinc-400">
