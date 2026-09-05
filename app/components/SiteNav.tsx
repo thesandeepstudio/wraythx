@@ -35,7 +35,7 @@ export default function SiteNav({
       className={`sticky top-0 z-50 mx-auto flex w-full items-center justify-between border-b border-zinc-200 bg-white pb-3 transition-all duration-500 ${
         visible
           ? "translate-y-0 opacity-100"
-          : "pointer-events-none -translate-y-2 opacity-0"
+          : "pointer-events-none -translate-y-full opacity-0"
       }`}
     >
       <Link
