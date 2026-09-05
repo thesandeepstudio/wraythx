@@ -128,16 +128,18 @@ const ClickSpark = ({
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
     const x = event.clientX;
     const y = event.clientY;
     const now = performance.now();
 
-    const directions = [-Math.PI / 2, 0, Math.PI / 2, Math.PI];
-
-    const newSparks = directions.map((angle) => ({
+    const newSparks = Array.from({ length: sparkCount }, (_, i) => ({
       x,
       y,
-      angle,
+      angle: (i / sparkCount) * Math.PI * 2,
       startTime: now,
     }));
 

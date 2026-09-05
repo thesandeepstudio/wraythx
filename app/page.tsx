@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import ClickSpark from "./ClickSpark";
+import SiteNav from "./components/SiteNav";
+import SiteFooter from "./components/SiteFooter";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -12,7 +14,7 @@ const projects = [
     category: "Motion",
     year: "2025",
     tools: "Motion · Ads · Promo",
-    image: "/assets/project-thumbnails/Lakes & Hill Realty v2.jpg",
+    image: "/assets/project-thumbnails/Lakes & Hill Realty.jpg",
     link: "https://www.behance.net/gallery/251462951/Motion-Design-for-Lakes-Hill-Realty",
   },
   {
@@ -35,8 +37,35 @@ const projects = [
 
 const stats = [
   { value: 5, suffix: "+", label: "Years experience" },
-  { value: 18, suffix: "", label: "Projects shipped" },
-  { value: 92, suffix: "%", label: "Client retention" },
+  { value: 18, suffix: "+", label: "Projects delivered" },
+  { value: 12, suffix: "+", label: "Happy clients" },
+];
+
+const services = [
+  {
+    title: "Branding & Identity",
+    text: "Logos, guidelines, and identity systems that make you unmistakable.",
+  },
+  {
+    title: "Motion Graphics",
+    text: "Promos, ads, and animated identities that bring ideas to life.",
+  },
+  {
+    title: "Video Editing",
+    text: "Rhythmic edits for music videos and content that hold attention.",
+  },
+  {
+    title: "Graphic Design",
+    text: "Tees, posters, and print that carry attitude and communicate clearly.",
+  },
+  {
+    title: "Social Media",
+    text: "Content systems and ad creatives built to convert.",
+  },
+  {
+    title: "Packaging Design",
+    text: "Labels and print that feel premium from shelf to hand.",
+  },
 ];
 
 function AnimatedStat({
@@ -51,15 +80,13 @@ function AnimatedStat({
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    let start = 0;
     const duration = 1200;
     const startTime = performance.now();
 
     const updateCount = (now: number) => {
       const progress = Math.min((now - startTime) / duration, 1);
       const easedProgress = 1 - (1 - progress) ** 3;
-      const nextValue = Math.round(easedProgress * value);
-      setCount(nextValue);
+      setCount(Math.round(easedProgress * value));
 
       if (progress < 1) {
         requestAnimationFrame(updateCount);
@@ -67,9 +94,6 @@ function AnimatedStat({
     };
 
     requestAnimationFrame(updateCount);
-    return () => {
-      start = 0;
-    };
   }, [value]);
 
   return (
@@ -84,19 +108,6 @@ function AnimatedStat({
 }
 
 export default function Home() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <ClickSpark
       sparkColor="#059669"
@@ -110,46 +121,7 @@ export default function Home() {
       <main className="min-h-screen bg-white text-zinc-900">
         <section className="relative overflow-hidden bg-white">
           <div className="relative mx-auto max-w-[1280px] py-7">
-            <header
-              className={`sticky top-0 z-50 mx-auto flex w-full items-center justify-between border-b border-zinc-200 bg-white pb-3 transition-all duration-300 ${
-                scrolled ? "shadow-none" : "shadow-none"
-              }`}
-            >
-              <Link
-                href="/"
-                className="text-lg font-semibold tracking-[-0.04em] text-zinc-900 transition-transform duration-300 hover:-translate-y-0.5"
-              >
-                wraithx
-              </Link>
-
-              <nav className="flex items-center gap-6 text-sm text-zinc-700 md:gap-8">
-                <Link
-                  href="/about"
-                  className="transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/work"
-                  className="transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
-                >
-                  Work
-                </Link>
-                <Link
-                  href="/services"
-                  className="transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
-                >
-                  Services
-                </Link>
-              </nav>
-
-              <a
-                href="mailto:wraithx@gmail.com"
-                className="text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
-              >
-                wraithx@gmail.com
-              </a>
-            </header>
+            <SiteNav />
 
             <div className="grid min-h-[70vh] items-center gap-8 py-16 lg:grid-cols-[1fr_1.2fr_1fr] lg:py-20">
               <div className="hidden lg:flex lg:items-center lg:justify-start">
@@ -163,15 +135,11 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col items-center justify-center text-center">
-                <div className="h-[170px] w-[155px] overflow-hidden border border-zinc-200 bg-zinc-200 grayscale transition duration-500 hover:scale-[1.02] hover:grayscale-0">
-                  <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_center,_#e5e5e5_0%,_#d4d4d4_40%,_#bdbdbd_100%)]">
-                    <div
-                      className="h-full w-full bg-cover bg-center transition duration-500 hover:scale-105"
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(180deg, rgba(255,255,255,0.2), rgba(0,0,0,0.08)), url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80')",
-                      }}
-                    />
+                <div className="h-[170px] w-[155px] overflow-hidden border border-zinc-200 grayscale transition duration-500 hover:scale-[1.02] hover:grayscale-0">
+                  <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(160deg,_#059669_0%,_#065f46_55%,_#022c22_100%)]">
+                    <span className="select-none text-4xl font-semibold italic tracking-[-0.04em] text-white">
+                      S.
+                    </span>
                   </div>
                 </div>
 
@@ -236,6 +204,12 @@ export default function Home() {
                 Recent projects
               </h2>
             </div>
+            <Link
+              href="/work"
+              className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
+            >
+              View all work
+            </Link>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
@@ -253,6 +227,8 @@ export default function Home() {
                     <img
                       src={`${BASE_PATH}${project.image}`}
                       alt={project.title}
+                      loading="lazy"
+                      decoding="async"
                       className="block w-full grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0"
                     />
                   ) : null}
@@ -275,31 +251,22 @@ export default function Home() {
               Services
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-zinc-900 md:text-4xl">
-              Design systems for modern brands
+              Design &amp; motion for modern brands
             </h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              [
-                "Brand Strategy",
-                "Positioning, messaging, and visual direction to make your brand memorable.",
-              ],
-              [
-                "Product Design",
-                "Interface design and interaction patterns built for clarity and conversion.",
-              ],
-              [
-                "Frontend Dev",
-                "Fast, responsive experiences built with a focus on performance and usability.",
-              ],
-            ].map(([title, text]) => (
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {services.map((service) => (
               <div
-                key={title}
+                key={service.title}
                 className="rounded-none border border-zinc-200 bg-white p-6 shadow-none"
               >
                 <div className="mb-4 h-10 w-10 rounded-none bg-zinc-200" />
-                <h3 className="text-xl font-semibold text-zinc-900">{title}</h3>
-                <p className="mt-4 text-base leading-7 text-zinc-600">{text}</p>
+                <h3 className="text-xl font-semibold text-zinc-900">
+                  {service.title}
+                </h3>
+                <p className="mt-4 text-base leading-7 text-zinc-600">
+                  {service.text}
+                </p>
               </div>
             ))}
           </div>
@@ -326,6 +293,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <SiteFooter />
       </main>
     </ClickSpark>
   );

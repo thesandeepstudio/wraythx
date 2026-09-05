@@ -49,6 +49,17 @@ const ScrollReveal = ({
     const el = containerRef.current;
     if (!el) return;
 
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.style.transform = "";
+      const wordEls = el.querySelectorAll<HTMLElement>(".word");
+      wordEls.forEach((w) => {
+        w.style.opacity = "1";
+        w.style.filter = "blur(0px)";
+        w.style.transform = "";
+      });
+      return;
+    }
+
     const scroller =
       scrollContainerRef && scrollContainerRef.current
         ? scrollContainerRef.current

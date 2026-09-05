@@ -12,9 +12,44 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thesandeepstudio.github.io";
+
 export const metadata: Metadata = {
-  title: "wraithx",
-  description: "Personal portfolio prototype for a designer and developer.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "wraithx — Visual Designer & Motion Artist",
+    template: "%s · wraithx",
+  },
+  description:
+    "Portfolio of S. Chaudhary — a graphic and visual designer crafting brand identities, motion graphics, and bold visual systems that feel clear, distinctive, and made to last.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: `${siteUrl}${basePath}/`,
+    siteName: "wraithx",
+    title: "wraithx — Visual Designer & Motion Artist",
+    description:
+      "Brand identities, motion graphics, and bold visual systems by S. Chaudhary.",
+    images: [
+      {
+        url: `${siteUrl}${basePath}/og.png`,
+        width: 1200,
+        height: 630,
+        alt: "wraithx",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "wraithx — Visual Designer & Motion Artist",
+    description:
+      "Brand identities, motion graphics, and bold visual systems by S. Chaudhary.",
+    images: [`${siteUrl}${basePath}/og.png`],
+  },
+  icons: {
+    icon: `${basePath}/icon.svg`,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -23,7 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-[#09090b] text-white">{children}</body>
+      <body className="min-h-full bg-white text-zinc-900">{children}</body>
     </html>
   );
 }

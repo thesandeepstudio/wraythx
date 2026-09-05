@@ -1,10 +1,14 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import type { Metadata } from "next";
 import ClickSpark from "../ClickSpark";
+import SiteNav from "../components/SiteNav";
+import SiteFooter from "../components/SiteFooter";
+import WorkFilters from "../components/WorkFilters";
 
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+export const metadata: Metadata = {
+  title: "Work",
+  description:
+    "Selected projects by wraithx — branding, motion graphics, video editing, graphic design, and social media work.",
+};
 
 const projects = [
   {
@@ -12,6 +16,8 @@ const projects = [
     category: "Motion",
     year: "2025",
     tools: "Motion · Brand Film",
+    summary:
+      "Motion language and brand film for a lifestyle real-estate brand.",
     image: "/assets/project-thumbnails/Lakes & Hill Realty.jpg",
     link: "https://www.behance.net/gallery/251462951/Motion-Design-for-Lakes-Hill-Realty",
     cover:
@@ -23,6 +29,7 @@ const projects = [
     category: "Branding",
     year: "2025",
     tools: "Logo · Guidelines · Identity",
+    summary: "Logo system and full brand guidelines for PIPE420.",
     image: "/assets/project-thumbnails/Pipe420.png",
     link: "https://www.behance.net/gallery/246128103/PIPE420-Brand-Guidlines",
     cover:
@@ -34,6 +41,7 @@ const projects = [
     category: "Graphic",
     year: "2025",
     tools: "Print · Illustration · Apparel",
+    summary: "Illustrated tee artwork for Lamour Fits.",
     image: "/assets/project-thumbnails/Lamour fits.jpg",
     link: "https://www.behance.net/gallery/241271361/Graphic-Tee-Designs",
     cover:
@@ -45,6 +53,7 @@ const projects = [
     category: "Motion",
     year: "2025",
     tools: "Editing · Sync · Polish",
+    summary: "Rhythmic music-video edits for the NCS series.",
     image: "/assets/project-thumbnails/NCS.webp",
     link: "https://www.behance.net/gallery/240937921/Video-Editing-NCS",
     cover:
@@ -56,6 +65,7 @@ const projects = [
     category: "Graphic",
     year: "2025",
     tools: "Art · Print · Psychedelic",
+    summary: "Psychedelic Buddha artwork for Hotbox.",
     image: "/assets/project-thumbnails/hotbox.jpg",
     link: "https://www.behance.net/gallery/236697445/HotBox-Buddha-Design",
     cover:
@@ -67,6 +77,7 @@ const projects = [
     category: "Graphic",
     year: "2025",
     tools: "Social · Content · Templates",
+    summary: "Social content system and templates for Drool.",
     image: "/assets/project-thumbnails/drool social media.jpg",
     link: "https://www.behance.net/gallery/218374849/Drool-Social-Media",
     cover:
@@ -78,6 +89,7 @@ const projects = [
     category: "Branding",
     year: "2025",
     tools: "Brand · Apparel · Identity",
+    summary: "Full brand identity for the Plutus Paradox clothing label.",
     image: "/assets/project-thumbnails/Plutus Paradox.jpg",
     link: "https://www.behance.net/gallery/202694555/PLUTUS-PARADOX",
     cover:
@@ -89,6 +101,7 @@ const projects = [
     category: "Branding",
     year: "2025",
     tools: "Identity · Logo · Systems",
+    summary: "Logo and identity system for Drool Nepal.",
     image: "/assets/project-thumbnails/Drool branding.png",
     link: "https://www.behance.net/gallery/212833621/Drool-Nepal-Branding",
     cover:
@@ -100,6 +113,7 @@ const projects = [
     category: "Packaging",
     year: "2025",
     tools: "Label · Print · Packaging",
+    summary: "Premium label and packaging design for Chimley Orchards.",
     image: "/assets/project-thumbnails/Apple.png",
     link: "https://www.behance.net/gallery/212049903/Chimley-Orchards-Packaging-design",
     cover:
@@ -111,6 +125,7 @@ const projects = [
     category: "Branding",
     year: "2025",
     tools: "Logo · Mark · Identity",
+    summary: "Logo and mark design for the tech brand SONITE.",
     image: "/assets/project-thumbnails/SONITE.png",
     link: "https://www.behance.net/gallery/221230439/SONITE-Tech-Logo-Design",
     cover:
@@ -122,6 +137,7 @@ const projects = [
     category: "Branding",
     year: "2025",
     tools: "Brand · Identity · Logo",
+    summary: "Brand and identity design for Urban Crust.",
     image: "/assets/project-thumbnails/urban crust.jpg",
     link: "https://www.behance.net/gallery/193035141/urban-crust",
     cover:
@@ -133,6 +149,7 @@ const projects = [
     category: "Graphic",
     year: "2025",
     tools: "Poster · Print · Typography",
+    summary: "A curated series of typographic and editorial posters.",
     image: "/assets/project-thumbnails/posters.jpg",
     link: "https://www.behance.net/gallery/197216091/Posters-collection-Poster-design",
     cover:
@@ -144,6 +161,7 @@ const projects = [
     category: "Graphic",
     year: "2025",
     tools: "Ads · Social · Content",
+    summary: "Appetizing ad creatives for a pizza brand&apos;s social feeds.",
     image: "/assets/project-thumbnails/pizza.png",
     link: "https://www.behance.net/gallery/177895085/Pizza-Social-Media-Ads-Design",
     cover:
@@ -155,6 +173,7 @@ const projects = [
     category: "Branding",
     year: "2025",
     tools: "Logo · Mark · Series",
+    summary: "Volume one of an ongoing logo exploration series.",
     image: "/assets/project-thumbnails/logofolio.jpg",
     link: "https://www.behance.net/gallery/189438129/Logofolio-P-001",
     cover:
@@ -166,6 +185,7 @@ const projects = [
     category: "Graphic",
     year: "2025",
     tools: "Print · Apparel · Graphics",
+    summary: "Tee print artwork for Plutus Paradox.",
     image: "/assets/project-thumbnails/PLUTUS Paradox logo.jpg",
     link: "https://www.behance.net/gallery/190002351/Tee-Design",
     cover:
@@ -177,6 +197,7 @@ const projects = [
     category: "Motion",
     year: "2025",
     tools: "Motion · Animation · Design",
+    summary: "A bold motion graphic with a playful punch.",
     image: "/assets/project-thumbnails/the game.png",
     link: "https://www.behance.net/gallery/179208269/THE-GAME",
     cover:
@@ -188,6 +209,7 @@ const projects = [
     category: "Motion",
     year: "2025",
     tools: "Motion · Ads · Promo",
+    summary: "High-impact promo motion for Black Friday.",
     link: "https://www.behance.net/gallery/179028623/Black-Friday",
     cover:
       "h-80 bg-[linear-gradient(160deg,_#0f172a_0%,_#450a0a_55%,_#000000_100%)]",
@@ -198,6 +220,7 @@ const projects = [
     category: "Graphic",
     year: "2025",
     tools: "Social · Content · Templates",
+    summary: "Social design system for Jawaaf Consulting Academy.",
     image: "/assets/project-thumbnails/Jawaaf.jpg",
     link: "https://www.behance.net/gallery/240885695/Jawaaf-Consulting-Academy-Social-Media-Design",
     cover:
@@ -206,25 +229,7 @@ const projects = [
   },
 ];
 
-const filters = ["All", "Branding", "Motion", "Graphic", "Packaging"];
-
 export default function WorkPage() {
-  const [scrolled, setScrolled] = useState(false);
-  const [active, setActive] = useState("All");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const visible =
-    active === "All" ? projects : projects.filter((p) => p.category === active);
-
   return (
     <ClickSpark
       sparkColor="#059669"
@@ -238,121 +243,20 @@ export default function WorkPage() {
       <main className="min-h-screen bg-white text-zinc-900">
         <section className="relative overflow-hidden bg-white">
           <div className="relative mx-auto max-w-[1280px] py-7">
-            <header
-              className={`sticky top-0 z-50 mx-auto flex w-full items-center justify-between border-b border-zinc-200 bg-white pb-3 transition-all duration-300 ${
-                scrolled ? "shadow-none" : "shadow-none"
-              }`}
-            >
-              <Link
-                href="/"
-                className="text-lg font-semibold tracking-[-0.04em] text-zinc-900 transition-transform duration-300 hover:-translate-y-0.5"
-              >
-                wraithx
-              </Link>
-
-              <nav className="flex items-center gap-6 text-sm text-zinc-700 md:gap-8">
-                <Link
-                  href="/about"
-                  className="transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/work"
-                  className="transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
-                >
-                  Work
-                </Link>
-                <Link
-                  href="/services"
-                  className="transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
-                >
-                  Services
-                </Link>
-              </nav>
-
-              <a
-                href="mailto:wraithx@gmail.com"
-                className="text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
-              >
-                wraithx@gmail.com
-              </a>
-            </header>
+            <SiteNav />
 
             <div className="py-16 md:py-20">
               <div className="flex items-baseline justify-between text-xs uppercase tracking-[0.2em] text-zinc-500">
                 <span>Portfolio</span>
                 <span>2022 — 2025</span>
               </div>
-
-              <div className="mt-10 flex flex-wrap items-center gap-8">
-                {filters.map((filter) => (
-                  <button
-                    key={filter}
-                    onClick={() => setActive(filter)}
-                    className={`pb-3 text-sm uppercase tracking-[0.16em] transition duration-300 ${
-                      active === filter
-                        ? "text-emerald-600"
-                        : "text-zinc-500 hover:text-zinc-900"
-                    }`}
-                  >
-                    {filter}
-                  </button>
-                ))}
-              </div>
+              <WorkFilters projects={projects} />
             </div>
           </div>
         </section>
 
         <section className="mx-auto max-w-[1280px] px-6 pb-24 lg:px-8">
-          <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
-            {visible.map((project) => (
-              <a
-                key={project.title}
-                href={project.link || "#"}
-                target={project.link ? "_blank" : undefined}
-                rel={project.link ? "noopener noreferrer" : undefined}
-                className="group mb-6 block break-inside-avoid"
-              >
-                <div
-                  className={`relative overflow-hidden transition duration-500 group-hover:-translate-y-1 ${
-                    project.image ? "" : project.cover
-                  }`}
-                >
-                  {project.image ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={`${BASE_PATH}${project.image}`}
-                      alt={project.title}
-                      className="block w-full transition duration-700 group-hover:scale-105"
-                    />
-                  ) : (
-                    <div className="absolute inset-0" />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/50 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
-                  {project.badge && (
-                    <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-zinc-900">
-                      Featured
-                    </span>
-                  )}
-                  <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-zinc-900/85 via-zinc-900/30 to-transparent p-6 opacity-0 transition duration-500 group-hover:opacity-100">
-                    <p className="text-xs uppercase tracking-[0.16em] text-emerald-300">
-                      {project.category}
-                    </p>
-                    <h3 className="mt-2 text-xl font-semibold tracking-[-0.02em] text-white">
-                      {project.title}
-                    </h3>
-                    <div className="mt-3 flex items-center justify-between gap-4 text-sm text-zinc-300">
-                      <span>{project.tools}</span>
-                      <span className="shrink-0 tabular-nums text-zinc-400">
-                        {project.year}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
+          <WorkFilters projects={projects} />
         </section>
 
         <section
@@ -390,6 +294,8 @@ export default function WorkPage() {
             </div>
           </div>
         </section>
+
+        <SiteFooter />
       </main>
     </ClickSpark>
   );

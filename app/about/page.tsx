@@ -1,8 +1,14 @@
-"use client";
-
-import { useEffect, useState } from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import ClickSpark from "../ClickSpark";
+import SiteNav from "../components/SiteNav";
+import SiteFooter from "../components/SiteFooter";
+
+export const metadata: Metadata = {
+  title: "About — S. Chaudhary",
+  description:
+    "About S. Chaudhary — a graphic and visual designer shaping brand identities, motion graphics, and visual systems from Nepal.",
+};
 
 const focusAreas = [
   "Brand Identity",
@@ -38,22 +44,10 @@ const tools = [
   "Photoshop",
   "After Effects",
   "Blender",
-  "Webflow",
+  "Premiere Pro",
 ];
 
 export default function AboutPage() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <ClickSpark
       sparkColor="#059669"
@@ -67,46 +61,7 @@ export default function AboutPage() {
       <main className="min-h-screen bg-white text-zinc-900">
         <section className="relative overflow-hidden bg-white">
           <div className="relative mx-auto max-w-[1280px] py-7">
-            <header
-              className={`sticky top-0 z-50 mx-auto flex w-full items-center justify-between border-b border-zinc-200 bg-white pb-3 transition-all duration-300 ${
-                scrolled ? "shadow-none" : "shadow-none"
-              }`}
-            >
-              <Link
-                href="/"
-                className="text-lg font-semibold tracking-[-0.04em] text-zinc-900 transition-transform duration-300 hover:-translate-y-0.5"
-              >
-                wraithx
-              </Link>
-
-              <nav className="flex items-center gap-6 text-sm text-zinc-700 md:gap-8">
-                <Link
-                  href="/about"
-                  className="transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/work"
-                  className="transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
-                >
-                  Work
-                </Link>
-                <Link
-                  href="/services"
-                  className="transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
-                >
-                  Services
-                </Link>
-              </nav>
-
-              <a
-                href="mailto:wraithx@gmail.com"
-                className="text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
-              >
-                wraithx@gmail.com
-              </a>
-            </header>
+            <SiteNav />
 
             <div className="py-16 md:py-20">
               <div className="flex items-baseline justify-between text-xs uppercase tracking-[0.2em] text-zinc-500">
@@ -207,15 +162,17 @@ export default function AboutPage() {
               <h2 className="max-w-xl text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
                 Let&apos;s make something lasting.
               </h2>
-              <a
+              <Link
                 href="mailto:wraithx@gmail.com"
                 className="inline-flex w-fit rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
               >
                 wraithx@gmail.com
-              </a>
+              </Link>
             </div>
           </div>
         </section>
+
+        <SiteFooter />
       </main>
     </ClickSpark>
   );
