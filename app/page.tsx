@@ -182,10 +182,7 @@ export default function Home() {
         <section id="work" className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
           <div className="mb-12 flex items-end justify-between gap-6">
             <div>
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
-                Selected work
-              </p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-zinc-900 md:text-4xl">
+              <h2 className="text-3xl font-semibold tracking-[-0.04em] text-zinc-900 md:text-4xl">
                 Recent projects
               </h2>
             </div>
