@@ -64,14 +64,15 @@ export default function AboutPage() {
             <SiteNav />
 
             <div className="py-16 md:py-20">
-              <div className="flex items-baseline justify-end text-xs uppercase tracking-[0.2em] text-zinc-500">
-                <span>Est. 2020</span>
-              </div>
-
-              <div className="mt-10 max-w-3xl">
-                <h1 className="text-4xl font-semibold uppercase leading-[1.05] tracking-[-0.05em] text-zinc-900 md:text-6xl lg:text-7xl">
-                  WRAYTHX
-                </h1>
+              <div className="max-w-3xl">
+                <div className="flex items-start justify-between gap-6">
+                  <h1 className="text-4xl font-semibold uppercase leading-[1.05] tracking-[-0.05em] text-zinc-900 md:text-6xl lg:text-7xl">
+                    WRAYTHX
+                  </h1>
+                  <span className="pt-2 text-xs uppercase tracking-[0.2em] text-zinc-500">
+                    Est. 2020
+                  </span>
+                </div>
                 <p className="mt-4 text-2xl font-light italic tracking-[-0.04em] text-zinc-900">
                   S. Chaudhary
                 </p>
