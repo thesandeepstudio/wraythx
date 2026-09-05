@@ -250,7 +250,6 @@ export default function WorkPage() {
                 <span>Portfolio</span>
                 <span>2020 — Present</span>
               </div>
-              <WorkFilters projects={projects} />
             </div>
           </div>
         </section>
