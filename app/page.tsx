@@ -1,69 +1,308 @@
-import Image from "next/image";
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import ClickSpark from "./ClickSpark";
+
+const projects = [
+  {
+    title: "Brand Refresh",
+    category: "UI / UX Design",
+    summary:
+      "Rebuilt a startup brand system to improve conversion and clarity across mobile and web experiences.",
+  },
+  {
+    title: "Commerce Dashboard",
+    category: "Product Design",
+    summary:
+      "Designed an analytics dashboard for sales teams to monitor KPIs, campaigns, and customer retention.",
+  },
+  {
+    title: "Portfolio Platform",
+    category: "Web Experience",
+    summary:
+      "Crafted a digital showcase for a creative studio with conversion-focused storytelling and case studies.",
+  },
+];
+
+const stats = [
+  { value: 5, suffix: "+", label: "Years experience" },
+  { value: 18, suffix: "", label: "Projects shipped" },
+  { value: 92, suffix: "%", label: "Client retention" },
+];
+
+function AnimatedStat({
+  value,
+  suffix,
+  label,
+}: {
+  value: number;
+  suffix: string;
+  label: string;
+}) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const duration = 1200;
+    const startTime = performance.now();
+
+    const updateCount = (now: number) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const easedProgress = 1 - (1 - progress) ** 3;
+      const nextValue = Math.round(easedProgress * value);
+      setCount(nextValue);
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCount);
+      }
+    };
+
+    requestAnimationFrame(updateCount);
+    return () => {
+      start = 0;
+    };
+  }, [value]);
+
+  return (
+    <div className="rounded-none bg-white p-6 text-center">
+      <div className="text-3xl font-semibold text-zinc-900">
+        {count}
+        {suffix}
+      </div>
+      <p className="mt-2 text-sm text-zinc-500">{label}</p>
+    </div>
+  );
+}
 
 export default function Home() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <ClickSpark
+      sparkColor="#059669"
+      sparkSize={8}
+      sparkRadius={12}
+      sparkCount={4}
+      duration={260}
+      easing="ease-out"
+      extraScale={1}
+    >
+      <main className="min-h-screen bg-white text-zinc-900">
+        <section className="relative overflow-hidden bg-white">
+          <div className="relative mx-auto max-w-[1280px] py-7">
+            <header
+              className={`sticky top-0 z-50 mx-auto flex w-full items-center justify-between border-b border-zinc-200 bg-white pb-3 transition-all duration-300 ${
+                scrolled ? "shadow-none" : "shadow-none"
+              }`}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+              <Link
+                href="/"
+                className="text-lg font-semibold tracking-[-0.04em] text-zinc-900 transition-transform duration-300 hover:-translate-y-0.5"
+              >
+                wraithx
+              </Link>
+
+              <nav className="flex items-center gap-6 text-sm text-zinc-700 md:gap-8">
+                <Link
+                  href="/about"
+                  className="transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
+                >
+                  About
+                </Link>
+                <Link
+                  href="/work"
+                  className="transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
+                >
+                  Work
+                </Link>
+                <Link
+                  href="/services"
+                  className="transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
+                >
+                  Services
+                </Link>
+              </nav>
+
+              <a
+                href="mailto:wraithx@gmail.com"
+                className="text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
+              >
+                wraithx@gmail.com
+              </a>
+            </header>
+
+            <div className="grid min-h-[70vh] items-center gap-8 py-16 lg:grid-cols-[1fr_1.2fr_1fr] lg:py-20">
+              <div className="hidden lg:flex lg:items-center lg:justify-start">
+                <p className="max-w-[180px] text-sm uppercase leading-[1.7] tracking-[0.06em] text-zinc-700 transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900">
+                  ART
+                  <br />
+                  MOTION
+                  <br />
+                  GRAPHIC
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center justify-center text-center">
+                <div className="h-[170px] w-[155px] overflow-hidden border border-zinc-200 bg-zinc-200 grayscale transition duration-500 hover:scale-[1.02] hover:grayscale-0">
+                  <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_center,_#e5e5e5_0%,_#d4d4d4_40%,_#bdbdbd_100%)]">
+                    <div className="h-full w-full bg-[linear-gradient(180deg,_rgba(255,255,255,0.2),_rgba(0,0,0,0.08)),url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80')] bg-cover bg-center transition duration-500 hover:scale-105" />
+                  </div>
+                </div>
+
+                <h1 className="mt-7 cursor-none text-4xl font-medium uppercase tracking-[-0.04em] transition duration-300 hover:-translate-y-0.5 md:text-5xl">
+                  WRAITHX
+                </h1>
+                <p className="mt-1 cursor-none text-2xl font-light italic tracking-[-0.04em] text-zinc-900 transition duration-300 hover:-translate-y-0.5 md:text-3xl">
+                  S. Chaudhary
+                </p>
+                <p className="mt-1 cursor-none text-base font-medium uppercase tracking-[0.14em] text-emerald-600 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-500 md:text-lg">
+                  Visual Designer
+                </p>
+              </div>
+
+              <div className="hidden lg:flex lg:items-center lg:justify-end">
+                <p className="max-w-[180px] text-right text-sm uppercase leading-[1.7] tracking-[0.06em] text-zinc-700 transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900">
+                  DESIGN
+                  <br />
+                  EDITING
+                  <br />
+                  CREATIVE
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-zinc-200 bg-white">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 py-8 md:grid-cols-3 lg:px-8">
+            {stats.map((stat) => (
+              <AnimatedStat
+                key={stat.label}
+                value={stat.value}
+                suffix={stat.suffix}
+                label={stat.label}
+              />
+            ))}
+          </div>
+        </section>
+
+        <section
+          id="about"
+          className="mx-auto max-w-6xl px-6 py-28 md:py-36 lg:px-8"
+        >
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="mt-7 text-xl font-medium uppercase leading-[1.35] tracking-[-0.03em] text-zinc-900 md:text-2xl">
+              I&apos;m a graphic and visual designer focused on turning bold
+              ideas into thoughtful, expressive experiences. I shape identities,
+              digital interfaces, and visual systems that feel clear,
+              distinctive, and made to last.
+            </p>
+          </div>
+        </section>
+
+        <section id="work" className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
+          <div className="mb-12 flex items-end justify-between gap-6">
+            <div>
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+                Selected work
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-zinc-900 md:text-4xl">
+                Recent projects
+              </h2>
+            </div>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {projects.map((project) => (
+              <article
+                key={project.title}
+                className="group rounded-none border border-zinc-200 bg-white p-6 shadow-none transition duration-300 hover:-translate-y-1 hover:border-zinc-300"
+              >
+                <div className="mb-8 h-40 rounded-none bg-[linear-gradient(135deg,_rgba(24,24,27,0.05),_rgba(24,24,27,0.12),_rgba(24,24,27,0.03))]" />
+                <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
+                  {project.category}
+                </p>
+                <h3 className="mt-4 text-2xl font-semibold tracking-[-0.04em] text-zinc-900">
+                  {project.title}
+                </h3>
+                <p className="mt-4 text-base leading-7 text-zinc-600">
+                  {project.summary}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="services" className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
+          <div className="mb-12">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+              Services
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-zinc-900 md:text-4xl">
+              Design systems for modern brands
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              [
+                "Brand Strategy",
+                "Positioning, messaging, and visual direction to make your brand memorable.",
+              ],
+              [
+                "Product Design",
+                "Interface design and interaction patterns built for clarity and conversion.",
+              ],
+              [
+                "Frontend Dev",
+                "Fast, responsive experiences built with a focus on performance and usability.",
+              ],
+            ].map(([title, text]) => (
+              <div
+                key={title}
+                className="rounded-none border border-zinc-200 bg-white p-6 shadow-none"
+              >
+                <div className="mb-4 h-10 w-10 rounded-none bg-zinc-200" />
+                <h3 className="text-xl font-semibold text-zinc-900">{title}</h3>
+                <p className="mt-4 text-base leading-7 text-zinc-600">{text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section
+          id="contact"
+          className="mx-auto max-w-6xl px-6 pb-24 pt-12 lg:px-8"
+        >
+          <div className="rounded-none border border-zinc-200 bg-[linear-gradient(135deg,_rgba(24,24,27,0.03),_rgba(255,255,255,0.85),_rgba(24,24,27,0.04))] p-8 shadow-none md:p-12">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+              Let&apos;s work together
+            </p>
+            <div className="mt-6 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+              <h2 className="max-w-xl text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
+                Need a standout digital presence?
+              </h2>
+              <a
+                href="mailto:wraithx@gmail.com"
+                className="inline-flex rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
+              >
+                wraithx@gmail.com
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
-    </div>
+    </ClickSpark>
   );
 }

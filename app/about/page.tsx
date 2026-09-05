@@ -1,0 +1,222 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import ClickSpark from "../ClickSpark";
+
+const focusAreas = [
+  "Brand Identity",
+  "Digital Interfaces",
+  "Art Direction",
+  "Motion Graphics",
+];
+
+const experience = [
+  {
+    period: "2023 — Present",
+    role: "Independent Visual Designer",
+    place: "Studio wraithx",
+    note: "Identity, interface, and motion work for startups and creative studios.",
+  },
+  {
+    period: "2021 — 2023",
+    role: "Product Designer",
+    place: "Freelance · Remote",
+    note: "Shipped dashboards, consumer apps, and marketing sites across industries.",
+  },
+  {
+    period: "2020 — 2021",
+    role: "Designer",
+    place: "Design Studio",
+    note: "Brand systems, packaging, and editorial campaigns for local brands.",
+  },
+];
+
+const tools = [
+  "Figma",
+  "Illustrator",
+  "Photoshop",
+  "After Effects",
+  "Blender",
+  "Webflow",
+];
+
+export default function AboutPage() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <ClickSpark
+      sparkColor="#059669"
+      sparkSize={8}
+      sparkRadius={12}
+      sparkCount={4}
+      duration={260}
+      easing="ease-out"
+      extraScale={1}
+    >
+      <main className="min-h-screen bg-white text-zinc-900">
+        <section className="relative overflow-hidden bg-white">
+          <div className="relative mx-auto max-w-[1280px] py-7">
+            <header
+              className={`sticky top-0 z-50 mx-auto flex w-full items-center justify-between border-b border-zinc-200 bg-white pb-3 transition-all duration-300 ${
+                scrolled ? "shadow-none" : "shadow-none"
+              }`}
+            >
+              <Link
+                href="/"
+                className="text-lg font-semibold tracking-[-0.04em] text-zinc-900 transition-transform duration-300 hover:-translate-y-0.5"
+              >
+                wraithx
+              </Link>
+
+              <nav className="flex items-center gap-6 text-sm text-zinc-700 md:gap-8">
+                <Link
+                  href="/about"
+                  className="transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
+                >
+                  About
+                </Link>
+                <Link
+                  href="/work"
+                  className="transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
+                >
+                  Work
+                </Link>
+                <Link
+                  href="/services"
+                  className="transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
+                >
+                  Services
+                </Link>
+              </nav>
+
+              <a
+                href="mailto:wraithx@gmail.com"
+                className="text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
+              >
+                wraithx@gmail.com
+              </a>
+            </header>
+
+            <div className="py-16 md:py-20">
+              <div className="flex items-baseline justify-between text-xs uppercase tracking-[0.2em] text-zinc-500">
+                <span>About</span>
+                <span>Est. 2020</span>
+              </div>
+
+              <div className="mt-10 max-w-3xl">
+                <h1 className="text-4xl font-semibold uppercase leading-[1.05] tracking-[-0.05em] text-zinc-900 md:text-6xl lg:text-7xl">
+                  S. Chaudhary
+                </h1>
+                <p className="mt-4 text-lg font-medium uppercase tracking-[0.14em] text-emerald-600">
+                  Graphic &amp; Visual Designer
+                </p>
+                <p className="mt-8 text-xl font-medium leading-[1.35] tracking-[-0.03em] text-zinc-900 md:text-3xl">
+                  I&apos;m a graphic and visual designer focused on turning bold
+                  ideas into thoughtful, expressive experiences. I shape
+                  identities, digital interfaces, and visual systems that feel
+                  clear, distinctive, and made to last.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-zinc-200 bg-white">
+          <div className="mx-auto max-w-[1280px] px-6 py-24 md:py-32 lg:px-8">
+            <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
+              <div>
+                <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+                  Focus areas
+                </p>
+                <ul className="mt-8 space-y-4">
+                  {focusAreas.map((area, index) => (
+                    <li
+                      key={area}
+                      className="flex items-baseline gap-4 text-xl font-medium tracking-[-0.02em] text-zinc-900"
+                    >
+                      <span className="text-xs font-normal tabular-nums text-zinc-400">
+                        0{index + 1}
+                      </span>
+                      {area}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+                  Tools
+                </p>
+                <div className="mt-8 flex flex-wrap gap-2">
+                  {tools.map((tool) => (
+                    <span
+                      key={tool}
+                      className="rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm text-zinc-700"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-[1280px] px-6 py-24 md:py-32 lg:px-8">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+            Experience
+          </p>
+          <div className="mt-8 divide-y divide-zinc-200 border-t border-zinc-200">
+            {experience.map((item) => (
+              <div
+                key={item.role}
+                className="grid gap-2 py-10 md:grid-cols-[200px_1fr_1fr] md:gap-8"
+              >
+                <p className="text-sm tabular-nums text-zinc-400">
+                  {item.period}
+                </p>
+                <div>
+                  <h3 className="text-xl font-semibold tracking-[-0.02em] text-zinc-900">
+                    {item.role}
+                  </h3>
+                  <p className="mt-1 text-sm text-emerald-600">{item.place}</p>
+                </div>
+                <p className="text-base leading-7 text-zinc-600">{item.note}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section
+          id="contact"
+          className="mx-auto max-w-[1280px] px-6 pb-24 lg:px-8"
+        >
+          <div className="border border-zinc-200 bg-[linear-gradient(135deg,_rgba(24,24,27,0.03),_rgba(255,255,255,0.85),_rgba(24,24,27,0.04))] p-8 md:p-12">
+            <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+              <h2 className="max-w-xl text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
+                Let&apos;s make something lasting.
+              </h2>
+              <a
+                href="mailto:wraithx@gmail.com"
+                className="inline-flex w-fit rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
+              >
+                wraithx@gmail.com
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </ClickSpark>
+  );
+}
