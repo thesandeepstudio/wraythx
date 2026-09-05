@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import ClickSpark from "./ClickSpark";
 import ScrollReveal from "./ScrollReveal";
@@ -58,26 +58,57 @@ function AnimatedStat({
   label: string;
 }) {
   const [count, setCount] = useState(0);
+  const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const duration = 1200;
-    const startTime = performance.now();
+    const el = ref.current;
+    if (!el) return;
 
-    const updateCount = (now: number) => {
-      const progress = Math.min((now - startTime) / duration, 1);
-      const easedProgress = 1 - (1 - progress) ** 3;
-      setCount(Math.round(easedProgress * value));
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const frame = requestAnimationFrame(() => setCount(value));
+      return () => cancelAnimationFrame(frame);
+    }
 
-      if (progress < 1) {
-        requestAnimationFrame(updateCount);
-      }
+    let animationFrame = 0;
+    let observer: IntersectionObserver | null = null;
+
+    const runCount = () => {
+      const duration = 1200;
+      const startTime = performance.now();
+
+      const updateCount = (now: number) => {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const easedProgress = 1 - (1 - progress) ** 3;
+        setCount(Math.round(easedProgress * value));
+
+        if (progress < 1) {
+          animationFrame = requestAnimationFrame(updateCount);
+        }
+      };
+
+      animationFrame = requestAnimationFrame(updateCount);
     };
 
-    requestAnimationFrame(updateCount);
+    observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          observer?.disconnect();
+          runCount();
+        }
+      },
+      { threshold: 0.4 },
+    );
+
+    observer.observe(el);
+
+    return () => {
+      observer?.disconnect();
+      cancelAnimationFrame(animationFrame);
+    };
   }, [value]);
 
   return (
-    <div className="rounded-none bg-white p-6 text-center">
+    <div ref={ref} className="rounded-none bg-white p-6 text-center">
       <div className="text-3xl font-semibold text-zinc-900">
         {count}
         {suffix}
