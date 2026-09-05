@@ -65,65 +65,51 @@ const ScrollReveal = ({
         ? scrollContainerRef.current
         : window;
 
-    const rotationTween = gsap.fromTo(
-      el,
-      { transformOrigin: "0% 50%", rotate: baseRotation },
-      {
-        ease: "none",
-        rotate: 0,
-        scrollTrigger: {
-          trigger: el,
-          scroller,
-          start: "top bottom",
-          end: rotationEnd,
-          scrub: true,
-        },
-      },
-    );
-
     const wordElements = gsap.utils.toArray<HTMLElement>(
       el.querySelectorAll(".word"),
     );
 
-    wordElements.forEach((word, index) => {
-      const startPercent = 95 - index * 7;
-      const endPercent = 60 - index * 5;
+    const timeline = gsap.timeline({
+      defaults: { ease: "none" },
+      scrollTrigger: {
+        trigger: el,
+        scroller,
+        start: "top 85%",
+        end: "center center",
+        scrub: true,
+      },
+    });
 
-      gsap.fromTo(
+    timeline.fromTo(
+      el,
+      { transformOrigin: "0% 50%", rotate: baseRotation },
+      { rotate: 0, duration: 0.2 },
+      0,
+    );
+
+    const stagger = 0.15;
+
+    wordElements.forEach((word, index) => {
+      timeline.fromTo(
         word,
         {
           opacity: baseOpacity,
           filter: enableBlur ? `blur(${blurStrength}px)` : "blur(0px)",
           y: 10,
-          rotate: baseRotation * 0.3,
         },
         {
           opacity: 1,
           filter: "blur(0px)",
           y: 0,
-          rotate: 0,
-          ease: "none",
-          scrollTrigger: {
-            trigger: word,
-            scroller,
-            start: `top ${startPercent}%`,
-            end: `top ${endPercent}%`,
-            scrub: true,
-          },
+          duration: 0.4,
         },
+        index * stagger,
       );
     });
 
     return () => {
-      rotationTween.scrollTrigger?.kill();
-      wordElements.forEach((word) => {
-        gsap.killTweensOf(word);
-        const trigger = ScrollTrigger.getAll().find(
-          (item) => item.trigger === word,
-        );
-        trigger?.kill();
-      });
-      gsap.killTweensOf(el);
+      timeline.scrollTrigger?.kill();
+      timeline.kill();
     };
   }, [
     scrollContainerRef,
