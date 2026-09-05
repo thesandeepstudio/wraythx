@@ -5,35 +5,13 @@ import Link from "next/link";
 import ClickSpark from "./ClickSpark";
 import SiteNav from "./components/SiteNav";
 import SiteFooter from "./components/SiteFooter";
+import { projects, featuredProjectTitles } from "../lib/projects";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
-const projects = [
-  {
-    title: "Motion Design for Lakes & Hill Realty",
-    category: "Motion",
-    year: "2025",
-    tools: "Motion · Ads · Promo",
-    image: "/assets/project-thumbnails/Lakes & Hill Realty.jpg",
-    link: "https://www.behance.net/gallery/251462951/Motion-Design-for-Lakes-Hill-Realty",
-  },
-  {
-    title: "NCS Edits — Music Video Series",
-    category: "Motion",
-    year: "2025",
-    tools: "Edit · Motion · Sound",
-    image: "/assets/project-thumbnails/NCS.webp",
-    link: "https://www.behance.net/gallery/240937921/Video-Editing-NCS",
-  },
-  {
-    title: "Plutus Paradox — Clothing Brand",
-    category: "Branding",
-    year: "2025",
-    tools: "Brand · Identity · Apparel",
-    image: "/assets/project-thumbnails/Plutus Paradox.jpg",
-    link: "https://www.behance.net/gallery/202694555/PLUTUS-PARADOX",
-  },
-];
+const featuredProjects = featuredProjectTitles.map((title) =>
+  projects.find((p) => p.title === title)!
+);
 
 const stats = [
   { value: 5, suffix: "+", label: "Years experience" },
@@ -213,7 +191,7 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {projects.map((project) => (
+            {featuredProjects.map((project) => (
               <a
                 key={project.title}
                 href={project.link}
