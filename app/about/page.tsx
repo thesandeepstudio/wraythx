@@ -64,7 +64,6 @@ export default function AboutPage() {
             <SiteNav />
 
             <div className="py-16 md:py-20">
-              <div className="max-w-3xl">
                 <div className="flex items-start justify-between gap-6">
                   <h1 className="text-4xl font-semibold uppercase leading-[1.05] tracking-[-0.05em] text-zinc-900 md:text-6xl lg:text-7xl">
                     WRAYTHX
@@ -73,20 +72,21 @@ export default function AboutPage() {
                     Est. 2020
                   </span>
                 </div>
-                <p className="mt-4 text-2xl font-light italic tracking-[-0.04em] text-zinc-900">
-                  S. Chaudhary
-                </p>
-                <p className="mt-1 text-base font-medium uppercase tracking-[0.14em] text-emerald-600">
-                  Visual Designer
-                </p>
-                <p className="mt-8 text-xl font-medium leading-[1.35] tracking-[-0.03em] text-zinc-900 md:text-3xl">
-                  I&apos;m a graphic and visual designer focused on turning bold
-                  ideas into thoughtful, expressive experiences. I shape
-                  identities, digital interfaces, and visual systems that feel
-                  clear, distinctive, and made to last.
-                </p>
+                <div className="mt-4 max-w-3xl">
+                  <p className="mt-4 text-2xl font-light italic tracking-[-0.04em] text-zinc-900">
+                    S. Chaudhary
+                  </p>
+                  <p className="mt-1 text-base font-medium uppercase tracking-[0.14em] text-emerald-600">
+                    Visual Designer
+                  </p>
+                  <p className="mt-8 text-xl font-medium leading-[1.35] tracking-[-0.03em] text-zinc-900 md:text-3xl">
+                    I&apos;m a graphic and visual designer focused on turning bold
+                    ideas into thoughtful, expressive experiences. I shape
+                    identities, digital interfaces, and visual systems that feel
+                    clear, distinctive, and made to last.
+                  </p>
+                </div>
               </div>
-            </div>
           </div>
         </section>
 
