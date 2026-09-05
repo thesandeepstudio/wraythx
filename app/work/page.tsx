@@ -10,7 +10,7 @@ const projects = [
     category: "Motion",
     year: "2025",
     tools: "Motion · Brand Film",
-    image: "/assets/project-thumbnails/Lakes & Hill Realty.jpg",
+    image: "assets/project-thumbnails/Lakes & Hill Realty.jpg",
     cover:
       "h-[460px] bg-[linear-gradient(160deg,_#2dd4bf_0%,_#0f766e_50%,_#0c4a3e_100%)]",
     badge: "Featured",
@@ -20,7 +20,7 @@ const projects = [
     category: "Branding",
     year: "2025",
     tools: "Logo · Guidelines · Identity",
-    image: "/assets/project-thumbnails/Pipe420.png",
+    image: "assets/project-thumbnails/Pipe420.png",
     cover:
       "h-80 bg-[linear-gradient(160deg,_#fbbf24_0%,_#92400e_55%,_#292524_100%)]",
     badge: "",
@@ -30,7 +30,7 @@ const projects = [
     category: "Graphic",
     year: "2025",
     tools: "Print · Illustration · Apparel",
-    image: "/assets/project-thumbnails/Lamour fits.jpg",
+    image: "assets/project-thumbnails/Lamour fits.jpg",
     cover:
       "h-96 bg-[linear-gradient(160deg,_#ef4444_0%,_#7f1d1d_55%,_#1c1917_100%)]",
     badge: "",
@@ -40,7 +40,7 @@ const projects = [
     category: "Motion",
     year: "2025",
     tools: "Editing · Sync · Polish",
-    image: "/assets/project-thumbnails/NCS.webp",
+    image: "assets/project-thumbnails/NCS.webp",
     cover:
       "h-72 bg-[linear-gradient(160deg,_#22d3ee_0%,_#4f46e5_55%,_#172554_100%)]",
     badge: "",
@@ -50,7 +50,7 @@ const projects = [
     category: "Graphic",
     year: "2025",
     tools: "Art · Print · Psychedelic",
-    image: "/assets/project-thumbnails/hotbox.jpg",
+    image: "assets/project-thumbnails/hotbox.jpg",
     cover:
       "h-96 bg-[linear-gradient(160deg,_#fb923c_0%,_#b45309_55%,_#431407_100%)]",
     badge: "",
@@ -60,7 +60,7 @@ const projects = [
     category: "Graphic",
     year: "2025",
     tools: "Social · Content · Templates",
-    image: "/assets/project-thumbnails/drool social media.jpg",
+    image: "assets/project-thumbnails/drool social media.jpg",
     cover:
       "h-80 bg-[linear-gradient(160deg,_#f472b6_0%,_#9d174d_55%,_#4a044e_100%)]",
     badge: "",
@@ -70,7 +70,7 @@ const projects = [
     category: "Branding",
     year: "2025",
     tools: "Brand · Apparel · Identity",
-    image: "/assets/project-thumbnails/Plutus Paradox.jpg",
+    image: "assets/project-thumbnails/Plutus Paradox.jpg",
     cover:
       "h-96 bg-[linear-gradient(160deg,_#a3e635_0%,_#4d7c0f_55%,_#1a2e05_100%)]",
     badge: "",
@@ -80,7 +80,7 @@ const projects = [
     category: "Branding",
     year: "2025",
     tools: "Identity · Logo · Systems",
-    image: "/assets/project-thumbnails/Drool branding.png",
+    image: "assets/project-thumbnails/Drool branding.png",
     cover:
       "h-80 bg-[linear-gradient(160deg,_#34d399_0%,_#065f46_55%,_#022c22_100%)]",
     badge: "",
@@ -90,7 +90,7 @@ const projects = [
     category: "Packaging",
     year: "2025",
     tools: "Label · Print · Packaging",
-    image: "/assets/project-thumbnails/Apple.png",
+    image: "assets/project-thumbnails/Apple.png",
     cover:
       "h-80 bg-[linear-gradient(160deg,_#4ade80_0%,_#166534_55%,_#052e16_100%)]",
     badge: "",
@@ -100,7 +100,7 @@ const projects = [
     category: "Branding",
     year: "2025",
     tools: "Logo · Mark · Identity",
-    image: "/assets/project-thumbnails/SONITE.png",
+    image: "assets/project-thumbnails/SONITE.png",
     cover:
       "h-72 bg-[linear-gradient(160deg,_#38bdf8_0%,_#0369a1_55%,_#082f49_100%)]",
     badge: "",
@@ -110,7 +110,7 @@ const projects = [
     category: "Branding",
     year: "2025",
     tools: "Brand · Identity · Logo",
-    image: "/assets/project-thumbnails/urban crust.jpg",
+    image: "assets/project-thumbnails/urban crust.jpg",
     cover:
       "h-80 bg-[linear-gradient(160deg,_#ea580c_0%,_#7c2d12_55%,_#1c1917_100%)]",
     badge: "",
@@ -120,7 +120,7 @@ const projects = [
     category: "Graphic",
     year: "2025",
     tools: "Poster · Print · Typography",
-    image: "/assets/project-thumbnails/posters.jpg",
+    image: "assets/project-thumbnails/posters.jpg",
     cover:
       "h-96 bg-[linear-gradient(160deg,_#d946ef_0%,_#701a75_55%,_#3b0764_100%)]",
     badge: "",
@@ -130,7 +130,7 @@ const projects = [
     category: "Graphic",
     year: "2025",
     tools: "Ads · Social · Content",
-    image: "/assets/project-thumbnails/pizza.png",
+    image: "assets/project-thumbnails/pizza.png",
     cover:
       "h-80 bg-[linear-gradient(160deg,_#f97316_0%,_#b45309_55%,_#451a03_100%)]",
     badge: "",
@@ -140,7 +140,7 @@ const projects = [
     category: "Branding",
     year: "2025",
     tools: "Logo · Mark · Series",
-    image: "/assets/project-thumbnails/logofolio.jpg",
+    image: "assets/project-thumbnails/logofolio.jpg",
     cover:
       "h-72 bg-[linear-gradient(160deg,_#3b82f6_0%,_#1e3a8a_55%,_#0b1120_100%)]",
     badge: "",
@@ -150,7 +150,7 @@ const projects = [
     category: "Graphic",
     year: "2025",
     tools: "Print · Apparel · Graphics",
-    image: "/assets/project-thumbnails/PLUTUS Paradox logo.jpg",
+    image: "assets/project-thumbnails/PLUTUS Paradox logo.jpg",
     cover:
       "h-96 bg-[linear-gradient(160deg,_#facc15_0%,_#a16207_55%,_#292524_100%)]",
     badge: "",
@@ -160,7 +160,7 @@ const projects = [
     category: "Motion",
     year: "2025",
     tools: "Motion · Animation · Design",
-    image: "/assets/project-thumbnails/the game.png",
+    image: "assets/project-thumbnails/the game.png",
     cover:
       "h-72 bg-[linear-gradient(160deg,_#a855f7_0%,_#6d28d9_55%,_#1e1b4b_100%)]",
     badge: "",
@@ -179,7 +179,7 @@ const projects = [
     category: "Graphic",
     year: "2025",
     tools: "Social · Content · Templates",
-    image: "/assets/project-thumbnails/Jawaaf.jpg",
+    image: "assets/project-thumbnails/Jawaaf.jpg",
     cover:
       "h-80 bg-[linear-gradient(160deg,_#6366f1_0%,_#312e81_55%,_#0f172a_100%)]",
     badge: "",

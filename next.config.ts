@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  basePath: "/wraythx",
+  assetPrefix: "/wraythx/",
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
