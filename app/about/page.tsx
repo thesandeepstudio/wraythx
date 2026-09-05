@@ -98,12 +98,14 @@ export default function AboutPage() {
                   {focusAreas.map((area, index) => (
                     <li
                       key={area}
-                      className="flex items-baseline gap-4 text-xl font-medium tracking-[-0.02em] text-zinc-900"
+                      className="group flex cursor-default items-baseline gap-4 border-l-2 border-zinc-200 py-3 pl-4 text-xl font-medium tracking-[-0.02em] text-zinc-900 transition duration-300 hover:border-emerald-600 hover:bg-emerald-50 hover:pl-6"
                     >
-                      <span className="text-xs font-normal tabular-nums text-zinc-400">
+                      <span className="text-xs font-normal tabular-nums text-zinc-400 transition duration-300 group-hover:text-emerald-600">
                         0{index + 1}
                       </span>
-                      {area}
+                      <span className="transition duration-300 group-hover:translate-x-1">
+                        {area}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -117,7 +119,7 @@ export default function AboutPage() {
                   {tools.map((tool) => (
                     <span
                       key={tool}
-                      className="rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm text-zinc-700"
+                      className="border border-zinc-200 bg-white px-4 py-2 text-sm text-zinc-700 transition duration-300 hover:-translate-y-0.5 hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-700"
                     >
                       {tool}
                     </span>
@@ -164,7 +166,7 @@ export default function AboutPage() {
               </h2>
               <Link
                 href="mailto:wraithx@gmail.com"
-                className="inline-flex w-fit rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
+                className="inline-flex w-fit bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
               >
                 wraithx@gmail.com
               </Link>
