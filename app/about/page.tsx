@@ -71,10 +71,10 @@ export default function AboutPage() {
 
               <div className="mt-10 max-w-3xl">
                 <h1 className="text-4xl font-semibold uppercase leading-[1.05] tracking-[-0.05em] text-zinc-900 md:text-6xl lg:text-7xl">
-                  S. Chaudhary
+                  wraythx
                 </h1>
                 <p className="mt-4 text-lg font-medium uppercase tracking-[0.14em] text-emerald-600">
-                  Graphic &amp; Visual Designer
+                  S. Chaudhary
                 </p>
                 <p className="mt-8 text-xl font-medium leading-[1.35] tracking-[-0.03em] text-zinc-900 md:text-3xl">
                   I&apos;m a graphic and visual designer focused on turning bold
