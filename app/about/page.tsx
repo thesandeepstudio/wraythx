@@ -21,7 +21,7 @@ const experience = [
   {
     period: "2022 — Present",
     role: "Independent Visual Designer",
-    place: "wraythx · Freelance · Remote",
+    place: "wraythx Freelance | Remote",
     note: "Identity, interface, and motion work for startups and creative studios.",
   },
   {
