@@ -196,7 +196,7 @@ export default function Home() {
         </section>
 
         <section id="work" className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
-          <div className="mb-12 flex items-end justify-between gap-6">
+          <ScrollFade className="mb-12 flex items-end justify-between gap-6">
             <div>
               <h2 className="text-3xl font-semibold tracking-[-0.04em] text-zinc-900 md:text-4xl">
                 Recent projects
@@ -208,7 +208,7 @@ export default function Home() {
             >
               View all work
             </Link>
-          </div>
+          </ScrollFade>
 
           <div className="grid gap-6 md:grid-cols-3">
             {featuredProjects.map((project) => (
