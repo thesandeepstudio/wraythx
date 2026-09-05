@@ -242,48 +242,59 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
-          <div className="mb-12">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
-              Services
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-zinc-900 md:text-4xl">
-              Design &amp; motion for modern brands
-            </h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="rounded-none border border-zinc-200 bg-white p-6 shadow-none"
-              >
-                <div className="mb-4 h-10 w-10 rounded-none bg-zinc-200" />
-                <h3 className="text-xl font-semibold text-zinc-900">
-                  {service.title}
-                </h3>
-                <p className="mt-4 text-base leading-7 text-zinc-600">
-                  {service.text}
-                </p>
-              </div>
-            ))}
+        <section id="services" className="mx-auto max-w-6xl px-6 py-24 md:py-32 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-[1fr_1.7fr] lg:gap-20">
+            <div>
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+                Services
+              </p>
+              <h2 className="mt-6 text-4xl font-semibold tracking-[-0.04em] text-zinc-900 md:text-5xl">
+                Design &amp; motion for modern brands
+              </h2>
+              <p className="mt-6 max-w-sm text-base leading-7 text-zinc-600">
+                Identity systems, motion, and content — everything your brand
+                needs to feel unmistakable.
+              </p>
+            </div>
+
+            <div className="border-y border-zinc-200">
+              {services.map((service, index) => (
+                <div
+                  key={service.title}
+                  className="group grid gap-1 py-8 transition duration-300 hover:pl-3 md:grid-cols-[auto_1fr_1.5fr] md:gap-10"
+                >
+                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-emerald-600">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="text-xl font-semibold tracking-[-0.02em] text-zinc-900 transition duration-300 group-hover:text-emerald-600 md:text-2xl">
+                    {service.title}
+                  </h3>
+                  <p className="mt-2 text-base leading-7 text-zinc-600 md:mt-0">
+                    {service.text}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         <section
           id="contact"
-          className="mx-auto max-w-6xl px-6 pb-24 pt-12 lg:px-8"
+          className="border-t border-zinc-200 bg-zinc-50/50"
         >
-          <div className="rounded-none border border-zinc-200 bg-[linear-gradient(135deg,_rgba(24,24,27,0.03),_rgba(255,255,255,0.85),_rgba(24,24,27,0.04))] p-8 shadow-none md:p-12">
+          <div className="mx-auto max-w-6xl px-6 py-24 md:py-32 lg:px-8">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
               Let&apos;s work together
             </p>
-            <div className="mt-6 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-              <h2 className="max-w-xl text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
-                Need a standout digital presence?
+            <div className="mt-10 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+              <h2 className="max-w-2xl text-4xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-6xl">
+                Need a standout
+                <br />
+                digital presence?
               </h2>
               <a
                 href="mailto:wraythx@gmail.com"
-                className="inline-flex rounded-none bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
+                className="inline-flex w-fit rounded-none bg-zinc-900 px-8 py-4 text-sm font-medium uppercase tracking-[0.14em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-600"
               >
                 wraythx@gmail.com
               </a>
