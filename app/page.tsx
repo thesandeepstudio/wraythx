@@ -105,7 +105,10 @@ export default function Home() {
 
             <div className="grid min-h-[70vh] items-center gap-8 py-16 lg:grid-cols-[1fr_1.2fr_1fr] lg:py-20">
               <div className="hidden lg:flex lg:items-center lg:justify-start">
-                <p className="max-w-[180px] text-sm uppercase leading-[1.7] tracking-[0.06em] text-zinc-700 transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900">
+                <p
+                  className="hero-in max-w-[180px] text-sm uppercase leading-[1.7] tracking-[0.06em] text-zinc-700 transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
+                  style={{ animationDelay: "0.05s" }}
+                >
                   ART
                   <br />
                   MOTION
@@ -115,7 +118,10 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col items-center justify-center text-center">
-                <div className="h-[170px] w-[155px] overflow-hidden border border-zinc-200 grayscale transition duration-500 hover:scale-[1.02] hover:grayscale-0">
+                <div
+                  className="hero-in-fade h-[170px] w-[155px] overflow-hidden border border-zinc-200 grayscale transition duration-500 hover:scale-[1.02] hover:grayscale-0"
+                  style={{ animationDelay: "0.15s" }}
+                >
                   <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(160deg,_#059669_0%,_#065f46_55%,_#022c22_100%)]">
                     <span className="select-none text-4xl font-semibold italic tracking-[-0.04em] text-white">
                       S.
@@ -123,19 +129,31 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h1 className="mt-7 cursor-none text-4xl font-medium uppercase tracking-[-0.04em] transition duration-300 hover:-translate-y-0.5 md:text-5xl">
+                <h1
+                  className="hero-in mt-7 cursor-none text-4xl font-medium uppercase tracking-[-0.04em] transition duration-300 hover:-translate-y-0.5 md:text-5xl"
+                  style={{ animationDelay: "0.25s" }}
+                >
                   WRAYTHX
                 </h1>
-                <p className="mt-1 cursor-none text-2xl font-light italic tracking-[-0.04em] text-zinc-900 transition duration-300 hover:-translate-y-0.5 md:text-3xl">
+                <p
+                  className="hero-in mt-1 cursor-none text-2xl font-light italic tracking-[-0.04em] text-zinc-900 transition duration-300 hover:-translate-y-0.5 md:text-3xl"
+                  style={{ animationDelay: "0.35s" }}
+                >
                   S. Chaudhary
                 </p>
-                <p className="mt-1 cursor-none text-base font-medium uppercase tracking-[0.14em] text-emerald-600 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-500 md:text-lg">
+                <p
+                  className="hero-in mt-1 cursor-none text-base font-medium uppercase tracking-[0.14em] text-emerald-600 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-500 md:text-lg"
+                  style={{ animationDelay: "0.45s" }}
+                >
                   Visual Designer
                 </p>
               </div>
 
               <div className="hidden lg:flex lg:items-center lg:justify-end">
-                <p className="max-w-[180px] text-right text-sm uppercase leading-[1.7] tracking-[0.06em] text-zinc-700 transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900">
+                <p
+                  className="hero-in max-w-[180px] text-right text-sm uppercase leading-[1.7] tracking-[0.06em] text-zinc-700 transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
+                  style={{ animationDelay: "0.55s" }}
+                >
                   DESIGN
                   <br />
                   EDITING
