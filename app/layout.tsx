@@ -18,8 +18,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thesandeepstudio.gi
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "wraithx — Visual Designer & Motion Artist",
-    template: "%s · wraithx",
+    default: "wraythx — Visual Designer & Motion Artist",
+    template: "%s · wraythx",
   },
   description:
     "Portfolio of S. Chaudhary — a graphic and visual designer crafting brand identities, motion graphics, and bold visual systems that feel clear, distinctive, and made to last.",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: `${siteUrl}${basePath}/`,
-    siteName: "wraithx",
-    title: "wraithx — Visual Designer & Motion Artist",
+    siteName: "wraythx",
+    title: "wraythx — Visual Designer & Motion Artist",
     description:
       "Brand identities, motion graphics, and bold visual systems by S. Chaudhary.",
     images: [
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
         url: `${siteUrl}${basePath}/og.png`,
         width: 1200,
         height: 630,
-        alt: "wraithx",
+        alt: "wraythx",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "wraithx — Visual Designer & Motion Artist",
+    title: "wraythx — Visual Designer & Motion Artist",
     description:
       "Brand identities, motion graphics, and bold visual systems by S. Chaudhary.",
     images: [`${siteUrl}${basePath}/og.png`],

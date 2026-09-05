@@ -36,7 +36,7 @@ export default function SiteNav() {
         href="/"
         className="text-lg font-semibold tracking-[-0.04em] text-zinc-900 transition-transform duration-300 hover:-translate-y-0.5"
       >
-        wraithx
+        wraythx
       </Link>
 
       <nav
@@ -59,10 +59,10 @@ export default function SiteNav() {
 
       <div className="hidden md:block">
         <a
-          href="mailto:wraithx@gmail.com"
+          href="mailto:wraythx@gmail.com"
           className="text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
         >
-          wraithx@gmail.com
+          wraythx@gmail.com
         </a>
       </div>
 
@@ -98,11 +98,11 @@ export default function SiteNav() {
             </Link>
           ))}
           <a
-            href="mailto:wraithx@gmail.com"
+            href="mailto:wraythx@gmail.com"
             onClick={() => setMenuOpen(false)}
             className="mt-2 pt-4 text-sm font-medium text-zinc-600"
           >
-            wraithx@gmail.com
+            wraythx@gmail.com
           </a>
         </nav>
       )}

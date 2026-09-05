@@ -285,10 +285,10 @@ export default function Home() {
                 Need a standout digital presence?
               </h2>
               <a
-                href="mailto:wraithx@gmail.com"
+                href="mailto:wraythx@gmail.com"
                 className="inline-flex rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
               >
-                wraithx@gmail.com
+                wraythx@gmail.com
               </a>
             </div>
           </div>

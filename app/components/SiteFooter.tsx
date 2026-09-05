@@ -4,7 +4,7 @@ export default function SiteFooter() {
       <div className="mx-auto flex max-w-[1280px] flex-col gap-8 px-6 py-14 lg:px-8 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="text-lg font-semibold tracking-[-0.04em] text-zinc-900">
-            wraithx
+            wraythx
           </p>
           <p className="mt-2 max-w-xs text-sm leading-6 text-zinc-500">
             S. Chaudhary — graphic &amp; visual designer making bold ideas feel
@@ -14,11 +14,11 @@ export default function SiteFooter() {
 
         <div className="flex flex-col gap-3 text-sm md:items-end">
           <a
-            href="mailto:wraithx@gmail.com"
-            aria-label="Email wraithx"
+            href="mailto:wraythx@gmail.com"
+            aria-label="Email wraythx"
             className="text-sm font-medium text-zinc-900 transition duration-300 hover:text-emerald-600"
           >
-            wraithx@gmail.com
+            wraythx@gmail.com
           </a>
           <div className="flex gap-6 text-zinc-600">
             <a
@@ -41,7 +41,7 @@ export default function SiteFooter() {
             </a>
           </div>
           <p className="mt-2 text-xs text-zinc-400">
-            © {new Date().getFullYear()} wraithx
+            © {new Date().getFullYear()} wraythx
           </p>
         </div>
       </div>

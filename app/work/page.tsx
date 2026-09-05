@@ -7,7 +7,7 @@ import WorkFilters from "../components/WorkFilters";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Selected projects by wraithx — branding, motion graphics, video editing, graphic design, and social media work.",
+    "Selected projects by wraythx — branding, motion graphics, video editing, graphic design, and social media work.",
 };
 
 const projects = [
@@ -284,10 +284,10 @@ export default function WorkPage() {
                   <span className="text-emerald-600 italic">lasting</span>.
                 </p>
                 <a
-                  href="mailto:wraithx@gmail.com"
+                  href="mailto:wraythx@gmail.com"
                   className="mt-6 inline-flex w-fit rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
                 >
-                  wraithx@gmail.com
+                  wraythx@gmail.com
                 </a>
               </div>
             </div>

@@ -7,7 +7,7 @@ import SiteFooter from "../components/SiteFooter";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Branding, motion graphics, video editing, graphic design, social media, and packaging services by wraithx.",
+    "Branding, motion graphics, video editing, graphic design, social media, and packaging services by wraythx.",
 };
 
 const services = [
@@ -154,10 +154,10 @@ export default function ServicesPage() {
                 Need a standout look for your brand?
               </h2>
               <Link
-                href="mailto:wraithx@gmail.com"
+                href="mailto:wraythx@gmail.com"
                 className="inline-flex w-fit rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
               >
-                wraithx@gmail.com
+                wraythx@gmail.com
               </Link>
             </div>
           </div>
