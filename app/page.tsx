@@ -150,12 +150,13 @@ export default function Home() {
         <section className="border-y border-zinc-200 bg-white">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 py-8 md:grid-cols-3 lg:px-8">
             {stats.map((stat) => (
-              <AnimatedStat
-                key={stat.label}
-                value={stat.value}
-                suffix={stat.suffix}
-                label={stat.label}
-              />
+              <ScrollFade key={stat.label}>
+                <AnimatedStat
+                  value={stat.value}
+                  suffix={stat.suffix}
+                  label={stat.label}
+                />
+              </ScrollFade>
             ))}
           </div>
         </section>
