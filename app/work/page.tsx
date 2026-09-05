@@ -248,7 +248,7 @@ export default function WorkPage() {
             <div className="py-16 md:py-20">
               <div className="flex items-baseline justify-between text-xs uppercase tracking-[0.2em] text-zinc-500">
                 <span>Portfolio</span>
-                <span>2022 — 2025</span>
+                <span>2020 — Present</span>
               </div>
               <WorkFilters projects={projects} />
             </div>
