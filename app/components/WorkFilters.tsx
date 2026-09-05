@@ -1,7 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import type { Project } from "@/lib/projects";
+
+type Project = {
+  title: string;
+  category: string;
+  year: string;
+  tools: string;
+  summary: string;
+  image?: string;
+  link: string;
+  cover: string;
+  badge: string;
+};
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
