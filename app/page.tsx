@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import ClickSpark from "./ClickSpark";
+import ScrollReveal from "./ScrollReveal";
 import SiteNav from "./components/SiteNav";
 import SiteFooter from "./components/SiteFooter";
 import { projects, featuredProjectTitles } from "../lib/projects";
@@ -163,12 +164,18 @@ export default function Home() {
           className="mx-auto max-w-6xl px-6 py-28 md:py-36 lg:px-8"
         >
           <div className="mx-auto max-w-3xl text-center">
-            <p className="mt-7 text-xl font-medium uppercase leading-[1.35] tracking-[-0.03em] text-zinc-900 md:text-2xl">
+            <ScrollReveal
+              baseRotation={0}
+              enableBlur
+              blurStrength={6}
+              containerClassName="text-center"
+              textClassName="mt-7 text-xl font-medium uppercase leading-[1.35] tracking-[-0.03em] text-zinc-900 md:text-2xl"
+            >
               I&apos;m a graphic and visual designer focused on turning bold
-              ideas into thoughtful, expressive experiences. I shape identities,
-              digital interfaces, and visual systems that feel clear,
-              distinctive, and made to last.
-            </p>
+              ideas into thoughtful, expressive experiences. I shape
+              identities, digital interfaces, and visual systems that feel
+              clear, distinctive, and made to last.
+            </ScrollReveal>
           </div>
         </section>
 
