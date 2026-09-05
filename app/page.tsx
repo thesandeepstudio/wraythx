@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import ClickSpark from "./ClickSpark";
 import ScrollReveal from "./ScrollReveal";
+import ScrollFade from "./components/ScrollFade";
 import SiteNav from "./components/SiteNav";
 import SiteFooter from "./components/SiteFooter";
 import { projects, featuredProjectTitles } from "../lib/projects";
@@ -211,40 +212,41 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-3">
             {featuredProjects.map((project) => (
-              <a
-                key={project.title}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block"
-              >
-                <div className="overflow-hidden border border-zinc-200 bg-zinc-100">
-                  {project.image ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={`${BASE_PATH}${project.homeImage ?? project.image}`}
-                      alt={project.title}
-                      loading="lazy"
-                      decoding="async"
-                      className="block w-full grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0"
-                    />
-                  ) : null}
-                </div>
-                <p className="mt-4 text-xs font-medium uppercase tracking-[0.2em] text-emerald-600">
-                  {project.category}
-                </p>
-                <h3 className="mt-2 text-xl font-semibold tracking-[-0.04em] text-zinc-900">
-                  {project.title}
-                </h3>
-                <p className="mt-1 text-sm text-zinc-500">{project.tools}</p>
-              </a>
+              <ScrollFade key={project.title} className="block">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block"
+                >
+                  <div className="overflow-hidden border border-zinc-200 bg-zinc-100">
+                    {project.image ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={`${BASE_PATH}${project.homeImage ?? project.image}`}
+                        alt={project.title}
+                        loading="lazy"
+                        decoding="async"
+                        className="block w-full grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                      />
+                    ) : null}
+                  </div>
+                  <p className="mt-4 text-xs font-medium uppercase tracking-[0.2em] text-emerald-600">
+                    {project.category}
+                  </p>
+                  <h3 className="mt-2 text-xl font-semibold tracking-[-0.04em] text-zinc-900">
+                    {project.title}
+                  </h3>
+                  <p className="mt-1 text-sm text-zinc-500">{project.tools}</p>
+                </a>
+              </ScrollFade>
             ))}
           </div>
         </section>
 
         <section id="services" className="mx-auto max-w-6xl px-6 py-24 md:py-32 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.7fr] lg:gap-20">
-            <div>
+            <ScrollFade>
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
                 Services
               </p>
@@ -255,24 +257,23 @@ export default function Home() {
                 Identity systems, motion, and content — everything your brand
                 needs to feel unmistakable.
               </p>
-            </div>
+            </ScrollFade>
 
             <div className="border-y border-zinc-200">
               {services.map((service, index) => (
-                <div
-                  key={service.title}
-                  className="group grid gap-1 py-8 transition duration-300 hover:pl-3 md:grid-cols-[auto_1fr_1.5fr] md:gap-10"
-                >
-                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-emerald-600">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="text-xl font-semibold tracking-[-0.02em] text-zinc-900 transition duration-300 group-hover:text-emerald-600 md:text-2xl">
-                    {service.title}
-                  </h3>
-                  <p className="mt-2 text-base leading-7 text-zinc-600 md:mt-0">
-                    {service.text}
-                  </p>
-                </div>
+                <ScrollFade key={service.title}>
+                  <div className="group grid gap-1 py-8 transition duration-300 hover:pl-3 md:grid-cols-[auto_1fr_1.5fr] md:gap-10">
+                    <span className="text-xs font-medium uppercase tracking-[0.2em] text-emerald-600">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="text-xl font-semibold tracking-[-0.02em] text-zinc-900 transition duration-300 group-hover:text-emerald-600 md:text-2xl">
+                      {service.title}
+                    </h3>
+                    <p className="mt-2 text-base leading-7 text-zinc-600 md:mt-0">
+                      {service.text}
+                    </p>
+                  </div>
+                </ScrollFade>
               ))}
             </div>
           </div>
