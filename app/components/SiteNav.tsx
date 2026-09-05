@@ -32,10 +32,12 @@ export default function SiteNav({
 
   return (
     <header
-      className={`sticky top-0 z-50 mx-auto flex w-full items-center justify-between border-b border-zinc-200 bg-white pb-3 transition-all duration-500 ${
-        visible
-          ? "translate-y-0 opacity-100"
-          : "pointer-events-none -translate-y-full opacity-0"
+      className={`z-50 mx-auto flex w-full max-w-[1280px] items-center justify-between border-b border-zinc-200 bg-white pb-3 transition-all duration-500 ${
+        revealOnScroll ? "fixed inset-x-0 top-0" : "sticky top-0"
+      } ${
+        revealOnScroll && !visible
+          ? "pointer-events-none -translate-y-full opacity-0"
+          : "translate-y-0 opacity-100"
       }`}
     >
       <Link
