@@ -98,13 +98,16 @@ export default function AboutPage() {
                   {focusAreas.map((area, index) => (
                     <li
                       key={area}
-                      className="group flex cursor-default items-baseline gap-4 border-l-2 border-zinc-200 py-3 pl-4 text-xl font-medium tracking-[-0.02em] text-zinc-900 transition duration-300 hover:border-emerald-600 hover:bg-emerald-50 hover:pl-6"
+                      className="group relative cursor-default overflow-hidden border-l-2 border-zinc-200 py-3 pl-4 text-xl font-medium tracking-[-0.02em] text-zinc-900 transition-colors duration-500 hover:border-emerald-600"
                     >
-                      <span className="text-xs font-normal tabular-nums text-zinc-400 transition duration-300 group-hover:text-emerald-600">
-                        0{index + 1}
-                      </span>
-                      <span className="transition duration-300 group-hover:translate-x-1">
-                        {area}
+                      <span className="pointer-events-none absolute inset-0 origin-left scale-x-0 bg-gradient-to-r from-emerald-50 to-transparent transition-transform duration-500 ease-out group-hover:scale-x-100" />
+                      <span className="relative z-10 flex items-baseline gap-4">
+                        <span className="text-xs font-normal tabular-nums text-zinc-400 transition-colors duration-500 group-hover:text-emerald-600">
+                          0{index + 1}
+                        </span>
+                        <span className="transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-2">
+                          {area}
+                        </span>
                       </span>
                     </li>
                   ))}
