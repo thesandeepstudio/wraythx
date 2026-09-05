@@ -4,24 +4,32 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import ClickSpark from "./ClickSpark";
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const projects = [
   {
-    title: "Brand Refresh",
-    category: "UI / UX Design",
-    summary:
-      "Rebuilt a startup brand system to improve conversion and clarity across mobile and web experiences.",
+    title: "Motion Design for Lakes & Hill Realty",
+    category: "Motion",
+    year: "2025",
+    tools: "Motion · Ads · Promo",
+    image: "/assets/project-thumbnails/Lakes & Hill Realty v2.jpg",
+    link: "https://www.behance.net/gallery/251462951/Motion-Design-for-Lakes-Hill-Realty",
   },
   {
-    title: "Commerce Dashboard",
-    category: "Product Design",
-    summary:
-      "Designed an analytics dashboard for sales teams to monitor KPIs, campaigns, and customer retention.",
+    title: "NCS Edits — Music Video Series",
+    category: "Motion",
+    year: "2025",
+    tools: "Edit · Motion · Sound",
+    image: "/assets/project-thumbnails/NCS.webp",
+    link: "https://www.behance.net/gallery/240937921/Video-Editing-NCS",
   },
   {
-    title: "Portfolio Platform",
-    category: "Web Experience",
-    summary:
-      "Crafted a digital showcase for a creative studio with conversion-focused storytelling and case studies.",
+    title: "Plutus Paradox — Clothing Brand",
+    category: "Branding",
+    year: "2025",
+    tools: "Brand · Identity · Apparel",
+    image: "/assets/project-thumbnails/Plutus Paradox.jpg",
+    link: "https://www.behance.net/gallery/202694555/PLUTUS-PARADOX",
   },
 ];
 
@@ -157,7 +165,13 @@ export default function Home() {
               <div className="flex flex-col items-center justify-center text-center">
                 <div className="h-[170px] w-[155px] overflow-hidden border border-zinc-200 bg-zinc-200 grayscale transition duration-500 hover:scale-[1.02] hover:grayscale-0">
                   <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_center,_#e5e5e5_0%,_#d4d4d4_40%,_#bdbdbd_100%)]">
-                    <div className="h-full w-full bg-[linear-gradient(180deg,_rgba(255,255,255,0.2),_rgba(0,0,0,0.08)),url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80')] bg-cover bg-center transition duration-500 hover:scale-105" />
+                    <div
+                      className="h-full w-full bg-cover bg-center transition duration-500 hover:scale-105"
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(180deg, rgba(255,255,255,0.2), rgba(0,0,0,0.08)), url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80')",
+                      }}
+                    />
                   </div>
                 </div>
 
@@ -226,21 +240,31 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-3">
             {projects.map((project) => (
-              <article
+              <a
                 key={project.title}
-                className="group rounded-none border border-zinc-200 bg-white p-6 shadow-none transition duration-300 hover:-translate-y-1 hover:border-zinc-300"
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
               >
-                <div className="mb-8 h-40 rounded-none bg-[linear-gradient(135deg,_rgba(24,24,27,0.05),_rgba(24,24,27,0.12),_rgba(24,24,27,0.03))]" />
-                <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
+                <div className="overflow-hidden border border-zinc-200 bg-zinc-100">
+                  {project.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={`${BASE_PATH}${project.image}`}
+                      alt={project.title}
+                      className="block w-full grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                    />
+                  ) : null}
+                </div>
+                <p className="mt-4 text-xs font-medium uppercase tracking-[0.2em] text-emerald-600">
                   {project.category}
                 </p>
-                <h3 className="mt-4 text-2xl font-semibold tracking-[-0.04em] text-zinc-900">
+                <h3 className="mt-2 text-xl font-semibold tracking-[-0.04em] text-zinc-900">
                   {project.title}
                 </h3>
-                <p className="mt-4 text-base leading-7 text-zinc-600">
-                  {project.summary}
-                </p>
-              </article>
+                <p className="mt-1 text-sm text-zinc-500">{project.tools}</p>
+              </a>
             ))}
           </div>
         </section>
