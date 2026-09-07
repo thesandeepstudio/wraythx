@@ -10,36 +10,26 @@ const navLinks = [
   { href: "/services", label: "Services" },
 ];
 
-export default function SiteNav({
-  revealOnScroll = false,
-}: {
-  revealOnScroll?: boolean;
-}) {
+export default function SiteNav() {
   const pathname = usePathname();
-  const [visible, setVisible] = useState(!revealOnScroll);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    if (!revealOnScroll) return;
-    const handleScroll = () => setVisible(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [revealOnScroll]);
+    if (!menuOpen) return;
+    const original = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = original;
+    };
+  }, [menuOpen]);
 
   const isActive = (href: string) =>
     pathname === href ||
     (href !== "/" && pathname.startsWith(`${href}/`));
 
   return (
-    <header
-      className={`z-50 mx-auto flex w-full max-w-[1280px] items-center justify-between border-b border-zinc-200 bg-white pb-3 transition-all duration-500 ${
-        revealOnScroll ? "fixed inset-x-0 top-0" : "sticky top-0"
-      } ${
-        revealOnScroll && !visible
-          ? "pointer-events-none -translate-y-full opacity-0"
-          : "translate-y-0 opacity-100"
-      }`}
-    >
+    <header className="sticky top-0 z-50 mx-auto flex w-full max-w-[1280px] items-center justify-between border-b border-zinc-200 bg-white pb-3">
+
       <Link
         href="/"
         className="text-lg font-semibold tracking-[-0.04em] text-zinc-900 transition-transform duration-300 hover:-translate-y-0.5"
@@ -86,11 +76,18 @@ export default function SiteNav({
         <span className="h-0.5 w-4 bg-zinc-900" />
       </button>
 
-      {menuOpen && (
+      <div
+        id="mobile-menu"
+        aria-hidden={!menuOpen}
+        className={`absolute left-0 right-0 top-full z-40 overflow-hidden transition-[max-height,opacity,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden ${
+          menuOpen
+            ? "max-h-96 translate-y-0 opacity-100"
+            : "pointer-events-none invisible max-h-0 -translate-y-2 opacity-0"
+        }`}
+      >
         <nav
-          id="mobile-menu"
           aria-label="Mobile navigation"
-          className="absolute left-0 right-0 top-full flex flex-col border-b border-zinc-200 bg-white px-6 py-6 md:hidden"
+          className="flex flex-col border-b border-zinc-200 bg-white px-6 py-6"
         >
           {navLinks.map((link) => (
             <Link
@@ -113,7 +110,7 @@ export default function SiteNav({
             wraythx@gmail.com
           </a>
         </nav>
-      )}
+      </div>
     </header>
   );
 }

@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import PageTransitions from "./components/PageTransitions";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,6 +15,10 @@ const geistMono = Geist_Mono({
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thesandeepstudio.github.io";
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -49,6 +54,17 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: `${basePath}/icon.svg`,
+    apple: {
+      url: `${basePath}/icons/icon-180.png`,
+      sizes: "180x180",
+      type: "image/png",
+    },
+  },
+  manifest: `${basePath}/manifest.json`,
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "wraythx",
   },
 };
 
@@ -58,7 +74,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-white text-zinc-900">{children}</body>
+      <body className="min-h-full bg-white text-zinc-900">
+        <PageTransitions />
+        {children}
+      </body>
     </html>
   );
 }

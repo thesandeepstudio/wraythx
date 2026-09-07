@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import type { Project } from "@/lib/projects";
+import { projectHref } from "@/lib/projects";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -35,11 +37,9 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
 
       <div className="mt-0 columns-1 gap-6 sm:columns-2 lg:columns-3">
         {visible.map((project) => (
-          <a
+          <Link
             key={project.title}
-            href={project.link || "#"}
-            target={project.link ? "_blank" : undefined}
-            rel={project.link ? "noopener noreferrer" : undefined}
+            href={projectHref(project.title)}
             className="group mb-6 block break-inside-avoid"
           >
             <div
@@ -83,7 +83,7 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </>

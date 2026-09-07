@@ -7,7 +7,7 @@ import ScrollReveal from "./ScrollReveal";
 import ScrollFade from "./components/ScrollFade";
 import SiteNav from "./components/SiteNav";
 import SiteFooter from "./components/SiteFooter";
-import { projects, featuredProjectTitles } from "../lib/projects";
+import { projects, featuredProjectTitles, projectHref } from "../lib/projects";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -132,7 +132,7 @@ export default function Home() {
       <main className="min-h-screen bg-white text-zinc-900">
         <section className="relative overflow-hidden bg-white">
           <div className="relative mx-auto max-w-[1280px] py-7">
-            <SiteNav revealOnScroll />
+            <SiteNav />
 
             <div className="grid min-h-[70vh] items-center gap-8 py-16 lg:grid-cols-[1fr_1.2fr_1fr] lg:py-20">
               <div className="hidden lg:flex lg:items-center lg:justify-start">
@@ -263,10 +263,8 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-3">
             {featuredProjects.map((project) => (
               <ScrollFade key={project.title} className="block">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href={projectHref(project.title)}
                   className="group block"
                 >
                   <div className="overflow-hidden border border-zinc-200 bg-zinc-100">
@@ -288,7 +286,7 @@ export default function Home() {
                     {project.title}
                   </h3>
                   <p className="mt-1 text-sm text-zinc-500">{project.tools}</p>
-                </a>
+                </Link>
               </ScrollFade>
             ))}
           </div>
@@ -312,11 +310,11 @@ export default function Home() {
             <div className="border-y border-zinc-200">
               {services.map((service, index) => (
                 <ScrollFade key={service.title}>
-                  <div className="group grid gap-1 py-8 transition duration-300 hover:pl-3 md:grid-cols-[auto_1fr_1.5fr] md:gap-10">
+                  <div className="group grid gap-1 py-8 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:pl-4 md:grid-cols-[auto_1fr_1.5fr] md:gap-10">
                     <span className="text-xs font-medium uppercase tracking-[0.2em] text-emerald-600">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="text-xl font-semibold tracking-[-0.02em] text-zinc-900 transition duration-300 group-hover:text-emerald-600 md:text-2xl">
+                    <h3 className="text-xl font-semibold tracking-[-0.02em] text-zinc-900 transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-emerald-600 md:text-2xl">
                       {service.title}
                     </h3>
                     <p className="mt-2 text-base leading-7 text-zinc-600 md:mt-0">

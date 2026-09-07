@@ -67,6 +67,37 @@ a {
   animation: hero-in-fade 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+@supports (view-transition-name: root) {
+  ::view-transition-old(root) {
+    animation: vt-out 0.35s ease both;
+  }
+
+  ::view-transition-new(root) {
+    animation: vt-in 0.35s ease both;
+  }
+
+  @keyframes vt-out {
+    to {
+      opacity: 0;
+      transform: translateY(-12px);
+    }
+  }
+
+  @keyframes vt-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

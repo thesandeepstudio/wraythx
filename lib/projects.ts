@@ -51,7 +51,7 @@ export const projects: Project[] = [
     badge: "",
   },
   {
-    title: "NCS Edits — Music Video Series",
+    title: "NCS Edits — Motion Video Series",
     category: "Motion",
     year: "2025",
     tools: "Editing · Sync · Polish",
@@ -212,6 +212,7 @@ export const projects: Project[] = [
     year: "2025",
     tools: "Motion · Ads · Promo",
     summary: "High-impact promo motion for Black Friday.",
+    image: "/assets/project-thumbnails/Black Friday.jpg",
     link: "https://www.behance.net/gallery/179028623/Black-Friday",
     cover:
       "h-80 bg-[linear-gradient(160deg,_#0f172a_0%,_#450a0a_55%,_#000000_100%)]",
@@ -233,6 +234,22 @@ export const projects: Project[] = [
 
 export const featuredProjectTitles = [
   "Motion Design for Lakes & Hill Realty",
-  "NCS Edits — Music Video Series",
+  "NCS Edits — Motion Video Series",
   "Plutus Paradox — Clothing Brand",
 ];
+
+export function slugify(title: string): string {
+  return title
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-+|-+$)/g, "");
+}
+
+export function getProjectBySlug(slug: string): Project | undefined {
+  return projects.find((project) => slugify(project.title) === slug);
+}
+
+export function projectHref(title: string): string {
+  return `/projects/${slugify(title)}`;
+}
