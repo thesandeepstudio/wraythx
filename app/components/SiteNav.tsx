@@ -28,7 +28,7 @@ export default function SiteNav() {
     (href !== "/" && pathname.startsWith(`${href}/`));
 
   return (
-    <header className="sticky top-0 z-50 mx-auto flex w-full max-w-[1280px] items-center justify-between border-b border-zinc-200 bg-white px-6 pb-3 md:px-0">
+    <header className="sticky top-0 z-50 mx-auto flex w-full max-w-[1280px] items-center justify-between border-b border-zinc-200 bg-white pb-3">
 
       <Link
         href="/"
