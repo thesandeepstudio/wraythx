@@ -45,7 +45,7 @@ export default function PageTransitions() {
       ).matches;
       const startViewTransition = (
         document as ViewTransitionDocument
-      ).startViewTransition;
+      ).startViewTransition?.bind(document);
 
       event.preventDefault();
 
