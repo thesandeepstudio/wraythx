@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ClickSpark from "../ClickSpark";
+import ScrollReveal from "../ScrollReveal";
+import ScrollFade from "../components/ScrollFade";
 import SiteNav from "../components/SiteNav";
 import SiteFooter from "../components/SiteFooter";
 
@@ -73,10 +75,9 @@ export default function ServicesPage() {
       extraScale={1}
     >
       <main className="min-h-screen bg-white text-zinc-900">
+        <SiteNav />
         <section className="relative overflow-hidden bg-white">
-          <div className="relative mx-auto max-w-[1280px] py-7">
-            <SiteNav />
-
+          <div className="relative mx-auto max-w-[1280px]">
             <div className="px-6 py-16 md:px-0 md:py-20">
               <div className="flex items-baseline justify-between text-xs uppercase tracking-[0.2em] text-zinc-500">
                 <span>Services</span>
@@ -91,10 +92,15 @@ export default function ServicesPage() {
                     for modern brands
                   </span>
                 </h1>
-                <p className="mt-6 text-lg leading-8 text-zinc-600">
-                  A focused set of services for building brands that are clear,
-                  distinctive, and made to last.
-                </p>
+                <ScrollReveal
+                  baseRotation={0}
+                  enableBlur
+                  blurStrength={6}
+                  textClassName="mt-6 text-lg leading-8 text-zinc-600"
+                  highlightedWords={["clear", "distinctive", "last"]}
+                >
+                  A focused set of services for building brands that are clear, distinctive, and made to last.
+                </ScrollReveal>
               </div>
             </div>
           </div>
@@ -103,64 +109,69 @@ export default function ServicesPage() {
         <section className="mx-auto max-w-[1280px] px-6 pb-24 lg:px-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
-              <div
-                key={service.title}
-                className="group flex flex-col justify-between border border-zinc-200 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-300"
-              >
-                <div>
-                  <p className="text-xs font-normal tabular-nums tracking-[0.2em] text-zinc-400">
-                    0{index + 1}
-                  </p>
-                  <h3 className="mt-6 text-xl font-semibold tracking-[-0.02em] text-zinc-900">
-                    {service.title}
-                  </h3>
-                  <p className="mt-4 text-base leading-7 text-zinc-600">
-                    {service.text}
+              <ScrollFade key={service.title}>
+                <div className="group flex h-full flex-col justify-between border border-zinc-200 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-300">
+                  <div>
+                    <p className="text-xs font-normal tabular-nums tracking-[0.2em] text-zinc-400">
+                      0{index + 1}
+                    </p>
+                    <h3 className="mt-6 text-xl font-semibold tracking-[-0.02em] text-zinc-900">
+                      {service.title}
+                    </h3>
+                    <p className="mt-4 text-base leading-7 text-zinc-600">
+                      {service.text}
+                    </p>
+                  </div>
+                  <p className="mt-8 border-t border-zinc-200 pt-4 text-xs uppercase tracking-[0.16em] text-emerald-600">
+                    {service.detail}
                   </p>
                 </div>
-                <p className="mt-8 border-t border-zinc-200 pt-4 text-xs uppercase tracking-[0.16em] text-emerald-600">
-                  {service.detail}
-                </p>
-              </div>
+              </ScrollFade>
             ))}
           </div>
 
           <div className="mt-24">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
-              Process
-            </p>
+            <ScrollFade>
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+                Process
+              </p>
+            </ScrollFade>
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               {process.map((item) => (
-                <div key={item.step} className="border-t border-zinc-200 pt-8">
-                  <p className="text-sm font-medium tabular-nums text-emerald-600">
-                    {item.step}
-                  </p>
-                  <h3 className="mt-4 text-xl font-semibold tracking-[-0.02em] text-zinc-900">
-                    {item.title}
-                  </h3>
-                  <p className="mt-4 text-base leading-7 text-zinc-600">
-                    {item.text}
-                  </p>
-                </div>
+                <ScrollFade key={item.step}>
+                  <div className="border-t border-zinc-200 pt-8">
+                    <p className="text-sm font-medium tabular-nums text-emerald-600">
+                      {item.step}
+                    </p>
+                    <h3 className="mt-4 text-xl font-semibold tracking-[-0.02em] text-zinc-900">
+                      {item.title}
+                    </h3>
+                    <p className="mt-4 text-base leading-7 text-zinc-600">
+                      {item.text}
+                    </p>
+                  </div>
+                </ScrollFade>
               ))}
             </div>
           </div>
         </section>
 
         <section className="mx-auto max-w-[1280px] px-6 pb-24 lg:px-8">
-          <div className="border border-zinc-200 bg-[linear-gradient(135deg,_rgba(24,24,27,0.03),_rgba(255,255,255,0.85),_rgba(24,24,27,0.04))] p-8 md:p-12">
-            <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-              <h2 className="max-w-xl text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
-                Need a standout look for your brand?
-              </h2>
-              <Link
-                href="mailto:wraythx@gmail.com"
-                className="inline-flex w-fit rounded-none bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
-              >
-                wraythx@gmail.com
-              </Link>
+          <ScrollFade>
+            <div className="border border-zinc-200 bg-[linear-gradient(135deg,_rgba(24,24,27,0.03),_rgba(255,255,255,0.85),_rgba(24,24,27,0.04))] p-8 md:p-12">
+              <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+                <h2 className="max-w-xl text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
+                  Need a standout look for your brand?
+                </h2>
+                <Link
+                  href="mailto:wraythxx@gmail.com"
+                  className="inline-flex w-fit rounded-none bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
+                >
+                  wraythxx@gmail.com
+                </Link>
+              </div>
             </div>
-          </div>
+          </ScrollFade>
         </section>
 
         <SiteFooter />

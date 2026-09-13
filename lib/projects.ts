@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     title: "Motion Design for Lakes & Hill Realty",
     category: "Motion",
-    year: "2025",
+    year: "2026",
     tools: "Motion · Brand Film",
     summary:
       "Motion language and brand film for a lifestyle real-estate brand.",
@@ -77,7 +77,7 @@ export const projects: Project[] = [
   {
     title: "Drool | Social Media Designs",
     category: "Graphic",
-    year: "2025",
+    year: "2024",
     tools: "Social · Content · Templates",
     summary: "Social content system and templates for Drool.",
     image: "/assets/project-thumbnails/drool social media.jpg",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
   {
     title: "Plutus Paradox — Clothing Brand",
     category: "Branding",
-    year: "2025",
+    year: "2024",
     tools: "Brand · Apparel · Identity",
     summary: "Full brand identity for the Plutus Paradox clothing label.",
     image: "/assets/project-thumbnails/Plutus Paradox.jpg",
@@ -101,7 +101,7 @@ export const projects: Project[] = [
   {
     title: "Drool Nepal | Branding",
     category: "Branding",
-    year: "2025",
+    year: "2024",
     tools: "Identity · Logo · Systems",
     summary: "Logo and identity system for Drool Nepal.",
     image: "/assets/project-thumbnails/Drool branding.png",
@@ -113,7 +113,7 @@ export const projects: Project[] = [
   {
     title: "Chimley Orchards — Packaging Design",
     category: "Packaging",
-    year: "2025",
+    year: "2024",
     tools: "Label · Print · Packaging",
     summary: "Premium label and packaging design for Chimley Orchards.",
     image: "/assets/project-thumbnails/Apple.png",
@@ -137,7 +137,7 @@ export const projects: Project[] = [
   {
     title: "Urban Crust | Branding",
     category: "Branding",
-    year: "2025",
+    year: "2023",
     tools: "Brand · Identity · Logo",
     summary: "Brand and identity design for Urban Crust.",
     image: "/assets/project-thumbnails/urban crust.jpg",
@@ -149,7 +149,7 @@ export const projects: Project[] = [
   {
     title: "Posters Collection | Poster Design",
     category: "Graphic",
-    year: "2025",
+    year: "2023",
     tools: "Poster · Print · Typography",
     summary: "A curated series of typographic and editorial posters.",
     image: "/assets/project-thumbnails/posters.jpg",
@@ -161,7 +161,7 @@ export const projects: Project[] = [
   {
     title: "Pizza | Social Media Ads Design",
     category: "Graphic",
-    year: "2025",
+    year: "2022",
     tools: "Ads · Social · Content",
     summary: "Appetizing ad creatives for a pizza brand's social feeds.",
     image: "/assets/project-thumbnails/pizza.png",
@@ -173,7 +173,7 @@ export const projects: Project[] = [
   {
     title: "Logofolio P-001",
     category: "Branding",
-    year: "2025",
+    year: "2023",
     tools: "Logo · Mark · Series",
     summary: "Volume one of an ongoing logo exploration series.",
     image: "/assets/project-thumbnails/logofolio.jpg",
@@ -185,7 +185,7 @@ export const projects: Project[] = [
   {
     title: "Plutus Paradox | Tee Design",
     category: "Graphic",
-    year: "2025",
+    year: "2023",
     tools: "Print · Apparel · Graphics",
     summary: "Tee print artwork for Plutus Paradox.",
     image: "/assets/project-thumbnails/PLUTUS Paradox logo.jpg",
@@ -197,7 +197,7 @@ export const projects: Project[] = [
   {
     title: "The Game? | Motion Graphic",
     category: "Motion",
-    year: "2025",
+    year: "2023",
     tools: "Motion · Animation · Design",
     summary: "A bold motion graphic with a playful punch.",
     image: "/assets/project-thumbnails/the game.png",
@@ -209,7 +209,7 @@ export const projects: Project[] = [
   {
     title: "Black Friday | Motion Graphic",
     category: "Motion",
-    year: "2025",
+    year: "2022",
     tools: "Motion · Ads · Promo",
     summary: "High-impact promo motion for Black Friday.",
     image: "/assets/project-thumbnails/Black Friday.jpg",

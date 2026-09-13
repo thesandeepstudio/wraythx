@@ -14,11 +14,11 @@ export default function SiteFooter() {
 
         <div className="flex flex-col gap-3 text-sm md:items-end">
           <a
-            href="mailto:wraythx@gmail.com"
+            href="mailto:wraythxx@gmail.com"
             aria-label="Email wraythx"
             className="text-sm font-medium text-zinc-900 transition duration-300 hover:text-emerald-600"
           >
-            wraythx@gmail.com
+            wraythxx@gmail.com
           </a>
           <div className="flex gap-6 text-zinc-600">
             <a

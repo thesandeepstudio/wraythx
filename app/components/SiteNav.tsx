@@ -57,10 +57,10 @@ export default function SiteNav() {
 
       <div className="hidden md:block">
         <a
-          href="mailto:wraythx@gmail.com"
+          href="mailto:wraythxx@gmail.com"
           className="text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
         >
-          wraythx@gmail.com
+          wraythxx@gmail.com
         </a>
       </div>
 
@@ -79,6 +79,7 @@ export default function SiteNav() {
       <div
         id="mobile-menu"
         aria-hidden={!menuOpen}
+        inert={!menuOpen}
         className={`absolute left-0 right-0 top-full z-40 overflow-hidden transition-[max-height,opacity,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden ${
           menuOpen
             ? "max-h-96 translate-y-0 opacity-100"
@@ -103,11 +104,11 @@ export default function SiteNav() {
             </Link>
           ))}
           <a
-            href="mailto:wraythx@gmail.com"
+            href="mailto:wraythxx@gmail.com"
             onClick={() => setMenuOpen(false)}
             className="mt-2 pt-4 text-sm font-medium text-zinc-600"
           >
-            wraythx@gmail.com
+            wraythxx@gmail.com
           </a>
         </nav>
       </div>

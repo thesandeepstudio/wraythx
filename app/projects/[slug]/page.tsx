@@ -75,11 +75,7 @@ export default async function ProjectPage({
       extraScale={1}
     >
       <main className="min-h-screen bg-white text-zinc-900">
-        <section className="relative overflow-hidden bg-white">
-          <div className="relative mx-auto max-w-[1280px] py-7">
-            <SiteNav />
-          </div>
-        </section>
+        <SiteNav />
 
         <section className="mx-auto max-w-[1280px] px-6 lg:px-8">
           <div className="flex flex-col gap-6 border-b border-zinc-200 pb-10 md:flex-row md:items-end md:justify-between">

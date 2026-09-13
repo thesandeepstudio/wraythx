@@ -16,7 +16,7 @@ const featuredProjects = featuredProjectTitles.map((title) =>
 );
 
 const stats = [
-  { value: 5, suffix: "+", label: "Years experience" },
+  { value: 4, suffix: "+", label: "Years experience" },
   { value: 18, suffix: "+", label: "Projects delivered" },
   { value: 12, suffix: "+", label: "Happy clients" },
 ];
@@ -130,10 +130,9 @@ export default function Home() {
       extraScale={1}
     >
       <main className="min-h-screen bg-white text-zinc-900">
+        <SiteNav />
         <section className="relative overflow-hidden bg-white">
-          <div className="relative mx-auto max-w-[1280px] py-7">
-            <SiteNav />
-
+          <div className="relative mx-auto max-w-[1280px]">
             <div className="grid min-h-[70vh] items-center gap-8 px-6 py-16 md:px-0 lg:grid-cols-[1fr_1.2fr_1fr] lg:py-20">
               <div className="hidden lg:flex lg:items-center lg:justify-start">
                 <p
@@ -342,10 +341,10 @@ export default function Home() {
                 digital presence?
               </h2>
               <a
-                href="mailto:wraythx@gmail.com"
+                href="mailto:wraythxx@gmail.com"
                 className="inline-flex w-fit rounded-none bg-zinc-900 px-8 py-4 text-sm font-medium uppercase tracking-[0.14em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-600"
               >
-                wraythx@gmail.com
+                wraythxx@gmail.com
               </a>
             </div>
           </div>
