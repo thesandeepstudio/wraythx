@@ -63,7 +63,7 @@ export default function AboutPage() {
           <div className="relative mx-auto max-w-[1280px] py-7">
             <SiteNav />
 
-            <div className="py-16 md:py-20">
+            <div className="px-6 py-16 md:px-0 md:py-20">
                 <div className="flex items-start justify-between gap-6">
                   <h1 className="text-4xl font-semibold uppercase leading-[1.05] tracking-[-0.05em] text-zinc-900 md:text-6xl lg:text-7xl">
                     WRAYTHX

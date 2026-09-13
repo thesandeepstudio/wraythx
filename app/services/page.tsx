@@ -77,7 +77,7 @@ export default function ServicesPage() {
           <div className="relative mx-auto max-w-[1280px] py-7">
             <SiteNav />
 
-            <div className="py-16 md:py-20">
+            <div className="px-6 py-16 md:px-0 md:py-20">
               <div className="flex items-baseline justify-between text-xs uppercase tracking-[0.2em] text-zinc-500">
                 <span>Services</span>
                 <span>Brand · Visual · Motion</span>
