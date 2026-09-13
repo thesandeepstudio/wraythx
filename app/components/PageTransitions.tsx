@@ -7,6 +7,15 @@ type ViewTransitionDocument = Document & {
   startViewTransition?: (update: () => void) => unknown;
 };
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+const stripBasePath = (path: string) => {
+  if (!BASE_PATH) return path;
+  if (path === BASE_PATH) return "/";
+  if (path.startsWith(`${BASE_PATH}/`)) return path.slice(BASE_PATH.length);
+  return path;
+};
+
 export default function PageTransitions() {
   const router = useRouter();
 
@@ -49,7 +58,9 @@ export default function PageTransitions() {
 
       event.preventDefault();
 
-      const destination = `${url.pathname}${url.search}${url.hash}`;
+      const destination = stripBasePath(
+        `${url.pathname}${url.search}${url.hash}`,
+      );
       if (reducedMotion || !startViewTransition) {
         router.push(destination);
       } else {
