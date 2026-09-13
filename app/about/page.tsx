@@ -5,9 +5,9 @@ import SiteNav from "../components/SiteNav";
 import SiteFooter from "../components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "About — S. Chaudhary",
+  title: "About — Sandeep. C",
   description:
-    "About S. Chaudhary — a graphic and visual designer shaping brand identities, motion graphics, and visual systems from Nepal.",
+    "About Sandeep. C — a graphic and visual designer shaping brand identities, motion graphics, and visual systems from Nepal.",
 };
 
 const focusAreas = [
@@ -74,7 +74,7 @@ export default function AboutPage() {
                 </div>
                 <div className="mt-4 max-w-3xl">
                   <p className="mt-4 text-2xl font-light italic tracking-[-0.04em] text-zinc-900">
-                    S. Chaudhary
+                    Sandeep. C
                   </p>
                   <p className="mt-1 text-base font-medium uppercase tracking-[0.14em] text-emerald-600">
                     Visual Designer

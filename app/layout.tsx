@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s · wraythx",
   },
   description:
-    "Portfolio of S. Chaudhary — a graphic and visual designer crafting brand identities, motion graphics, and bold visual systems that feel clear, distinctive, and made to last.",
+    "Portfolio of Sandeep. C — a graphic and visual designer crafting brand identities, motion graphics, and bold visual systems that feel clear, distinctive, and made to last.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "wraythx",
     title: "wraythx — Visual Designer & Motion Artist",
     description:
-      "Brand identities, motion graphics, and bold visual systems by S. Chaudhary.",
+      "Brand identities, motion graphics, and bold visual systems by Sandeep. C.",
     images: [
       {
         url: `${siteUrl}${basePath}/og.png`,
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "wraythx — Visual Designer & Motion Artist",
     description:
-      "Brand identities, motion graphics, and bold visual systems by S. Chaudhary.",
+      "Brand identities, motion graphics, and bold visual systems by Sandeep. C.",
     images: [`${siteUrl}${basePath}/og.png`],
   },
   icons: {

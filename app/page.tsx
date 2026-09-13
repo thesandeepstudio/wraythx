@@ -170,7 +170,7 @@ export default function Home() {
                   className="hero-in mt-1 cursor-none text-2xl font-light italic tracking-[-0.04em] text-zinc-900 transition duration-300 hover:-translate-y-0.5 md:text-3xl"
                   style={{ animationDelay: "0.35s" }}
                 >
-                  S. Chaudhary
+                  Sandeep. C
                 </p>
                 <p
                   className="hero-in mt-1 cursor-none text-base font-medium uppercase tracking-[0.14em] text-emerald-600 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-500 md:text-lg"
