@@ -34,7 +34,6 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /wraythx
-          BUILD_TARGET: github-pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
