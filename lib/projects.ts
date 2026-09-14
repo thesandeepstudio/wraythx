@@ -54,7 +54,7 @@ export const projects: Project[] = [
     title: "NCS Edits | Motion Video Series",
     category: "Motion",
     year: "2025",
-    tools: "Editing · Sync · Polish",
+    tools: "Premiere Pro · After Effects",
     summary: "Beat-synced edits for NCS releases — cuts, transitions, and kinetic type timed to the drop.",
     image: "/assets/project-thumbnails/ncs.webp",
     link: "https://www.behance.net/gallery/240937921/Video-Editing-NCS",
