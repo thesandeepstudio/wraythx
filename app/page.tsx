@@ -380,6 +380,11 @@ export default function Home() {
           className="mx-auto max-w-6xl px-6 py-28 md:py-36 lg:px-8"
         >
           <div className="mx-auto max-w-3xl text-center">
+            <ScrollFade>
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+                About
+              </p>
+            </ScrollFade>
             <ScrollReveal
               baseRotation={0}
               enableBlur
@@ -407,6 +412,26 @@ export default function Home() {
               identities, digital interfaces, and visual systems that feel
               clear, distinctive, and made to last.
             </ScrollReveal>
+            <ScrollFade>
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
+                {["Brand systems", "Motion-first", "Print-ready", "48h replies"].map(
+                  (tag) => (
+                    <span
+                      key={tag}
+                      className="border border-zinc-200 bg-white px-3 py-1 text-xs font-medium uppercase tracking-[0.12em] text-zinc-600"
+                    >
+                      {tag}
+                    </span>
+                  ),
+                )}
+              </div>
+              <Link
+                href="/about"
+                className="mt-8 inline-flex text-sm font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-emerald-600 hover:text-emerald-600"
+              >
+                More about me →
+              </Link>
+            </ScrollFade>
           </div>
         </section>
 
