@@ -22,7 +22,7 @@ export default function SiteFooter() {
           </a>
           <div className="flex gap-6 text-zinc-600">
             <a
-              href="https://www.behance.net/daboistudio"
+              href="https://www.behance.net/daboistudio" // verified 2026-09-14: brand is wraythx, Behance handle remains daboistudio (legacy)
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Behance profile"
