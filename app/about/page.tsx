@@ -79,7 +79,7 @@ const selectedClients = [
   },
   {
     name: "Khicha Studio",
-    detail: "Character designs · illustration / animation",
+    detail: "Character designs · illustration · animation",
   },
 ];
 
