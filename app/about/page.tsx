@@ -130,6 +130,9 @@ export default function AboutPage() {
                   <p className="mt-4 text-2xl font-light italic tracking-[-0.04em] text-zinc-900">
                     Sandeep. C
                   </p>
+                  <p className="mt-2 text-sm font-medium uppercase tracking-[0.14em] text-zinc-500">
+                    Based in Kathmandu, Nepal — working worldwide
+                  </p>
                   <p className="mt-1 text-base font-medium uppercase tracking-[0.14em] text-emerald-600">
                     Graphic, Motion & Visual Designer
                   </p>
