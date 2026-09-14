@@ -530,6 +530,41 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="mx-auto max-w-6xl px-6 pb-24 lg:px-8">
+          <ScrollFade className="flex items-end justify-between gap-6">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+              How we&apos;ll work
+            </p>
+            <Link
+              href="/services"
+              className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
+            >
+              Full process →
+            </Link>
+          </ScrollFade>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {[
+              { step: "01", title: "Discover", text: "Goals, audience, and direction — locked before design starts." },
+              { step: "02", title: "Design", text: "Concepts explored and refined across the mediums that matter." },
+              { step: "03", title: "Deliver", text: "Clean, documented handoff that scales beyond day one." },
+            ].map((item) => (
+              <ScrollFade key={item.step}>
+                <div className="border-t-2 border-zinc-900 pt-6">
+                  <p className="text-sm font-medium tabular-nums text-emerald-600">
+                    {item.step}
+                  </p>
+                  <h3 className="mt-2 text-lg font-semibold tracking-[-0.02em] text-zinc-900">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-zinc-600">
+                    {item.text}
+                  </p>
+                </div>
+              </ScrollFade>
+            ))}
+          </div>
+        </section>
+
         <section
           id="testimonials"
           className="border-t border-zinc-200 bg-white"
