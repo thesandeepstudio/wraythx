@@ -288,6 +288,9 @@ export default function AboutPage() {
                 <h2 className="max-w-xl text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
                   Let&apos;s make something lasting.
                 </h2>
+                <p className="mt-4 text-sm text-zinc-500">
+                  Kathmandu, Nepal · NPT (UTC+5:45) · replies within 48h
+                </p>
                 <Link
                   href="mailto:wraythxx@gmail.com"
                   className="inline-flex w-fit bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
