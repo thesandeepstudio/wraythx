@@ -79,7 +79,7 @@ export const projects: Project[] = [
     category: "Graphic",
     year: "2024",
     tools: "Social · Content · Templates",
-    summary: "Social content system and templates for Drool.",
+    summary: "Social content system and templates for Drool — cloud kitchen brand.",
     image: "/assets/project-thumbnails/drool-social-media.jpg",
     link: "https://www.behance.net/gallery/218374849/Drool-Social-Media",
     cover:
@@ -103,7 +103,7 @@ export const projects: Project[] = [
     category: "Branding",
     year: "2024",
     tools: "Identity · Logo · Systems",
-    summary: "Logo and identity system for Drool Nepal.",
+    summary: "Logo and identity system for Drool Nepal — Nepal branch of Drool.",
     image: "/assets/project-thumbnails/drool-branding.png",
     link: "https://www.behance.net/gallery/212833621/Drool-Nepal-Branding",
     cover:

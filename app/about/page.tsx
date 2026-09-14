@@ -51,7 +51,8 @@ const selectedClients = [
   { name: "LamourFits", detail: "Branding, socials, promo visuals · clothing brand" },
   { name: "HotBox", detail: "Graphic design + social assets · clothing brand" },
   { name: "PIPE420 — Pipe King", detail: "Logo system, guidelines, promo · vape store" },
-  { name: "Drool Nepal", detail: "Logo, identity + social visuals · cloud kitchen" },
+  { name: "Drool", detail: "Social content system · cloud kitchen" },
+  { name: "Drool Nepal", detail: "Logo, identity + social visuals · cloud kitchen — Nepal branch" },
   {
     name: "Lakes & Hill Realty",
     detail: "Motion language + brand film · real estate",
