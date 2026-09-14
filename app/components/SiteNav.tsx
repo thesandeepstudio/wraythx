@@ -69,11 +69,11 @@ export default function SiteNav() {
         onClick={() => setMenuOpen((open) => !open)}
         aria-expanded={menuOpen}
         aria-controls="mobile-menu"
-        aria-label="Toggle menu"
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
         className="flex flex-col items-end gap-1.5 p-2 md:hidden"
       >
-        <span className="h-0.5 w-6 bg-zinc-900" />
-        <span className="h-0.5 w-4 bg-zinc-900" />
+        <span aria-hidden="true" className="h-0.5 w-6 bg-zinc-900" />
+        <span aria-hidden="true" className="h-0.5 w-4 bg-zinc-900" />
       </button>
 
       <div
