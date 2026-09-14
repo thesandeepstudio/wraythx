@@ -220,6 +220,9 @@ export default function AboutPage() {
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
               Experience
             </p>
+            <p className="mt-2 text-xs text-zinc-400">
+              Last updated September 2026
+            </p>
           </ScrollFade>
           <div className="mt-8 divide-y divide-zinc-200 border-t border-zinc-200">
             {experience.map((item) => (
