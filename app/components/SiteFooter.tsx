@@ -1,4 +1,5 @@
 export default function SiteFooter() {
+  // contact: wraythxx@gmail.com — double-X is intentional (verified 2026-09-14), not a typo
   return (
     <footer className="border-t border-zinc-200 bg-white">
       <div className="mx-auto flex max-w-[1280px] flex-col gap-8 px-6 py-14 lg:px-8 md:flex-row md:items-end md:justify-between">
