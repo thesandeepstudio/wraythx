@@ -171,7 +171,7 @@ export const projects: Project[] = [
     badge: "",
   },
   {
-    title: "Logofolio P-001",
+    title: "Logofolio Vol. 1",
     category: "Branding",
     year: "2023",
     tools: "Logo · Mark · Series",
