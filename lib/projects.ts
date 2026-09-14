@@ -39,11 +39,11 @@ export const projects: Project[] = [
     badge: "",
   },
   {
-    title: "Lamour Fits | Tee Designs",
+    title: "LamourFits | Tee Designs",
     category: "Graphic",
     year: "2025",
     tools: "Print · Illustration · Apparel",
-    summary: "Illustrated tee artwork for Lamour Fits.",
+    summary: "Illustrated tee artwork for LamourFits.",
     image: "/assets/project-thumbnails/lamour-fits.jpg",
     link: "https://www.behance.net/gallery/241271361/Graphic-Tee-Designs",
     cover:
