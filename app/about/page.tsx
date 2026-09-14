@@ -46,44 +46,49 @@ const experience = [
   },
 ];
 
+const BEHANCE_PROFILE = "https://www.behance.net/daboistudio";
+
 const selectedClients = [
-  { name: "Plutus Paradox", detail: "Branding + printable graphics · clothing brand" },
-  { name: "LamourFits", detail: "Branding, socials, promo visuals · clothing brand" },
-  { name: "HotBox", detail: "Graphic design + social assets · clothing brand" },
-  { name: "PIPE420 — Pipe King", detail: "Logo system, guidelines, promo · vape store" },
-  { name: "Drool", detail: "Social content system · cloud kitchen" },
-  { name: "Drool Nepal", detail: "Logo, identity + social visuals · cloud kitchen — Nepal branch" },
+  { name: "Plutus Paradox", detail: "Branding + printable graphics · clothing brand", link: "https://www.behance.net/gallery/202694555/PLUTUS-PARADOX" },
+  { name: "LamourFits", detail: "Branding, socials, promo visuals · clothing brand", link: "https://www.behance.net/gallery/241271361/Graphic-Tee-Designs" },
+  { name: "HotBox", detail: "Graphic design + social assets · clothing brand", link: "https://www.behance.net/gallery/236697445/HotBox-Buddha-Design" },
+  { name: "PIPE420 — Pipe King", detail: "Logo system, guidelines, promo · vape store", link: "https://www.behance.net/gallery/246128103/PIPE420-Brand-Guidelines" },
+  { name: "Drool", detail: "Social content system · cloud kitchen", link: "https://www.behance.net/gallery/218374849/Drool-Social-Media" },
+  { name: "Drool Nepal", detail: "Logo, identity + social visuals · cloud kitchen — Nepal branch", link: "https://www.behance.net/gallery/212833621/Drool-Nepal-Branding" },
   {
     name: "Lakes & Hill Realty",
     detail: "Motion language + brand film · real estate",
+    link: "https://www.behance.net/gallery/251462951/Motion-Design-for-Lakes-Hill-Realty",
   },
   {
     name: "Chimley Orchards",
     detail: "Premium label + packaging · orchards",
+    link: "https://www.behance.net/gallery/212049903/Chimley-Orchards-Packaging-design",
   },
   {
     name: "Jawaaf Consulting Academy",
     detail: "Social design system · education",
+    link: "https://www.behance.net/gallery/240885695/Jawaaf-Consulting-Academy-Social-Media-Design",
   },
   {
     name: "Stellar Music & Events",
     detail: "Event branding, motion graphics, promos",
-  },
-  {
-    name: "Nepal Cosmetic Surgery",
-    detail: "Motion videos + social posts · clinic",
+    link: BEHANCE_PROFILE,
   },
   {
     name: "Nepal Cosmetic Surgery",
     detail: "Motion videos + social posts · clinic — see NCS Edits",
+    link: "https://www.behance.net/gallery/240937921/Video-Editing-NCS",
   },
   {
     name: "Tato Na Charo",
     detail: "Thumbnails, logo, motion graphics · comedy channel",
+    link: BEHANCE_PROFILE,
   },
   {
     name: "Khicha Studio",
     detail: "Character designs · illustration · animation",
+    link: BEHANCE_PROFILE,
   },
 ];
 
@@ -249,12 +254,18 @@ export default function AboutPage() {
             <div className="mt-8 grid gap-2 md:grid-cols-2 lg:grid-cols-3">
               {selectedClients.map((client) => (
                 <ScrollFade key={client.name}>
-                  <div className="border border-zinc-200 bg-white px-5 py-4 transition duration-300 hover:-translate-y-0.5 hover:border-emerald-600 hover:bg-emerald-50/50">
+                  <a
+                    href={client.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${client.name} — view on Behance`}
+                    className="block border border-zinc-200 bg-white px-5 py-4 transition duration-300 hover:-translate-y-0.5 hover:border-emerald-600 hover:bg-emerald-50/50"
+                  >
                     <p className="text-sm font-semibold tracking-[-0.01em] text-zinc-900">
-                      {client.name}
+                      {client.name} ↗
                     </p>
                     <p className="mt-1 text-sm text-zinc-500">{client.detail}</p>
-                  </div>
+                  </a>
                 </ScrollFade>
               ))}
             </div>
