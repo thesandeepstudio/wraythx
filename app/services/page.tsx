@@ -181,7 +181,7 @@ export default function ServicesPage() {
             <div className="border border-zinc-200 bg-[linear-gradient(135deg,_rgba(24,24,27,0.03),_rgba(255,255,255,0.85),_rgba(24,24,27,0.04))] p-8 md:p-12">
               <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
                 <h2 className="max-w-xl text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
-                  Need a standout look for your brand?
+                  Give your brand a standout look.
                 </h2>
                 <Link
                   href="mailto:wraythxx@gmail.com"
