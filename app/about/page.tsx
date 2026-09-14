@@ -110,9 +110,9 @@ export default function AboutPage() {
           <div className="relative mx-auto max-w-[1280px]">
             <div className="px-6 py-16 md:px-0 md:py-20">
                 <div className="flex items-start justify-between gap-6">
-                  <h1 className="text-4xl font-semibold uppercase leading-[1.05] tracking-[-0.05em] text-zinc-900 md:text-6xl lg:text-7xl">
-                    WRAYTHX
-                  </h1>
+                    <h1 className="text-4xl font-semibold uppercase leading-[1.05] tracking-[-0.05em] text-zinc-900 md:text-6xl lg:text-7xl">
+                      Wraythx
+                    </h1>
                   <span className="pt-2 text-xs uppercase tracking-[0.2em] text-zinc-500">
                     Est. 2022
                   </span>

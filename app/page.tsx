@@ -310,7 +310,7 @@ export default function Home() {
                   className="hero-in mt-7 cursor-none text-4xl font-medium uppercase tracking-[-0.04em] transition duration-300 hover:-translate-y-0.5 md:text-5xl"
                   style={{ animationDelay: "0.25s" }}
                 >
-                  WRAYTHX
+                  Wraythx
                 </h1>
                 <p
                   className="hero-in mt-1 cursor-none text-2xl font-light italic tracking-[-0.04em] text-zinc-900 transition duration-300 hover:-translate-y-0.5 md:text-3xl"
