@@ -33,7 +33,7 @@ export const projects: Project[] = [
     tools: "Logo · Guidelines · Identity",
     summary: "Logo system and full brand guidelines for PIPE420 — the Pipe King vape store.",
     image: "/assets/project-thumbnails/pipe420.png",
-    link: "https://www.behance.net/gallery/246128103/PIPE420-Brand-Guidlines",
+    link: "https://www.behance.net/gallery/246128103/PIPE420-Brand-Guidelines",
     cover:
       "h-80 bg-[linear-gradient(160deg,_#fbbf24_0%,_#92400e_55%,_#292524_100%)]",
     badge: "",
