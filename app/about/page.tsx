@@ -30,7 +30,7 @@ const experience = [
     period: "2024 — 2025",
     role: "Graphic & Motion Designer",
     place: "Kopila Dynamic Marketing Agency",
-    note: "Marketing visuals, motion graphics, and campaign assets for regional + international brands.",
+    note: "Full-time — marketing visuals, motion graphics, and campaign assets for regional + international brands.",
   },
   {
     period: "2023 — 2024",
