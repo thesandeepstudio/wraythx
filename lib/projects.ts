@@ -51,7 +51,7 @@ export const projects: Project[] = [
     badge: "",
   },
   {
-    title: "NCS Edits — Motion Video Series",
+    title: "NCS Edits | Motion Video Series",
     category: "Motion",
     year: "2025",
     tools: "Editing · Sync · Polish",
@@ -87,7 +87,7 @@ export const projects: Project[] = [
     badge: "",
   },
   {
-    title: "Plutus Paradox — Clothing Brand",
+    title: "Plutus Paradox | Clothing Brand",
     category: "Branding",
     year: "2024",
     tools: "Brand · Apparel · Identity",
@@ -111,7 +111,7 @@ export const projects: Project[] = [
     badge: "",
   },
   {
-    title: "Chimley Orchards — Packaging Design",
+    title: "Chimley Orchards | Packaging Design",
     category: "Packaging",
     year: "2024",
     tools: "Label · Print · Packaging",
@@ -219,7 +219,7 @@ export const projects: Project[] = [
     badge: "",
   },
   {
-    title: "Jawaaf Consulting Academy — Social Media Design",
+    title: "Jawaaf Consulting Academy | Social Media Design",
     category: "Graphic",
     year: "2025",
     tools: "Social · Content · Templates",
@@ -234,8 +234,8 @@ export const projects: Project[] = [
 
 export const featuredProjectTitles = [
   "Motion Design for Lakes & Hill Realty",
-  "NCS Edits — Motion Video Series",
-  "Plutus Paradox — Clothing Brand",
+  "NCS Edits | Motion Video Series",
+  "Plutus Paradox | Clothing Brand",
 ];
 
 export function slugify(title: string): string {
