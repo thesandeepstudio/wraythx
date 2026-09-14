@@ -8,7 +8,7 @@ export default function SiteFooter() {
             wraythx
           </p>
           <p className="mt-2 max-w-xs text-sm leading-6 text-zinc-500">
-            Sandeep. C — graphic &amp; visual designer making bold ideas feel
+            Sandeep. C — graphic and visual designer making bold ideas feel
             clear, distinctive, and lasting.
           </p>
         </div>
