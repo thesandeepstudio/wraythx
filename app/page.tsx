@@ -324,6 +324,12 @@ export default function Home() {
                 >
                   Visual Designer
                 </p>
+                <p
+                  className="hero-in mt-3 text-xs font-medium uppercase tracking-[0.2em] text-zinc-500"
+                  style={{ animationDelay: "0.5s" }}
+                >
+                  Nepal · worldwide
+                </p>
               </div>
 
               <div className="hidden lg:flex lg:items-center lg:justify-end">
