@@ -16,7 +16,11 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
 
   return (
     <>
-      <div className="mt-10 flex flex-wrap items-center gap-2 md:gap-8">
+      <div
+        role="group"
+        aria-label="Filter projects by category"
+        className="mt-10 flex flex-wrap items-center gap-2 md:gap-8"
+      >
         {filters.map((filter) => (
           <button
             key={filter}

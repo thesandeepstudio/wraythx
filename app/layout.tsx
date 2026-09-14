@@ -28,6 +28,11 @@ export const metadata: Metadata = {
   },
   description:
     "Portfolio of Sandeep. C — a graphic and visual designer crafting brand identities, motion graphics, and bold visual systems that feel clear, distinctive, and made to last.",
+  authors: [{ name: "Sandeep. C", url: siteUrl }],
+  creator: "Sandeep. C",
+  publisher: "wraythx",
+  formatDetection: { telephone: false },
+  alternates: { canonical: `${siteUrl}${basePath}/` },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -36,14 +41,14 @@ export const metadata: Metadata = {
     title: "wraythx — Visual Designer & Motion Artist",
     description:
       "Brand identities, motion graphics, and bold visual systems by Sandeep. C.",
-    images: [
-      {
-        url: `${siteUrl}${basePath}/og.png`,
-        width: 1200,
-        height: 630,
-        alt: "wraythx",
-      },
-    ],
+      images: [
+        {
+          url: `${siteUrl}${basePath}/og.png`,
+          width: 1200,
+          height: 630,
+          alt: "wraythx — Sandeep. C, visual designer: branding, motion, and graphic work",
+        },
+      ],
   },
   twitter: {
     card: "summary_large_image",
@@ -162,6 +167,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-white text-zinc-900">
+        <link rel="preconnect" href="https://www.behance.net" />
+        <link rel="preconnect" href="https://www.instagram.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

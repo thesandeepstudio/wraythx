@@ -116,8 +116,13 @@ function AnimatedStat({
   }, [value]);
 
   return (
-    <div ref={ref} className="rounded-none bg-white p-6 text-center">
-      <div className="text-3xl font-semibold text-zinc-900">
+    <div
+      ref={ref}
+      role="img"
+      aria-label={`${value}${suffix} ${label}`}
+      className="rounded-none bg-white p-6 text-center"
+    >
+      <div aria-hidden="true" className="text-3xl font-semibold text-zinc-900">
         {count}
         {suffix}
       </div>
