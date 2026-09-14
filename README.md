@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# wraythx — Portfolio
 
-## Getting Started
+Portfolio of **Sandeep. C** — graphic and visual designer (branding, motion graphics, video editing, graphic design, social media, packaging). Built with Next.js 16 + React 19 + Tailwind 4 + GSAP.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # static export → out/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Static export (`output: "export"`) → GitHub Pages at `/wraythx` via `.github/workflows/deploy.yml`. `NEXT_PUBLIC_BASE_PATH` + `NEXT_PUBLIC_SITE_URL` set in CI.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content
 
-## Learn More
+- `lib/projects.ts` — 18 projects (title/category/year/tools/summary/image/link) + featured list. Thumbnails link out to Behance.
+- `public/assets/project-thumbnails/` — keep covers ≤200KB (WebP preferred), kebab-case names.
+- `public/og.png` — 1200×630 social card.
 
-To learn more about Next.js, take a look at the following resources:
+## Notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Sharp corners only, no rounded UI. Bio emphasis = italic emerald.
+- After any change: `npx tsc --noEmit`, `npm run lint`, `npm run build` — then commit + push (one commit per task).
