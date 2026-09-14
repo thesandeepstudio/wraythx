@@ -17,31 +17,37 @@ const services = [
     title: "Branding & Identity",
     text: "Logos, guidelines, and full identity systems that make your brand unmistakable.",
     detail: "Logo · Guidelines · Identity",
+    price: "Starting at $799",
   },
   {
     title: "Motion Graphics",
     text: "Motion systems, promotions, and animated identities that bring still designs to life.",
     detail: "Motion · Ads · Promo",
+    price: "Starting at $599",
   },
   {
     title: "Video Editing",
     text: "Rhythmic, polished edits for music videos and content that hold attention.",
     detail: "Editing · Sync · Polish",
+    price: "Starting at $299",
   },
   {
     title: "Graphic Design",
     text: "Tees, posters, and print that carry attitude and communicate clearly.",
     detail: "Poster · Print · Illustration",
+    price: "Starting at $199",
   },
   {
     title: "Social Media",
     text: "Weekly content systems, ad creatives, and templates built to convert.",
     detail: "Social · Content · Templates",
+    price: "Starting at $399/mo",
   },
   {
     title: "Packaging Design",
     text: "Label and print design that feels premium from shelf to hand.",
     detail: "Label · Print · Packaging",
+    price: "Starting at $499",
   },
 ];
 
@@ -122,9 +128,23 @@ export default function ServicesPage() {
                       {service.text}
                     </p>
                   </div>
-                  <p className="mt-8 border-t border-zinc-200 pt-4 text-xs uppercase tracking-[0.16em] text-emerald-600">
-                    {service.detail}
-                  </p>
+                  <div className="mt-8 border-t border-zinc-200 pt-4">
+                    <p className="text-xs uppercase tracking-[0.16em] text-emerald-600">
+                      {service.detail}
+                    </p>
+                    <div className="mt-4 flex items-center justify-between gap-3">
+                      <span className="inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs font-medium tracking-wide text-zinc-700">
+                        {service.price}
+                      </span>
+                      <a
+                        href={`mailto:wraythxx@gmail.com?subject=${encodeURIComponent(`Enquiry: ${service.title} — ${service.price}`)}`}
+                        aria-label={`Enquire about ${service.title}`}
+                        className="inline-flex items-center text-xs font-medium tracking-wide text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-zinc-900"
+                      >
+                        Enquire →
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </ScrollFade>
             ))}
