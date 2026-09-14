@@ -126,6 +126,145 @@ function AnimatedStat({
   );
 }
 
+const PROJECT_TYPES = [
+  "Branding & Identity",
+  "Motion Graphics",
+  "Video Editing",
+  "Graphic Design",
+  "Social Media",
+  "Packaging Design",
+  "Other",
+] as const;
+
+function ContactForm() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [projectType, setProjectType] = useState<(typeof PROJECT_TYPES)[number]>(
+    PROJECT_TYPES[0]
+  );
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = `Enquiry: ${projectType} — ${name || "New lead"}`;
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Project type: ${projectType}`,
+      "",
+      "Message:",
+      message,
+      "",
+      "—",
+      `Sent via wraythx contact form`,
+    ].join("\n");
+    const mailto = `mailto:wraythxx@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+  };
+
+  return (
+    <form
+      onSubmit={handleSubmit}
+      className="border border-zinc-200 bg-white p-6 md:p-8"
+      aria-label="Contact form"
+    >
+      <div className="flex items-center justify-between gap-4 border-b border-zinc-100 pb-4">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">
+          Send an enquiry
+        </p>
+        <span className="inline-flex items-center border border-emerald-100 bg-emerald-50 px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.12em] text-emerald-700">
+          48h reply · NPT
+        </span>
+      </div>
+
+      <div className="mt-6 grid gap-5">
+        <div className="grid gap-5 md:grid-cols-2">
+          <label className="block">
+            <span className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-600">
+              Name
+            </span>
+            <input
+              type="text"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Your name"
+              className="mt-2 w-full rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-emerald-600 focus:outline-none focus:ring-0"
+            />
+          </label>
+          <label className="block">
+            <span className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-600">
+              Email
+            </span>
+            <input
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="you@company.com"
+              className="mt-2 w-full rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-emerald-600 focus:outline-none focus:ring-0"
+            />
+          </label>
+        </div>
+
+        <label className="block">
+          <span className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-600">
+            Project type
+          </span>
+          <select
+            value={projectType}
+            onChange={(e) =>
+              setProjectType(e.target.value as typeof projectType)
+            }
+            className="mt-2 w-full rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm text-zinc-900 focus:border-emerald-600 focus:outline-none focus:ring-0"
+          >
+            {PROJECT_TYPES.map((t) => (
+              <option key={t} value={t}>
+                {t}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className="block">
+          <span className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-600">
+            Message
+          </span>
+          <textarea
+            required
+            rows={4}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Goals, timeline, budget range…"
+            className="mt-2 w-full resize-none rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm leading-6 text-zinc-900 placeholder:text-zinc-400 focus:border-emerald-600 focus:outline-none focus:ring-0"
+          />
+        </label>
+
+        <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center">
+          <button
+            type="submit"
+            className="inline-flex w-full items-center justify-center rounded-none bg-zinc-900 px-6 py-3 text-sm font-medium tracking-wide text-white transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-600 sm:w-auto"
+          >
+            Send enquiry →
+          </button>
+          <a
+            href="https://cal.com/wraythx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-full items-center justify-center rounded-none border border-zinc-200 bg-white px-6 py-3 text-sm font-medium tracking-wide text-zinc-900 transition hover:border-zinc-300 sm:w-auto"
+          >
+            Book a call instead
+          </a>
+        </div>
+        <p className="text-xs leading-5 text-zinc-400">
+          Opens your email client with a pre-filled message to
+          wraythxx@gmail.com — no data stored.
+        </p>
+      </div>
+    </form>
+  );
+}
+
 export default function Home() {
   return (
     <ClickSpark
@@ -412,21 +551,55 @@ export default function Home() {
           className="border-t border-zinc-200 bg-zinc-50/50"
         >
           <div className="mx-auto max-w-6xl px-6 py-24 md:py-32 lg:px-8">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
-              Let&apos;s work together
-            </p>
-            <div className="mt-10 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
-              <h2 className="max-w-2xl text-4xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-6xl">
-                Need a standout
-                <br />
-                digital presence?
-              </h2>
-              <a
-                href="mailto:wraythxx@gmail.com"
-                className="inline-flex w-fit rounded-none bg-zinc-900 px-8 py-4 text-sm font-medium uppercase tracking-[0.14em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-600"
-              >
-                wraythxx@gmail.com
-              </a>
+            <ScrollFade>
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+                Let&apos;s work together
+              </p>
+            </ScrollFade>
+            <div className="mt-8 grid gap-10 lg:grid-cols-[1.05fr_1.35fr] lg:gap-12">
+              <ScrollFade>
+                <div>
+                  <h2 className="max-w-xl text-4xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
+                    Start a project
+                    <br />
+                    <span className="italic font-light text-emerald-600">
+                      with wraythx
+                    </span>
+                  </h2>
+                  <p className="mt-6 max-w-md text-base leading-7 text-zinc-600">
+                    Brand, motion, or content — tell us what you&apos;re
+                    building. Replies within 48h (NPT).
+                  </p>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <a
+                      href="https://cal.com/wraythx"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Book a call on Cal.com"
+                      className="inline-flex items-center rounded-none bg-emerald-600 px-6 py-3 text-sm font-medium tracking-wide text-white transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-700"
+                    >
+                      Book a call →
+                    </a>
+                    <a
+                      href="mailto:wraythxx@gmail.com"
+                      aria-label="Email wraythx"
+                      className="inline-flex items-center rounded-none border border-zinc-200 bg-white px-6 py-3 text-sm font-medium tracking-wide text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300"
+                    >
+                      wraythxx@gmail.com
+                    </a>
+                  </div>
+                  <p className="mt-4 text-xs leading-5 text-zinc-500">
+                    Booking opens Cal.com in a new tab — if unavailable, the
+                    form sends via your email client.
+                  </p>
+                  <p className="mt-2 text-xs leading-5 text-zinc-400">
+                    Projects from $199. Prefer DM? Instagram @wraythx.
+                  </p>
+                </div>
+              </ScrollFade>
+              <ScrollFade>
+                <ContactForm />
+              </ScrollFade>
             </div>
           </div>
         </section>
