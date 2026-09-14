@@ -25,16 +25,16 @@ export default function SiteFooter() {
             <a
               href="https://www.behance.net/daboistudio" // verified 2026-09-14: brand is wraythx, Behance handle remains daboistudio (legacy)
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer me"
               aria-label="Behance profile"
               className="transition duration-300 hover:text-emerald-600"
             >
               Behance
             </a>
             <a
-              href="https://www.instagram.com/wraythx/?hl=en"
+              href="https://www.instagram.com/wraythx/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer me"
               aria-label="Instagram profile"
               className="transition duration-300 hover:text-emerald-600"
             >

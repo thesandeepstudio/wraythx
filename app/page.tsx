@@ -691,16 +691,16 @@ export default function Home() {
                     <a
                       href="https://www.behance.net/daboistudio"
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener noreferrer me"
                       aria-label="Behance profile"
                       className="transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
                     >
                       Behance ↗
                     </a>
                     <a
-                      href="https://www.instagram.com/wraythx/?hl=en"
+                      href="https://www.instagram.com/wraythx/"
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener noreferrer me"
                       aria-label="Instagram profile"
                       className="transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
                     >

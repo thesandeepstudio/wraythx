@@ -300,9 +300,9 @@ export default function AboutPage() {
                 <p className="mt-4 text-sm text-zinc-500">
                   Prefer DMs?{" "}
                   <a
-                    href="https://www.instagram.com/wraythx/?hl=en"
+                    href="https://www.instagram.com/wraythx/"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer me"
                     className="font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-emerald-600 hover:text-emerald-600"
                   >
                     Instagram @wraythx
