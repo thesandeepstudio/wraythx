@@ -195,7 +195,7 @@ export const projects: Project[] = [
     badge: "",
   },
   {
-    title: "The Game? | Motion Graphic",
+    title: "The Game | Motion Graphic",
     category: "Motion",
     year: "2023",
     tools: "Motion · Animation · Design",
