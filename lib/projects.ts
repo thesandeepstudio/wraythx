@@ -63,11 +63,11 @@ export const projects: Project[] = [
     badge: "",
   },
   {
-    title: "Hotbox | Buddha Design",
+    title: "HotBox | Buddha Design",
     category: "Graphic",
     year: "2025",
     tools: "Art · Print · Psychedelic",
-    summary: "Psychedelic Buddha artwork for Hotbox.",
+    summary: "Psychedelic Buddha artwork for HotBox.",
     image: "/assets/project-thumbnails/hotbox.jpg",
     link: "https://www.behance.net/gallery/236697445/HotBox-Buddha-Design",
     cover:
