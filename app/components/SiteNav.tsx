@@ -110,6 +110,24 @@ export default function SiteNav() {
           >
             wraythxx@gmail.com
           </a>
+          <div className="mt-4 flex gap-6 border-t border-zinc-100 pt-4 text-sm font-medium text-zinc-900">
+            <a
+              href="https://www.behance.net/daboistudio"
+              target="_blank"
+              rel="noopener noreferrer me"
+              onClick={() => setMenuOpen(false)}
+            >
+              Behance
+            </a>
+            <a
+              href="https://www.instagram.com/wraythx/"
+              target="_blank"
+              rel="noopener noreferrer me"
+              onClick={() => setMenuOpen(false)}
+            >
+              Instagram
+            </a>
+          </div>
         </nav>
       </div>
     </header>
