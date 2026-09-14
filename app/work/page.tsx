@@ -33,6 +33,13 @@ export default function WorkPage() {
                 <span>Portfolio</span>
                 <span>2022 — Present</span>
               </ScrollFade>
+              <h1 className="mt-8 text-4xl font-semibold tracking-[-0.04em] text-zinc-900 md:text-5xl">
+                Selected Work
+              </h1>
+              <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-600">
+                Branding, motion graphics, video editing and graphic design — 18
+                projects from 2022 to present.
+              </p>
             </div>
           </div>
         </section>
