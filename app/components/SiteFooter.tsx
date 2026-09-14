@@ -14,6 +14,26 @@ export default function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-3 text-sm md:items-end">
+          <nav aria-label="Footer" className="flex gap-6 text-zinc-600">
+            <a
+              href="/about"
+              className="transition duration-300 hover:text-emerald-600"
+            >
+              About
+            </a>
+            <a
+              href="/work"
+              className="transition duration-300 hover:text-emerald-600"
+            >
+              Work
+            </a>
+            <a
+              href="/services"
+              className="transition duration-300 hover:text-emerald-600"
+            >
+              Services
+            </a>
+          </nav>
           <a
             href="mailto:wraythxx@gmail.com"
             aria-label="Email wraythx"
