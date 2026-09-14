@@ -286,11 +286,11 @@ export default function Home() {
                   className="hero-in max-w-[180px] text-sm uppercase leading-[1.7] tracking-[0.06em] text-zinc-700 transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
                   style={{ animationDelay: "0.05s" }}
                 >
-                  ART
+                  BRANDING
                   <br />
                   MOTION
                   <br />
-                  GRAPHIC
+                  EDITING
                 </p>
               </div>
 
@@ -331,11 +331,11 @@ export default function Home() {
                   className="hero-in max-w-[180px] text-right text-sm uppercase leading-[1.7] tracking-[0.06em] text-zinc-700 transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
                   style={{ animationDelay: "0.55s" }}
                 >
-                  DESIGN
+                  GRAPHIC
                   <br />
-                  EDITING
+                  SOCIAL
                   <br />
-                  CREATIVE
+                  PACKAGING
                 </p>
               </div>
             </div>
