@@ -75,7 +75,7 @@ const selectedClients = [
   },
   {
     name: "Tato Na Charo",
-    detail: "Thumbnails, logo, motion · comedy channel",
+    detail: "Thumbnails, logo, motion graphics · comedy channel",
   },
   {
     name: "Khicha Studio",
