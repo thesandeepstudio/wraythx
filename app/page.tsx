@@ -486,6 +486,9 @@ export default function Home() {
                     {project.title}
                   </h3>
                   <p className="mt-1 text-sm text-zinc-500">{project.tools}</p>
+                  <p className="mt-2 text-sm leading-6 text-zinc-600">
+                    {project.summary}
+                  </p>
                 </a>
               </ScrollFade>
             ))}
