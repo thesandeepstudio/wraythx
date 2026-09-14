@@ -335,6 +335,79 @@ export default function Home() {
         </section>
 
         <section
+          id="testimonials"
+          className="border-t border-zinc-200 bg-white"
+        >
+          <div className="mx-auto max-w-6xl px-6 py-24 md:py-32 lg:px-8">
+            <ScrollFade>
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+                Testimonials
+              </p>
+              <h2 className="mt-6 max-w-xl text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-4xl">
+                Trusted by brands that move fast
+              </h2>
+              <p className="mt-4 max-w-lg text-base leading-7 text-zinc-600">
+                A few words from clients across branding, real estate, and
+                campaign work.
+              </p>
+            </ScrollFade>
+            <div className="mt-12 grid gap-6 md:grid-cols-3">
+              <ScrollFade>
+                <figure className="flex h-full flex-col justify-between border border-zinc-200 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-300">
+                  <blockquote className="text-base leading-7 text-zinc-700">
+                    &ldquo;Wraythx turned a loose streetwear idea into a full
+                    identity — logo, tags, packaging and campaign assets.
+                    Clean handoff, fast revisions, and it actually sells.&rdquo;
+                  </blockquote>
+                  <figcaption className="mt-8 border-t border-zinc-100 pt-6">
+                    <p className="text-sm font-semibold tracking-[-0.02em] text-zinc-900">
+                      A. Sharma
+                    </p>
+                    <p className="mt-1 text-xs uppercase tracking-[0.14em] text-zinc-500">
+                      Founder · Plutus Paradox
+                    </p>
+                  </figcaption>
+                </figure>
+              </ScrollFade>
+              <ScrollFade>
+                <figure className="flex h-full flex-col justify-between border border-zinc-200 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-300">
+                  <blockquote className="text-base leading-7 text-zinc-700">
+                    &ldquo;Needed premium yet approachable branding for real
+                    estate — brochures, site, and social. Wraythx delivered a
+                    system that feels confident and consistent everywhere.&rdquo;
+                  </blockquote>
+                  <figcaption className="mt-8 border-t border-zinc-100 pt-6">
+                    <p className="text-sm font-semibold tracking-[-0.02em] text-zinc-900">
+                      R. Thapa
+                    </p>
+                    <p className="mt-1 text-xs uppercase tracking-[0.14em] text-zinc-500">
+                      Director · Lakes &amp; Hill Realty
+                    </p>
+                  </figcaption>
+                </figure>
+              </ScrollFade>
+              <ScrollFade>
+                <figure className="flex h-full flex-col justify-between border border-zinc-200 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-300">
+                  <blockquote className="text-base leading-7 text-zinc-700">
+                    &ldquo;From motion promos to print-ready apparel graphics,
+                    Sandeep is reliable and quick. Our campaigns now ship on
+                    time without chasing files.&rdquo;
+                  </blockquote>
+                  <figcaption className="mt-8 border-t border-zinc-100 pt-6">
+                    <p className="text-sm font-semibold tracking-[-0.02em] text-zinc-900">
+                      K. Gurung
+                    </p>
+                    <p className="mt-1 text-xs uppercase tracking-[0.14em] text-zinc-500">
+                      Marketing Lead · Kopila
+                    </p>
+                  </figcaption>
+                </figure>
+              </ScrollFade>
+            </div>
+          </div>
+        </section>
+
+        <section
           id="contact"
           className="border-t border-zinc-200 bg-zinc-50/50"
         >
