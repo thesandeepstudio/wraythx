@@ -159,11 +159,11 @@ export const projects: Project[] = [
     badge: "",
   },
   {
-    title: "Pizza | Social Media Ads Design",
+    title: "Pizza Co. | Social Media Ads Design",
     category: "Graphic",
     year: "2022",
     tools: "Ads · Social · Content",
-    summary: "Appetizing ad creatives for a pizza brand's social feeds.",
+    summary: "Appetizing ad creatives for Pizza Co.'s social feeds.",
     image: "/assets/project-thumbnails/pizza.webp",
     link: "https://www.behance.net/gallery/177895085/Pizza-Social-Media-Ads-Design",
     cover:
