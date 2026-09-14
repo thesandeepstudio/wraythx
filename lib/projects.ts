@@ -236,6 +236,9 @@ export const featuredProjectTitles = [
   "Motion Design for Lakes & Hill Realty",
   "NCS Edits | Motion Video Series",
   "Plutus Paradox | Clothing Brand",
+  "PIPE420 | Brand Guidelines",
+  "LamourFits | Tee Designs",
+  "HotBox | Buddha Design",
 ];
 
 export function slugify(title: string): string {
