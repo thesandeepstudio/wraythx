@@ -24,7 +24,7 @@ const experience = [
     period: "2025 — Present",
     role: "Graphic, Motion & Visual Designer",
     place: "wraythx · Freelance",
-    note: "Leading branding, motion, and visual design — creative direction and full visual systems for startups, fashion, events, and ecommerce.",
+    note: "Leading branding, motion, and visual design — creative direction and full visual systems for startups, fashion brands, events, and ecommerce.",
   },
   {
     period: "2024 — 2025",
