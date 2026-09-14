@@ -8,7 +8,7 @@ import ScrollReveal from "./ScrollReveal";
 import ScrollFade from "./components/ScrollFade";
 import SiteNav from "./components/SiteNav";
 import SiteFooter from "./components/SiteFooter";
-import { projects, featuredProjectTitles, projectHref } from "../lib/projects";
+import { projects, featuredProjectTitles } from "../lib/projects";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -409,8 +409,10 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-3">
             {featuredProjects.map((project) => (
               <ScrollFade key={project.title} className="block">
-                <Link
-                  href={projectHref(project.title)}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group block"
                 >
                   <div className="overflow-hidden border border-zinc-200 bg-zinc-100">
@@ -432,7 +434,7 @@ export default function Home() {
                     {project.title}
                   </h3>
                   <p className="mt-1 text-sm text-zinc-500">{project.tools}</p>
-                </Link>
+                </a>
               </ScrollFade>
             ))}
           </div>

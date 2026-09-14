@@ -2,9 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import type { Project } from "@/lib/projects";
-import { projectHref } from "@/lib/projects";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -38,9 +36,11 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
 
       <div className="mt-0 columns-1 gap-6 sm:columns-2 lg:columns-3">
         {visible.map((project) => (
-          <Link
+          <a
             key={project.title}
-            href={projectHref(project.title)}
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group mb-6 block break-inside-avoid"
           >
             <div
@@ -84,7 +84,7 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
                 </div>
               </div>
             </div>
-          </Link>
+          </a>
         ))}
       </div>
     </>
