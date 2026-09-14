@@ -330,6 +330,13 @@ export default function Home() {
                 >
                   Nepal · worldwide
                 </p>
+                <p
+                  className="hero-in mt-4 inline-flex items-center gap-2 border border-emerald-100 bg-emerald-50 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-emerald-700"
+                  style={{ animationDelay: "0.55s" }}
+                >
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                  Available for new projects
+                </p>
               </div>
 
               <div className="hidden lg:flex lg:items-center lg:justify-end">
