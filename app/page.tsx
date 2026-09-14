@@ -32,15 +32,15 @@ const stats = [
 const services = [
   {
     title: "Branding & Identity",
-    text: "Logos, guidelines, and identity systems that make you unmistakable.",
+    text: "Logos, guidelines, and full identity systems that make your brand unmistakable.",
   },
   {
     title: "Motion Graphics",
-    text: "Promos, ads, and animated identities that bring ideas to life.",
+    text: "Motion systems, promotions, and animated identities that bring still designs to life.",
   },
   {
     title: "Video Editing",
-    text: "Rhythmic edits for music videos and content that hold attention.",
+    text: "Rhythmic, polished edits for music videos and content that hold attention.",
   },
   {
     title: "Graphic Design",
@@ -48,11 +48,11 @@ const services = [
   },
   {
     title: "Social Media",
-    text: "Content systems and ad creatives built to convert.",
+    text: "Weekly content systems, ad creatives, and templates built to convert.",
   },
   {
     title: "Packaging Design",
-    text: "Labels and print that feel premium from shelf to hand.",
+    text: "Label and print design that feels premium from shelf to hand.",
   },
 ];
 
