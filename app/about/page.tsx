@@ -225,7 +225,10 @@ export default function AboutPage() {
         </section>
 
         <section className="border-t border-zinc-200 bg-white">
-          <div className="mx-auto max-w-[1280px] px-6 py-24 md:py-32 lg:px-8">
+          <div
+            id="clients"
+            className="mx-auto max-w-[1280px] scroll-mt-24 px-6 py-24 md:py-32 lg:px-8"
+          >
             <ScrollFade>
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
                 Selected clients & projects

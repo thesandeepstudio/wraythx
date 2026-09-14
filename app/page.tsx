@@ -24,9 +24,9 @@ const featuredProjects = featuredProjectTitles
   .filter((p): p is (typeof projects)[number] => p !== null);
 
 const stats = [
-  { value: 4, suffix: "+", label: "Years experience" },
-  { value: 18, suffix: "+", label: "Projects delivered" },
-  { value: 12, suffix: "+", label: "Happy clients" },
+  { value: 4, suffix: "+", label: "Years experience", href: "/about" },
+  { value: 18, suffix: "+", label: "Projects delivered", href: "/work" },
+  { value: 12, suffix: "+", label: "Happy clients", href: "/about#clients" },
 ];
 
 const services = [
@@ -359,11 +359,17 @@ export default function Home() {
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 py-8 md:grid-cols-3 lg:px-8">
             {stats.map((stat) => (
               <ScrollFade key={stat.label}>
-                <AnimatedStat
-                  value={stat.value}
-                  suffix={stat.suffix}
-                  label={stat.label}
-                />
+                <Link
+                  href={stat.href}
+                  aria-label={`${stat.label} — see proof`}
+                  className="block transition duration-300 hover:-translate-y-0.5"
+                >
+                  <AnimatedStat
+                    value={stat.value}
+                    suffix={stat.suffix}
+                    label={stat.label}
+                  />
+                </Link>
               </ScrollFade>
             ))}
           </div>
