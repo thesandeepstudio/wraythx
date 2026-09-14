@@ -55,7 +55,7 @@ export const projects: Project[] = [
     category: "Motion",
     year: "2025",
     tools: "Editing · Sync · Polish",
-    summary: "Rhythmic music-video edits for the NCS series.",
+    summary: "Beat-synced edits for NCS releases — cuts, transitions, and kinetic type timed to the drop.",
     image: "/assets/project-thumbnails/ncs.webp",
     link: "https://www.behance.net/gallery/240937921/Video-Editing-NCS",
     cover:
