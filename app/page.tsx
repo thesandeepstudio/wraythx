@@ -12,9 +12,16 @@ import { projects, featuredProjectTitles, projectHref } from "../lib/projects";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
-const featuredProjects = featuredProjectTitles.map((title) =>
-  projects.find((p) => p.title === title)!
-);
+const featuredProjects = featuredProjectTitles
+  .map((title) => {
+    const found = projects.find((p) => p.title === title);
+    if (!found) {
+      console.warn(`Featured project not found: ${title}`);
+      return null;
+    }
+    return found;
+  })
+  .filter((p): p is (typeof projects)[number] => p !== null);
 
 const stats = [
   { value: 4, suffix: "+", label: "Years experience" },
