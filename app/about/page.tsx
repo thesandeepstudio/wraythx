@@ -197,6 +197,10 @@ export default function AboutPage() {
                   Clo 3D — 3D garment mockups and apparel visualization for
                   fashion clients.
                 </p>
+                <p className="mt-2 text-sm leading-6 text-zinc-500">
+                  Also: HTML · CSS · JavaScript · React — handy for
+                  Figma-to-web handoffs.
+                </p>
               </div>
             </div>
           </div>
