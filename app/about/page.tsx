@@ -42,7 +42,7 @@ const experience = [
     period: "2022 — 2023",
     role: "Graphic Designer",
     place: "Plutus Paradox",
-    note: "Printable graphics and marketing materials, in-store and online campaigns for a clothing brand.",
+    note: "Print-ready apparel graphics and marketing materials, in-store and online campaigns for a clothing brand.",
   },
 ];
 
