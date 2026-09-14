@@ -31,7 +31,7 @@ export const projects: Project[] = [
     category: "Branding",
     year: "2025",
     tools: "Logo · Guidelines · Identity",
-    summary: "Logo system and full brand guidelines for PIPE420.",
+    summary: "Logo system and full brand guidelines for PIPE420 — the Pipe King vape store.",
     image: "/assets/project-thumbnails/pipe420.png",
     link: "https://www.behance.net/gallery/246128103/PIPE420-Brand-Guidlines",
     cover:

@@ -50,7 +50,7 @@ const selectedClients = [
   { name: "Plutus Paradox", detail: "Branding + printable graphics · clothing brand" },
   { name: "LamourFits", detail: "Branding, socials, promo visuals · clothing brand" },
   { name: "HotBox", detail: "Graphic design + social assets · clothing brand" },
-  { name: "PIPE420 / Pipe King", detail: "Logo system, guidelines, promo · vape store" },
+  { name: "PIPE420 — Pipe King", detail: "Logo system, guidelines, promo · vape store" },
   { name: "Drool Nepal", detail: "Logo, identity + social visuals · cloud kitchen" },
   {
     name: "Lakes & Hill Realty",
