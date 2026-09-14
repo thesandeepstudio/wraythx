@@ -75,8 +75,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-white text-zinc-900">
+        <a
+          href="#main-content"
+          className="sr-only left-4 top-4 z-[100] rounded-none bg-zinc-900 px-4 py-2 text-sm font-medium text-white focus:not-sr-only focus:absolute focus:block"
+        >
+          Skip to content
+        </a>
         <PageTransitions />
-        {children}
+        <main id="main-content" tabIndex={-1}>
+          {children}
+        </main>
       </body>
     </html>
   );
