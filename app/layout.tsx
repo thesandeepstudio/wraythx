@@ -68,6 +68,93 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}${basePath}/#person`,
+      name: "Sandeep. C",
+      alternateName: "wraythx",
+      jobTitle: "Visual Designer",
+      url: `${siteUrl}${basePath}/`,
+      image: `${siteUrl}${basePath}/og.png`,
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "NP",
+        addressLocality: "Nepal",
+      },
+      sameAs: [
+        "https://www.behance.net/daboistudio",
+        "https://www.instagram.com/wraythx/",
+      ],
+      email: "mailto:wraythxx@gmail.com",
+      knowsAbout: [
+        "Branding",
+        "Visual Identity",
+        "Motion Graphics",
+        "Video Editing",
+        "Graphic Design",
+        "Social Media Design",
+        "Packaging Design",
+      ],
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${siteUrl}${basePath}/#service`,
+      name: "wraythx",
+      url: `${siteUrl}${basePath}/`,
+      image: `${siteUrl}${basePath}/og.png`,
+      priceRange: "$$",
+      email: "mailto:wraythxx@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "NP",
+        addressLocality: "Nepal",
+      },
+      areaServed: [
+        { "@type": "Country", name: "Nepal" },
+        { "@type": "Place", name: "Global" },
+      ],
+      founder: { "@id": `${siteUrl}${basePath}/#person` },
+      sameAs: [
+        "https://www.behance.net/daboistudio",
+        "https://www.instagram.com/wraythx/",
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Design Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Branding & Identity" },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Motion Graphics" },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Video Editing" },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Graphic Design" },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Social Media" },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Packaging Design" },
+          },
+        ],
+      },
+    },
+  ],
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -75,6 +162,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-white text-zinc-900">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <a
           href="#main-content"
           className="sr-only left-4 top-4 z-[100] rounded-none bg-zinc-900 px-4 py-2 text-sm font-medium text-white focus:not-sr-only focus:absolute focus:block"
