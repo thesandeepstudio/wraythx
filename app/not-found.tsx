@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import ClickSpark from "./ClickSpark";
+
+export const metadata: Metadata = {
+  title: "Page not found",
+  description:
+    "This page isn't in the wraythx portfolio — browse selected work or start a project.",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (
