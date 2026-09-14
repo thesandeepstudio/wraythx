@@ -297,6 +297,18 @@ export default function AboutPage() {
                 >
                   wraythxx@gmail.com
                 </Link>
+                <p className="mt-4 text-sm text-zinc-500">
+                  Prefer DMs?{" "}
+                  <a
+                    href="https://www.instagram.com/wraythx/?hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-emerald-600 hover:text-emerald-600"
+                  >
+                    Instagram @wraythx
+                  </a>{" "}
+                  — or copy the email above into your app.
+                </p>
               </div>
             </div>
           </ScrollFade>
