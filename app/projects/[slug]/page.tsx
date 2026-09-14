@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import ClickSpark from "@/app/ClickSpark";
 import SiteNav from "@/app/components/SiteNav";
@@ -103,10 +104,12 @@ export default async function ProjectPage({
             }`}
           >
             {project.image ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
+              <Image
                 src={`${BASE_PATH}${project.image}`}
                 alt={project.title}
+                width={1200}
+                height={800}
+                sizes="100vw"
                 className="block w-full object-cover"
               />
             ) : (

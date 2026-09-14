@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/lib/projects";
 import { projectHref } from "@/lib/projects";
@@ -48,12 +49,12 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
               }`}
             >
               {project.image ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
+                <Image
                   src={`${BASE_PATH}${project.image}`}
                   alt={project.title}
-                  loading="lazy"
-                  decoding="async"
+                  width={800}
+                  height={600}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="block w-full transition duration-700 group-hover:scale-105"
                 />
               ) : (

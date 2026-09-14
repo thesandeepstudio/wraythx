@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import ClickSpark from "./ClickSpark";
 import ScrollReveal from "./ScrollReveal";
@@ -268,12 +269,12 @@ export default function Home() {
                 >
                   <div className="overflow-hidden border border-zinc-200 bg-zinc-100">
                     {project.image ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
+                      <Image
                         src={`${BASE_PATH}${project.homeImage ?? project.image}`}
                         alt={project.title}
-                        loading="lazy"
-                        decoding="async"
+                        width={800}
+                        height={600}
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         className="block w-full grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0"
                       />
                     ) : null}
