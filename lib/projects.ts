@@ -116,7 +116,7 @@ export const projects: Project[] = [
     year: "2024",
     tools: "Label · Print · Packaging",
     summary: "Premium label and packaging design for Chimley Orchards.",
-    image: "/assets/project-thumbnails/apple.png",
+    image: "/assets/project-thumbnails/apple.webp",
     link: "https://www.behance.net/gallery/212049903/Chimley-Orchards-Packaging-design",
     cover:
       "h-80 bg-[linear-gradient(160deg,_#4ade80_0%,_#166534_55%,_#052e16_100%)]",
@@ -140,7 +140,7 @@ export const projects: Project[] = [
     year: "2023",
     tools: "Brand · Identity · Logo",
     summary: "Brand and identity design for Urban Crust.",
-    image: "/assets/project-thumbnails/urban-crust.jpg",
+    image: "/assets/project-thumbnails/urban-crust.webp",
     link: "https://www.behance.net/gallery/193035141/urban-crust",
     cover:
       "h-80 bg-[linear-gradient(160deg,_#ea580c_0%,_#7c2d12_55%,_#1c1917_100%)]",
@@ -164,7 +164,7 @@ export const projects: Project[] = [
     year: "2022",
     tools: "Ads · Social · Content",
     summary: "Appetizing ad creatives for a pizza brand's social feeds.",
-    image: "/assets/project-thumbnails/pizza.png",
+    image: "/assets/project-thumbnails/pizza.webp",
     link: "https://www.behance.net/gallery/177895085/Pizza-Social-Media-Ads-Design",
     cover:
       "h-80 bg-[linear-gradient(160deg,_#f97316_0%,_#b45309_55%,_#451a03_100%)]",
