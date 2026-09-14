@@ -687,6 +687,26 @@ export default function Home() {
                   <p className="mt-2 text-xs leading-5 text-zinc-400">
                     Projects from $199. Prefer DM? Instagram @wraythx.
                   </p>
+                  <div className="mt-4 flex gap-6 text-sm font-medium text-zinc-900">
+                    <a
+                      href="https://www.behance.net/daboistudio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Behance profile"
+                      className="transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
+                    >
+                      Behance ↗
+                    </a>
+                    <a
+                      href="https://www.instagram.com/wraythx/?hl=en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram profile"
+                      className="transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
+                    >
+                      Instagram ↗
+                    </a>
+                  </div>
                 </div>
               </ScrollFade>
               <ScrollFade>
