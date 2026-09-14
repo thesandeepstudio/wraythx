@@ -15,10 +15,6 @@ export default function SiteNav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
     if (!menuOpen) return;
     const original = document.body.style.overflow;
     document.body.style.overflow = "hidden";
