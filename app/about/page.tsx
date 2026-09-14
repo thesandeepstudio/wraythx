@@ -193,6 +193,10 @@ export default function AboutPage() {
                     </ScrollFade>
                   ))}
                 </div>
+                <p className="mt-6 text-sm leading-6 text-zinc-500">
+                  Clo 3D — 3D garment mockups and apparel visualization for
+                  fashion clients.
+                </p>
               </div>
             </div>
           </div>
