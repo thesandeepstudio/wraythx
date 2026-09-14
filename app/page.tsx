@@ -442,12 +442,20 @@ export default function Home() {
                 Recent projects
               </h2>
             </div>
-            <Link
-              href="/work"
-              className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
-            >
-              View all work
-            </Link>
+            <div className="flex shrink-0 gap-6">
+              <Link
+                href="/work"
+                className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
+              >
+                View all work
+              </Link>
+              <Link
+                href="/services"
+                className="shrink-0 text-sm font-medium text-zinc-500 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
+              >
+                View services
+              </Link>
+            </div>
           </ScrollFade>
 
           <div className="grid gap-6 md:grid-cols-3">
