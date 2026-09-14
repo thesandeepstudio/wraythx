@@ -74,6 +74,10 @@ const selectedClients = [
     detail: "Motion videos + social posts · clinic",
   },
   {
+    name: "Nepal Cosmetic Surgery",
+    detail: "Motion videos + social posts · clinic — see NCS Edits",
+  },
+  {
     name: "Tato Na Charo",
     detail: "Thumbnails, logo, motion graphics · comedy channel",
   },
