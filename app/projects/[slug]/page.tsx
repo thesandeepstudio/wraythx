@@ -156,7 +156,7 @@ export default async function ProjectPage({
           <div className="flex flex-col gap-6 border-t border-zinc-200 pt-10 md:flex-row md:items-center md:justify-between">
             <Link
               href={projectHref(prev.title)}
-              className="group max-w-[60%]"
+              className="group max-w-full md:max-w-[60%]"
             >
               <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
                 ← Previous
@@ -167,7 +167,7 @@ export default async function ProjectPage({
             </Link>
             <Link
               href={projectHref(next.title)}
-              className="group max-w-[60%] text-right"
+              className="group max-w-full md:max-w-[60%] text-right"
             >
               <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
                 Next →
