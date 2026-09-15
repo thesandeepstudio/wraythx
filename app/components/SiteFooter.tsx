@@ -7,7 +7,7 @@ export default function SiteFooter() {
           <p className="text-lg font-semibold tracking-[-0.04em] text-zinc-900">
             wraythx
           </p>
-          <p className="mt-2 max-w-xs text-sm leading-6 text-zinc-500">
+          <p className="mt-2 max-w-xs text-sm leading-6 text-zinc-600">
             Sandeep. C — graphic and visual designer making bold ideas feel
             clear, distinctive, and lasting.
           </p>
@@ -61,7 +61,7 @@ export default function SiteFooter() {
               Instagram
             </a>
           </div>
-          <p className="mt-2 text-xs text-zinc-400">
+          <p className="mt-2 text-xs text-zinc-600">
             © {new Date().getFullYear()} wraythx
           </p>
         </div>

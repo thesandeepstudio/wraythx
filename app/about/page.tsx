@@ -122,7 +122,7 @@ export default function AboutPage() {
                     <h1 className="text-4xl font-semibold uppercase leading-[1.05] tracking-[-0.05em] text-zinc-900 md:text-6xl lg:text-7xl">
                       Wraythx
                     </h1>
-                  <span className="pt-2 text-xs uppercase tracking-[0.2em] text-zinc-500">
+                  <span className="pt-2 text-xs uppercase tracking-[0.2em] text-zinc-600">
                     Est. 2022
                   </span>
                 </div>
@@ -130,7 +130,7 @@ export default function AboutPage() {
                   <p className="mt-4 text-2xl font-light italic tracking-[-0.04em] text-zinc-900">
                     Sandeep. C
                   </p>
-                  <p className="mt-2 text-sm font-medium uppercase tracking-[0.14em] text-zinc-500">
+                  <p className="mt-2 text-sm font-medium uppercase tracking-[0.14em] text-zinc-600">
                     Based in Kathmandu, Nepal — working worldwide
                   </p>
                   <p className="mt-1 text-base font-medium uppercase tracking-[0.14em] text-emerald-700">
@@ -167,7 +167,7 @@ export default function AboutPage() {
             <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
               <div>
                 <ScrollFade>
-                  <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+                  <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
                     Focus areas
                   </p>
                 </ScrollFade>
@@ -177,7 +177,7 @@ export default function AboutPage() {
                       <div className="group relative cursor-default overflow-hidden border-l-2 border-zinc-200 py-3 pl-4 text-xl font-medium tracking-[-0.02em] text-zinc-900 transition-colors duration-500 hover:border-emerald-600">
                         <span className="pointer-events-none absolute inset-0 origin-left scale-x-0 bg-gradient-to-r from-emerald-50 to-transparent transition-transform duration-500 ease-out group-hover:scale-x-100" />
                         <span className="relative z-10 flex items-baseline gap-4">
-                          <span className="text-xs font-normal tabular-nums text-zinc-400 transition-colors duration-500 group-hover:text-emerald-700">
+                          <span className="text-xs font-normal tabular-nums text-zinc-600 transition-colors duration-500 group-hover:text-emerald-700">
                             0{index + 1}
                           </span>
                           <span className="transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-2">
@@ -192,7 +192,7 @@ export default function AboutPage() {
 
               <div>
                 <ScrollFade>
-                  <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+                  <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
                     Tools
                   </p>
                 </ScrollFade>
@@ -205,11 +205,11 @@ export default function AboutPage() {
                     </ScrollFade>
                   ))}
                 </div>
-                <p className="mt-6 text-sm leading-6 text-zinc-500">
+                <p className="mt-6 text-sm leading-6 text-zinc-600">
                   Clo 3D — 3D garment mockups and apparel visualization for
                   fashion clients.
                 </p>
-                <p className="mt-2 text-sm leading-6 text-zinc-500">
+                <p className="mt-2 text-sm leading-6 text-zinc-600">
                   Also: HTML · CSS · JavaScript · React — handy for
                   Figma-to-web handoffs.
                 </p>
@@ -220,10 +220,10 @@ export default function AboutPage() {
 
         <section className="mx-auto max-w-[1280px] px-6 py-24 md:py-32 lg:px-8">
           <ScrollFade>
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
               Experience
             </p>
-            <p className="mt-2 text-xs text-zinc-400">
+            <p className="mt-2 text-xs text-zinc-600">
               Last updated September 2026
             </p>
           </ScrollFade>
@@ -231,7 +231,7 @@ export default function AboutPage() {
             {experience.map((item) => (
               <ScrollFade key={`${item.period}-${item.role}`}>
                 <div className="grid gap-2 py-10 md:grid-cols-[200px_1fr_1fr] md:gap-8">
-                  <p className="text-sm tabular-nums text-zinc-400">
+                  <p className="text-sm tabular-nums text-zinc-600">
                     {item.period}
                   </p>
                   <div>
@@ -253,7 +253,7 @@ export default function AboutPage() {
             className="mx-auto max-w-[1280px] scroll-mt-24 px-6 py-24 md:py-32 lg:px-8"
           >
             <ScrollFade>
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
                 Selected clients & projects
               </p>
             </ScrollFade>
@@ -270,7 +270,7 @@ export default function AboutPage() {
                     <p className="text-sm font-semibold tracking-[-0.01em] text-zinc-900">
                       {client.name} ↗
                     </p>
-                    <p className="mt-1 text-sm text-zinc-500">{client.detail}</p>
+                    <p className="mt-1 text-sm text-zinc-600">{client.detail}</p>
                   </a>
                 </ScrollFade>
               ))}
@@ -288,7 +288,7 @@ export default function AboutPage() {
                 <h2 className="max-w-xl text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
                   Let&apos;s make something lasting.
                 </h2>
-                <p className="mt-4 text-sm text-zinc-500">
+                <p className="mt-4 text-sm text-zinc-600">
                   Kathmandu, Nepal · NPT (UTC+5:45) · replies within 48h
                 </p>
                 <Link
@@ -297,7 +297,7 @@ export default function AboutPage() {
                 >
                   wraythxx@gmail.com
                 </Link>
-                <p className="mt-4 text-sm text-zinc-500">
+                <p className="mt-4 text-sm text-zinc-600">
                   Prefer DMs?{" "}
                   <a
                     href="https://www.instagram.com/wraythx/"

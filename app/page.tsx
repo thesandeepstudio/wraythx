@@ -126,7 +126,7 @@ function AnimatedStat({
         {count}
         {suffix}
       </div>
-      <p className="mt-2 text-sm text-zinc-500">{label}</p>
+      <p className="mt-2 text-sm text-zinc-600">{label}</p>
     </div>
   );
 }
@@ -174,7 +174,7 @@ function ContactForm() {
       aria-label="Contact form"
     >
       <div className="flex items-center justify-between gap-4 border-b border-zinc-100 pb-4">
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
           Send an enquiry
         </p>
         <span className="inline-flex items-center border border-emerald-100 bg-emerald-50 px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.12em] text-emerald-700">
@@ -194,7 +194,7 @@ function ContactForm() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Your name"
-              className="mt-2 w-full rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-emerald-600 focus:outline-none focus:ring-0"
+              className="mt-2 w-full rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm text-zinc-900 placeholder:text-zinc-500 focus:border-emerald-600 focus:outline-none focus:ring-0"
             />
           </label>
           <label className="block">
@@ -207,7 +207,7 @@ function ContactForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@company.com"
-              className="mt-2 w-full rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-emerald-600 focus:outline-none focus:ring-0"
+              className="mt-2 w-full rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm text-zinc-900 placeholder:text-zinc-500 focus:border-emerald-600 focus:outline-none focus:ring-0"
             />
           </label>
         </div>
@@ -241,7 +241,7 @@ function ContactForm() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Goals, timeline, budget range…"
-            className="mt-2 w-full resize-none rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm leading-6 text-zinc-900 placeholder:text-zinc-400 focus:border-emerald-600 focus:outline-none focus:ring-0"
+            className="mt-2 w-full resize-none rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm leading-6 text-zinc-900 placeholder:text-zinc-500 focus:border-emerald-600 focus:outline-none focus:ring-0"
           />
         </label>
 
@@ -261,7 +261,7 @@ function ContactForm() {
             Book a call instead
           </a>
         </div>
-        <p className="text-xs leading-5 text-zinc-400">
+        <p className="text-xs leading-5 text-zinc-600">
           Opens your email client with a pre-filled message to
           wraythxx@gmail.com — no data stored.
         </p>
@@ -330,7 +330,7 @@ export default function Home() {
                   Visual Designer
                 </p>
                 <p
-                  className="hero-in mt-3 text-xs font-medium uppercase tracking-[0.2em] text-zinc-500"
+                  className="hero-in mt-3 text-xs font-medium uppercase tracking-[0.2em] text-zinc-600"
                   style={{ animationDelay: "0.5s" }}
                 >
                   Nepal · worldwide
@@ -386,7 +386,7 @@ export default function Home() {
         >
           <div className="mx-auto max-w-3xl text-center">
             <ScrollFade>
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
                 About
               </p>
             </ScrollFade>
@@ -456,7 +456,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/services"
-                className="shrink-0 text-sm font-medium text-zinc-500 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-700"
+                className="shrink-0 text-sm font-medium text-zinc-600 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-700"
               >
                 View services
               </Link>
@@ -490,7 +490,7 @@ export default function Home() {
                   <h3 className="mt-2 text-xl font-semibold tracking-[-0.04em] text-zinc-900">
                     {project.title}
                   </h3>
-                  <p className="mt-1 text-sm text-zinc-500">{project.tools}</p>
+                  <p className="mt-1 text-sm text-zinc-600">{project.tools}</p>
                   <p className="mt-2 text-sm leading-6 text-zinc-600">
                     {project.summary}
                   </p>
@@ -503,7 +503,7 @@ export default function Home() {
         <section id="services" className="mx-auto max-w-6xl px-6 py-24 md:py-32 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.7fr] lg:gap-20">
             <ScrollFade>
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
                 Services
               </p>
               <h2 className="mt-6 text-4xl font-semibold tracking-[-0.04em] text-zinc-900 md:text-5xl">
@@ -537,7 +537,7 @@ export default function Home() {
 
         <section className="mx-auto max-w-6xl px-6 pb-24 lg:px-8">
           <ScrollFade className="flex items-end justify-between gap-6">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
               How we&apos;ll work
             </p>
             <Link
@@ -576,7 +576,7 @@ export default function Home() {
         >
           <div className="mx-auto max-w-6xl px-6 py-24 md:py-32 lg:px-8">
             <ScrollFade>
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
                 Testimonials
               </p>
               <h2 className="mt-6 max-w-xl text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-4xl">
@@ -599,7 +599,7 @@ export default function Home() {
                     <p className="text-sm font-semibold tracking-[-0.02em] text-zinc-900">
                       A. Sharma
                     </p>
-                    <p className="mt-1 text-xs uppercase tracking-[0.14em] text-zinc-500">
+                    <p className="mt-1 text-xs uppercase tracking-[0.14em] text-zinc-600">
                       Founder · Plutus Paradox
                     </p>
                   </figcaption>
@@ -616,7 +616,7 @@ export default function Home() {
                     <p className="text-sm font-semibold tracking-[-0.02em] text-zinc-900">
                       R. Thapa
                     </p>
-                    <p className="mt-1 text-xs uppercase tracking-[0.14em] text-zinc-500">
+                    <p className="mt-1 text-xs uppercase tracking-[0.14em] text-zinc-600">
                       Director · Lakes &amp; Hill Realty
                     </p>
                   </figcaption>
@@ -633,7 +633,7 @@ export default function Home() {
                     <p className="text-sm font-semibold tracking-[-0.02em] text-zinc-900">
                       K. Gurung
                     </p>
-                    <p className="mt-1 text-xs uppercase tracking-[0.14em] text-zinc-500">
+                    <p className="mt-1 text-xs uppercase tracking-[0.14em] text-zinc-600">
                       Marketing Lead · Kopila
                     </p>
                   </figcaption>
@@ -649,7 +649,7 @@ export default function Home() {
         >
           <div className="mx-auto max-w-6xl px-6 py-24 md:py-32 lg:px-8">
             <ScrollFade>
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
                 Let&apos;s work together
               </p>
             </ScrollFade>
@@ -685,11 +685,11 @@ export default function Home() {
                       wraythxx@gmail.com
                     </a>
                   </div>
-                  <p className="mt-4 text-xs leading-5 text-zinc-500">
+                  <p className="mt-4 text-xs leading-5 text-zinc-600">
                     Booking opens Cal.com in a new tab — if unavailable, the
                     form sends via your email client.
                   </p>
-                  <p className="mt-2 text-xs leading-5 text-zinc-400">
+                  <p className="mt-2 text-xs leading-5 text-zinc-600">
                     Projects from $199. Prefer DM? Instagram @wraythx.
                   </p>
                   <div className="mt-4 flex gap-6 text-sm font-medium text-zinc-900">

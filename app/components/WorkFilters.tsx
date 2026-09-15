@@ -30,7 +30,7 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
             className={`pb-3 text-sm uppercase tracking-[0.16em] transition duration-300 ${
               active === filter
                 ? "text-emerald-700"
-                : "text-zinc-500 hover:text-zinc-900"
+                : "text-zinc-600 hover:text-zinc-900"
             }`}
           >
             {filter}
@@ -82,7 +82,7 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
                 </p>
                 <div className="mt-3 flex items-center justify-between gap-4 text-sm text-zinc-300">
                   <span>{project.tools}</span>
-                  <span className="shrink-0 tabular-nums text-zinc-400">
+                  <span className="shrink-0 tabular-nums text-zinc-300">
                     {project.year}
                   </span>
                 </div>

@@ -85,7 +85,7 @@ export default function ServicesPage() {
         <section className="relative overflow-hidden bg-white">
           <div className="relative mx-auto max-w-[1280px]">
             <div className="px-6 py-16 md:px-0 md:py-20">
-              <div className="flex items-baseline justify-between text-xs uppercase tracking-[0.2em] text-zinc-500">
+              <div className="flex items-baseline justify-between text-xs uppercase tracking-[0.2em] text-zinc-600">
                 <span>Services</span>
                 <span>Brand · Visual · Motion</span>
               </div>
@@ -118,7 +118,7 @@ export default function ServicesPage() {
               <ScrollFade key={service.title}>
                 <div className="group flex h-full flex-col justify-between border border-zinc-200 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-300">
                   <div>
-                    <p className="text-xs font-normal tabular-nums tracking-[0.2em] text-zinc-400">
+                    <p className="text-xs font-normal tabular-nums tracking-[0.2em] text-zinc-600">
                       0{index + 1}
                     </p>
                     <h3 className="mt-6 text-xl font-semibold tracking-[-0.02em] text-zinc-900">
@@ -152,7 +152,7 @@ export default function ServicesPage() {
 
           <div className="mt-24">
             <ScrollFade>
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
                 Process
               </p>
             </ScrollFade>

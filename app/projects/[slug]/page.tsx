@@ -122,7 +122,7 @@ export default async function ProjectPage({
 
           <div className="mt-12 grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-20">
             <div>
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
                 Overview
               </p>
               <p className="mt-6 text-xl font-medium leading-[1.4] tracking-[-0.03em] text-zinc-900 md:text-2xl">
@@ -140,7 +140,7 @@ export default async function ProjectPage({
 
             <div className="grid h-fit grid-cols-2 gap-6 border-t border-zinc-200 pt-8 sm:grid-cols-3 lg:grid-cols-1">
               <div>
-                <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">
+                <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
                   Category
                 </p>
                 <p className="mt-2 text-base font-medium text-zinc-900">
@@ -148,7 +148,7 @@ export default async function ProjectPage({
                 </p>
               </div>
               <div>
-                <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">
+                <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
                   Year
                 </p>
                 <p className="mt-2 text-base font-medium tabular-nums text-zinc-900">
@@ -156,7 +156,7 @@ export default async function ProjectPage({
                 </p>
               </div>
               <div>
-                <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">
+                <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
                   Tools
                 </p>
                 <p className="mt-2 text-base font-medium text-zinc-900">
@@ -173,7 +173,7 @@ export default async function ProjectPage({
               href={projectHref(prev.title)}
               className="group max-w-[60%]"
             >
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
                 ← Previous
               </p>
               <p className="mt-2 text-lg font-semibold tracking-[-0.02em] text-zinc-900 transition duration-300 group-hover:text-emerald-700 md:text-xl">
@@ -184,7 +184,7 @@ export default async function ProjectPage({
               href={projectHref(next.title)}
               className="group max-w-[60%] text-right"
             >
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
                 Next →
               </p>
               <p className="mt-2 text-lg font-semibold tracking-[-0.02em] text-zinc-900 transition duration-300 group-hover:text-emerald-700 md:text-xl">

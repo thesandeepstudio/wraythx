@@ -29,7 +29,7 @@ export default function WorkPage() {
         <section className="relative overflow-hidden bg-white">
           <div className="relative mx-auto max-w-[1280px]">
             <div className="px-6 py-16 md:px-0 md:py-20">
-              <ScrollFade className="flex items-baseline justify-between text-xs uppercase tracking-[0.2em] text-zinc-500">
+              <ScrollFade className="flex items-baseline justify-between text-xs uppercase tracking-[0.2em] text-zinc-600">
                 <span>Portfolio</span>
                 <span>2022 — Present</span>
               </ScrollFade>
@@ -58,7 +58,7 @@ export default function WorkPage() {
             <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-20">
               <div>
                 <ScrollFade>
-                  <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+                  <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
                     About
                   </p>
                 </ScrollFade>
@@ -81,7 +81,7 @@ export default function WorkPage() {
               </div>
               <div className="flex flex-col justify-end">
                 <ScrollFade>
-                  <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+                  <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
                     Contact
                   </p>
                   <p className="mt-6 text-2xl font-medium tracking-[-0.03em] text-zinc-900 md:text-3xl">
