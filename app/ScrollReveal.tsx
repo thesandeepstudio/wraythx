@@ -47,6 +47,7 @@ const ScrollReveal = ({
       const normalized = word.replace(/[^A-Za-z0-9']/g, "").toLowerCase();
       return (
         <span
+          aria-hidden="true"
           className={highlightedSet.has(normalized) ? "word word--hl" : "word"}
           key={index}
         >
@@ -55,6 +56,8 @@ const ScrollReveal = ({
       );
     });
   }, [children, highlightedSet]);
+
+  const fullText = typeof children === "string" ? children : undefined;
 
   useEffect(() => {
     const el = containerRef.current;
@@ -134,7 +137,12 @@ const ScrollReveal = ({
 
   return (
     <div ref={containerRef} className={`scroll-reveal ${containerClassName}`}>
-      <div className={`scroll-reveal-text ${textClassName}`}>{splitText}</div>
+      <div
+        aria-label={fullText}
+        className={`scroll-reveal-text ${textClassName}`}
+      >
+        {splitText}
+      </div>
     </div>
   );
 };
