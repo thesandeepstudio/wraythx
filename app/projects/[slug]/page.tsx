@@ -81,7 +81,7 @@ export default async function ProjectPage({
         <section className="mx-auto max-w-[1280px] px-6 lg:px-8">
           <div className="flex flex-col gap-6 border-b border-zinc-200 pb-10 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-600">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-700">
                 {project.category} · {project.year}
               </p>
               <h1 className="mt-4 max-w-3xl text-3xl font-semibold uppercase leading-[1.05] tracking-[-0.04em] text-zinc-900 md:text-5xl">
@@ -90,7 +90,7 @@ export default async function ProjectPage({
             </div>
             <Link
               href="/work"
-              className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
+              className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-700"
             >
               ← Back to work
             </Link>
@@ -176,7 +176,7 @@ export default async function ProjectPage({
               <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">
                 ← Previous
               </p>
-              <p className="mt-2 text-lg font-semibold tracking-[-0.02em] text-zinc-900 transition duration-300 group-hover:text-emerald-600 md:text-xl">
+              <p className="mt-2 text-lg font-semibold tracking-[-0.02em] text-zinc-900 transition duration-300 group-hover:text-emerald-700 md:text-xl">
                 {prev.title}
               </p>
             </Link>
@@ -187,7 +187,7 @@ export default async function ProjectPage({
               <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">
                 Next →
               </p>
-              <p className="mt-2 text-lg font-semibold tracking-[-0.02em] text-zinc-900 transition duration-300 group-hover:text-emerald-600 md:text-xl">
+              <p className="mt-2 text-lg font-semibold tracking-[-0.02em] text-zinc-900 transition duration-300 group-hover:text-emerald-700 md:text-xl">
                 {next.title}
               </p>
             </Link>

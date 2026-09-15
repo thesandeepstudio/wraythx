@@ -94,7 +94,7 @@ export default function ServicesPage() {
                 <h1 className="text-4xl font-semibold uppercase leading-[1.05] tracking-[-0.05em] text-zinc-900 md:text-6xl lg:text-7xl">
                   Design &amp; motion
                   <br />
-                  <span className="text-emerald-600 italic normal-case">
+                  <span className="text-emerald-700 italic normal-case">
                     for modern brands
                   </span>
                 </h1>
@@ -129,7 +129,7 @@ export default function ServicesPage() {
                     </p>
                   </div>
                   <div className="mt-8 border-t border-zinc-200 pt-4">
-                    <p className="text-xs uppercase tracking-[0.16em] text-emerald-600">
+                    <p className="text-xs uppercase tracking-[0.16em] text-emerald-700">
                       {service.detail}
                     </p>
                     <div className="mt-4 flex items-center justify-between gap-3">
@@ -160,7 +160,7 @@ export default function ServicesPage() {
               {process.map((item) => (
                 <ScrollFade key={item.step}>
                   <div className="border-t border-zinc-200 pt-8">
-                    <p className="text-sm font-medium tabular-nums text-emerald-600">
+                    <p className="text-sm font-medium tabular-nums text-emerald-700">
                       {item.step}
                     </p>
                     <h3 className="mt-4 text-xl font-semibold tracking-[-0.02em] text-zinc-900">

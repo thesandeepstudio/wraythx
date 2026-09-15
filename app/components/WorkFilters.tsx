@@ -29,7 +29,7 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
             aria-pressed={active === filter}
             className={`pb-3 text-sm uppercase tracking-[0.16em] transition duration-300 ${
               active === filter
-                ? "text-emerald-600"
+                ? "text-emerald-700"
                 : "text-zinc-500 hover:text-zinc-900"
             }`}
           >

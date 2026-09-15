@@ -324,7 +324,7 @@ export default function Home() {
                   Sandeep. C
                 </p>
                 <p
-                  className="hero-in mt-1 cursor-none text-base font-medium uppercase tracking-[0.14em] text-emerald-600 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-500 md:text-lg"
+                  className="hero-in mt-1 cursor-none text-base font-medium uppercase tracking-[0.14em] text-emerald-700 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-500 md:text-lg"
                   style={{ animationDelay: "0.45s" }}
                 >
                   Visual Designer
@@ -432,7 +432,7 @@ export default function Home() {
               </div>
               <Link
                 href="/about"
-                className="mt-8 inline-flex text-sm font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-emerald-600 hover:text-emerald-600"
+                className="mt-8 inline-flex text-sm font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-emerald-600 hover:text-emerald-700"
               >
                 More about me →
               </Link>
@@ -450,13 +450,13 @@ export default function Home() {
             <div className="flex shrink-0 gap-6">
               <Link
                 href="/work"
-                className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
+                className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-700"
               >
                 View all work
               </Link>
               <Link
                 href="/services"
-                className="shrink-0 text-sm font-medium text-zinc-500 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
+                className="shrink-0 text-sm font-medium text-zinc-500 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-700"
               >
                 View services
               </Link>
@@ -484,7 +484,7 @@ export default function Home() {
                       />
                     ) : null}
                   </div>
-                  <p className="mt-4 text-xs font-medium uppercase tracking-[0.2em] text-emerald-600">
+                  <p className="mt-4 text-xs font-medium uppercase tracking-[0.2em] text-emerald-700">
                     {project.category}
                   </p>
                   <h3 className="mt-2 text-xl font-semibold tracking-[-0.04em] text-zinc-900">
@@ -519,10 +519,10 @@ export default function Home() {
               {services.map((service, index) => (
                 <ScrollFade key={service.title}>
                   <div className="group grid gap-1 py-8 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:pl-4 md:grid-cols-[auto_1fr_1.5fr] md:gap-10">
-                    <span className="text-xs font-medium uppercase tracking-[0.2em] text-emerald-600">
+                    <span className="text-xs font-medium uppercase tracking-[0.2em] text-emerald-700">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="text-xl font-semibold tracking-[-0.02em] text-zinc-900 transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-emerald-600 md:text-2xl">
+                    <h3 className="text-xl font-semibold tracking-[-0.02em] text-zinc-900 transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-emerald-700 md:text-2xl">
                       {service.title}
                     </h3>
                     <p className="mt-2 text-base leading-7 text-zinc-600 md:mt-0">
@@ -542,7 +542,7 @@ export default function Home() {
             </p>
             <Link
               href="/services"
-              className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
+              className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-700"
             >
               Full process →
             </Link>
@@ -555,7 +555,7 @@ export default function Home() {
             ].map((item) => (
               <ScrollFade key={item.step}>
                 <div className="border-t-2 border-zinc-900 pt-6">
-                  <p className="text-sm font-medium tabular-nums text-emerald-600">
+                  <p className="text-sm font-medium tabular-nums text-emerald-700">
                     {item.step}
                   </p>
                   <h3 className="mt-2 text-lg font-semibold tracking-[-0.02em] text-zinc-900">
@@ -659,7 +659,7 @@ export default function Home() {
                   <h2 className="max-w-xl text-4xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
                     Start a project
                     <br />
-                    <span className="italic font-light text-emerald-600">
+                    <span className="italic font-light text-emerald-700">
                       with wraythx
                     </span>
                   </h2>
@@ -698,7 +698,7 @@ export default function Home() {
                       target="_blank"
                       rel="noopener noreferrer me"
                       aria-label="Behance profile"
-                      className="transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
+                      className="transition duration-300 hover:-translate-y-0.5 hover:text-emerald-700"
                     >
                       Behance ↗
                     </a>
@@ -707,7 +707,7 @@ export default function Home() {
                       target="_blank"
                       rel="noopener noreferrer me"
                       aria-label="Instagram profile"
-                      className="transition duration-300 hover:-translate-y-0.5 hover:text-emerald-600"
+                      className="transition duration-300 hover:-translate-y-0.5 hover:text-emerald-700"
                     >
                       Instagram ↗
                     </a>
