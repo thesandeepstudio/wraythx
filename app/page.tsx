@@ -471,7 +471,7 @@ export default function Home() {
                         width={800}
                         height={600}
                         sizes="(max-width: 768px) 100vw, 33vw"
-                        className="block w-full grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                        className="block aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105"
                       />
                     ) : null}
                   </div>
