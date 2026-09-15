@@ -216,7 +216,7 @@ export default function AboutPage() {
           <div className="mt-8 divide-y divide-zinc-200 border-t border-zinc-200">
             {experience.map((item) => (
               <ScrollFade key={`${item.period}-${item.role}`}>
-                <div className="grid gap-2 py-10 md:grid-cols-[200px_1fr_1fr] md:gap-8">
+                <div className="grid gap-2 py-10 md:grid-cols-[140px_1fr_1fr] md:gap-8 lg:grid-cols-[200px_1fr_1fr]">
                   <p className="text-sm tabular-nums text-zinc-600">
                     {item.period}
                   </p>
