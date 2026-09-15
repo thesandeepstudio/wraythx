@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ClickSpark from "./ClickSpark";
+import SiteNav from "./components/SiteNav";
+import SiteFooter from "./components/SiteFooter";
 import { SPARK, EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -13,8 +15,12 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <ClickSpark {...SPARK}>
-      <main className="grid min-h-screen place-items-center bg-white px-6 text-center text-zinc-900">
-        <div>
+      <SiteNav />
+      <main className="grid min-h-[70svh] place-items-center bg-white px-6 py-16 text-center text-zinc-900">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
+              wraythx
+            </p>
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-brand-700">
             404
           </p>
@@ -47,6 +53,7 @@ export default function NotFound() {
           </div>
         </div>
       </main>
+      <SiteFooter />
     </ClickSpark>
   );
 }
