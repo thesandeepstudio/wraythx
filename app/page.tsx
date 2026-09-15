@@ -506,7 +506,7 @@ export default function Home() {
               </p>
             </ScrollFade>
 
-            <div className="border-y border-zinc-200">
+            <div className="divide-y divide-zinc-200 border-y border-zinc-200">
               {services.map((service, index) => (
                 <ScrollFade key={service.title}>
                   <div className="group grid gap-1 py-8 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:pl-4 md:grid-cols-[auto_1fr_1.5fr] md:gap-10">
