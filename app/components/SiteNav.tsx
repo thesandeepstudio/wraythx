@@ -14,8 +14,15 @@ const navLinks = [
 export default function SiteNav() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   useEffect(() => {
     if (!menuOpen) return;
     const original = document.body.style.overflow;
@@ -44,7 +51,7 @@ export default function SiteNav() {
     (href !== "/" && pathname.startsWith(`${href}/`));
 
   return (
-    <header className="sticky top-0 z-50 mx-auto flex w-full max-w-[1280px] items-center justify-between border-b border-zinc-200 bg-white px-6 pb-3 pt-3 md:px-0">
+    <header className={`sticky top-0 z-50 mx-auto flex w-full max-w-[1280px] items-center justify-between border-b border-zinc-200 bg-white px-6 pb-3 pt-3 transition-shadow duration-300 md:px-0 ${scrolled ? "shadow-[0_8px_24px_-12px_rgba(0,0,0,0.25)]" : ""}`}>
 
       <Link
         href="/"
