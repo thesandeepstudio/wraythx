@@ -5,11 +5,12 @@
 .scroll-reveal-text {
   margin: 0;
   color: inherit;
+  overflow-wrap: break-word;
 }
 
 .word {
   display: inline-block;
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
 .word--hl {
