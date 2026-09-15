@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { EMAIL } from "@/lib/site";
 
 const navLinks = [
   { href: "/about", label: "About" },
@@ -72,10 +73,10 @@ export default function SiteNav() {
 
       <div className="hidden md:block">
         <a
-          href="mailto:wraythxx@gmail.com"
+          href={`mailto:${EMAIL}`}
           className="text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-700"
         >
-          wraythxx@gmail.com
+          {EMAIL}
         </a>
       </div>
 
@@ -120,11 +121,11 @@ export default function SiteNav() {
             </Link>
           ))}
           <a
-            href="mailto:wraythxx@gmail.com"
+            href={`mailto:${EMAIL}`}
             onClick={() => setMenuOpen(false)}
             className="mt-2 pt-4 text-sm font-medium text-zinc-600"
           >
-            wraythxx@gmail.com
+            {EMAIL}
           </a>
           <div className="mt-4 flex gap-6 border-t border-zinc-100 pt-4 text-sm font-medium text-zinc-900">
             <a

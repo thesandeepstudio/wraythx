@@ -9,8 +9,7 @@ import ScrollFade from "./components/ScrollFade";
 import SiteNav from "./components/SiteNav";
 import SiteFooter from "./components/SiteFooter";
 import { projects, featuredProjectTitles } from "../lib/projects";
-
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+import { BASE_PATH, SPARK, EMAIL, mailto as buildMailto } from "../lib/site";
 
 const featuredProjects = featuredProjectTitles
   .map((title) => {
@@ -163,7 +162,7 @@ function ContactForm() {
       "—",
       `Sent via wraythx contact form`,
     ].join("\n");
-    const mailto = `mailto:wraythxx@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailto = buildMailto(subject, body);
     window.location.href = mailto;
   };
 
@@ -272,15 +271,7 @@ function ContactForm() {
 
 export default function Home() {
   return (
-    <ClickSpark
-      sparkColor="#059669"
-      sparkSize={8}
-      sparkRadius={12}
-      sparkCount={4}
-      duration={260}
-      easing="ease-out"
-      extraScale={1}
-    >
+    <ClickSpark {...SPARK}>
       <main className="min-h-screen bg-white text-zinc-900">
         <SiteNav />
         <section className="relative overflow-hidden bg-white">
@@ -678,11 +669,11 @@ export default function Home() {
                       Book a call →
                     </a>
                     <a
-                      href="mailto:wraythxx@gmail.com"
+                      href={`mailto:${EMAIL}`}
                       aria-label="Email wraythx"
                       className="inline-flex items-center rounded-none border border-zinc-200 bg-white px-6 py-3 text-sm font-medium tracking-wide text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300"
                     >
-                      wraythxx@gmail.com
+                      {EMAIL}
                     </a>
                   </div>
                   <p className="mt-4 text-xs leading-5 text-zinc-600">

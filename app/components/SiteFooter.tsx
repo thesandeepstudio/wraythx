@@ -1,3 +1,5 @@
+import { EMAIL } from "@/lib/site";
+
 export default function SiteFooter() {
   // contact: wraythxx@gmail.com — double-X is intentional (verified 2026-09-14), not a typo
   return (
@@ -35,11 +37,11 @@ export default function SiteFooter() {
             </a>
           </nav>
           <a
-            href="mailto:wraythxx@gmail.com"
+            href={`mailto:${EMAIL}`}
             aria-label="Email wraythx"
             className="text-sm font-medium text-zinc-900 transition duration-300 hover:text-emerald-700"
           >
-            wraythxx@gmail.com
+            {EMAIL}
           </a>
           <div className="flex gap-6 text-zinc-600">
             <a

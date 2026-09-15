@@ -11,9 +11,9 @@ import {
   slugify,
   projectHref,
 } from "@/lib/projects";
+import { BASE_PATH, SITE_URL, SPARK } from "@/lib/site";
 
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thesandeepstudio.github.io";
+const siteUrl = SITE_URL;
 
 export const dynamic = "force-static";
 
@@ -66,15 +66,7 @@ export default async function ProjectPage({
   const next = projects[(index + 1) % projects.length];
 
   return (
-    <ClickSpark
-      sparkColor="#059669"
-      sparkSize={8}
-      sparkRadius={12}
-      sparkCount={4}
-      duration={260}
-      easing="ease-out"
-      extraScale={1}
-    >
+    <ClickSpark {...SPARK}>
       <main className="min-h-screen bg-white text-zinc-900">
         <SiteNav />
 

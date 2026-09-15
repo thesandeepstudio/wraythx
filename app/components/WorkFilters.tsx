@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import type { Project } from "@/lib/projects";
 
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+import { BASE_PATH } from "@/lib/site";
 
 const filters = ["All", "Branding", "Motion", "Graphic", "Packaging"];
 

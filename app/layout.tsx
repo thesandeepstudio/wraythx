@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import PageTransitions from "./components/PageTransitions";
+import { BASE_PATH, SITE_URL, EMAIL } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thesandeepstudio.github.io";
+const siteUrl = SITE_URL;
 
 export const viewport: Viewport = {
   themeColor: "#ffffff",
@@ -32,18 +32,18 @@ export const metadata: Metadata = {
   creator: "Sandeep. C",
   publisher: "wraythx",
   formatDetection: { telephone: false },
-  alternates: { canonical: `${siteUrl}${basePath}/` },
+  alternates: { canonical: `${siteUrl}${BASE_PATH}/` },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: `${siteUrl}${basePath}/`,
+    url: `${siteUrl}${BASE_PATH}/`,
     siteName: "wraythx",
     title: "wraythx — Visual Designer & Motion Artist",
     description:
       "Brand identities, motion graphics, and bold visual systems by Sandeep. C.",
       images: [
         {
-          url: `${siteUrl}${basePath}/og.png`,
+          url: `${siteUrl}${BASE_PATH}/og.png`,
           width: 1200,
           height: 630,
           alt: "wraythx — Sandeep. C, visual designer: branding, motion, and graphic work",
@@ -55,17 +55,17 @@ export const metadata: Metadata = {
     title: "wraythx — Visual Designer & Motion Artist",
     description:
       "Brand identities, motion graphics, and bold visual systems by Sandeep. C.",
-    images: [`${siteUrl}${basePath}/og.png`],
+    images: [`${siteUrl}${BASE_PATH}/og.png`],
   },
   icons: {
-    icon: `${basePath}/icon.svg`,
+    icon: `${BASE_PATH}/icon.svg`,
     apple: {
-      url: `${basePath}/icons/icon-180.png`,
+      url: `${BASE_PATH}/icons/icon-180.png`,
       sizes: "180x180",
       type: "image/png",
     },
   },
-  manifest: `${basePath}/manifest.json`,
+  manifest: `${BASE_PATH}/manifest.json`,
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -78,12 +78,12 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": `${siteUrl}${basePath}/#person`,
+      "@id": `${siteUrl}${BASE_PATH}/#person`,
       name: "Sandeep. C",
       alternateName: "wraythx",
       jobTitle: "Visual Designer",
-      url: `${siteUrl}${basePath}/`,
-      image: `${siteUrl}${basePath}/og.png`,
+      url: `${siteUrl}${BASE_PATH}/`,
+      image: `${siteUrl}${BASE_PATH}/og.png`,
       address: {
         "@type": "PostalAddress",
         addressCountry: "NP",
@@ -93,7 +93,7 @@ const jsonLd = {
         "https://www.behance.net/daboistudio",
         "https://www.instagram.com/wraythx/",
       ],
-      email: "mailto:wraythxx@gmail.com",
+      email: `mailto:${EMAIL}`,
       knowsAbout: [
         "Branding",
         "Visual Identity",
@@ -106,12 +106,12 @@ const jsonLd = {
     },
     {
       "@type": "ProfessionalService",
-      "@id": `${siteUrl}${basePath}/#service`,
+      "@id": `${siteUrl}${BASE_PATH}/#service`,
       name: "wraythx",
-      url: `${siteUrl}${basePath}/`,
-      image: `${siteUrl}${basePath}/og.png`,
+      url: `${siteUrl}${BASE_PATH}/`,
+      image: `${siteUrl}${BASE_PATH}/og.png`,
       priceRange: "$$",
-      email: "mailto:wraythxx@gmail.com",
+      email: `mailto:${EMAIL}`,
       address: {
         "@type": "PostalAddress",
         addressCountry: "NP",
@@ -121,7 +121,7 @@ const jsonLd = {
         { "@type": "Country", name: "Nepal" },
         { "@type": "Place", name: "Global" },
       ],
-      founder: { "@id": `${siteUrl}${basePath}/#person` },
+      founder: { "@id": `${siteUrl}${BASE_PATH}/#person` },
       sameAs: [
         "https://www.behance.net/daboistudio",
         "https://www.instagram.com/wraythx/",

@@ -7,7 +7,7 @@ type ViewTransitionDocument = Document & {
   startViewTransition?: (update: () => void) => unknown;
 };
 
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+import { BASE_PATH } from "@/lib/site";
 
 const stripBasePath = (path: string) => {
   if (!BASE_PATH) return path;
@@ -56,16 +56,14 @@ export default function PageTransitions() {
         document as ViewTransitionDocument
       ).startViewTransition?.bind(document);
 
+      if (reducedMotion || !startViewTransition) return;
+
       event.preventDefault();
 
       const destination = stripBasePath(
         `${url.pathname}${url.search}${url.hash}`,
       );
-      if (reducedMotion || !startViewTransition) {
-        router.push(destination);
-      } else {
-        startViewTransition(() => router.push(destination));
-      }
+      startViewTransition(() => router.push(destination));
     };
 
     document.addEventListener("click", onClickCapture, true);

@@ -5,6 +5,7 @@ import ScrollReveal from "../ScrollReveal";
 import ScrollFade from "../components/ScrollFade";
 import SiteNav from "../components/SiteNav";
 import SiteFooter from "../components/SiteFooter";
+import { SPARK, EMAIL } from "../../lib/site";
 
 export const metadata: Metadata = {
   title: "About — Sandeep. C",
@@ -104,15 +105,7 @@ const tools = [
 
 export default function AboutPage() {
   return (
-    <ClickSpark
-      sparkColor="#059669"
-      sparkSize={8}
-      sparkRadius={12}
-      sparkCount={4}
-      duration={260}
-      easing="ease-out"
-      extraScale={1}
-    >
+    <ClickSpark {...SPARK}>
       <main className="min-h-screen bg-white text-zinc-900">
         <SiteNav />
         <section className="relative overflow-hidden bg-white">
@@ -292,10 +285,10 @@ export default function AboutPage() {
                   Kathmandu, Nepal · NPT (UTC+5:45) · replies within 48h
                 </p>
                 <Link
-                  href="mailto:wraythxx@gmail.com"
+                  href={`mailto:${EMAIL}`}
                   className="inline-flex w-fit bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
                 >
-                  wraythxx@gmail.com
+                  {EMAIL}
                 </Link>
                 <p className="mt-4 text-sm text-zinc-600">
                   Prefer DMs?{" "}

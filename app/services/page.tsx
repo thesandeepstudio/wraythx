@@ -5,6 +5,7 @@ import ScrollReveal from "../ScrollReveal";
 import ScrollFade from "../components/ScrollFade";
 import SiteNav from "../components/SiteNav";
 import SiteFooter from "../components/SiteFooter";
+import { SPARK, EMAIL, mailto as buildMailto } from "../../lib/site";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -71,15 +72,7 @@ const process = [
 
 export default function ServicesPage() {
   return (
-    <ClickSpark
-      sparkColor="#059669"
-      sparkSize={8}
-      sparkRadius={12}
-      sparkCount={4}
-      duration={260}
-      easing="ease-out"
-      extraScale={1}
-    >
+    <ClickSpark {...SPARK}>
       <main className="min-h-screen bg-white text-zinc-900">
         <SiteNav />
         <section className="relative overflow-hidden bg-white">
@@ -137,7 +130,7 @@ export default function ServicesPage() {
                         {service.price}
                       </span>
                       <a
-                        href={`mailto:wraythxx@gmail.com?subject=${encodeURIComponent(`Enquiry: ${service.title} — ${service.price}`)}`}
+                        href={buildMailto(`Enquiry: ${service.title} — ${service.price}`)}
                         aria-label={`Enquire about ${service.title}`}
                         className="inline-flex items-center text-xs font-medium tracking-wide text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-zinc-900"
                       >
@@ -184,10 +177,10 @@ export default function ServicesPage() {
                   Give your brand a standout look.
                 </h2>
                 <Link
-                  href="mailto:wraythxx@gmail.com"
+                  href={`mailto:${EMAIL}`}
                   className="inline-flex w-fit rounded-none bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
                 >
-                  wraythxx@gmail.com
+                  {EMAIL}
                 </Link>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ClickSpark from "./ClickSpark";
+import { SPARK, EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Page not found",
@@ -11,15 +12,7 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <ClickSpark
-      sparkColor="#059669"
-      sparkSize={8}
-      sparkRadius={12}
-      sparkCount={4}
-      duration={260}
-      easing="ease-out"
-      extraScale={1}
-    >
+    <ClickSpark {...SPARK}>
       <main className="grid min-h-screen place-items-center bg-white px-6 text-center text-zinc-900">
         <div>
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-700">
@@ -46,7 +39,7 @@ export default function NotFound() {
               Services
             </Link>
             <a
-              href="mailto:wraythxx@gmail.com"
+              href={`mailto:${EMAIL}`}
               className="inline-flex rounded-none px-6 py-3 text-sm font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-zinc-900"
             >
               Contact →

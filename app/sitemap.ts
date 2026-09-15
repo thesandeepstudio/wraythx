@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
 import { projects, projectHref } from "@/lib/projects";
+import { BASE_PATH, SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://thesandeepstudio.github.io";
+const basePath = BASE_PATH;
+const siteUrl = SITE_URL;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const root = `${siteUrl}${basePath}`;
