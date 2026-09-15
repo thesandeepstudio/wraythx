@@ -8,6 +8,43 @@ import { BASE_PATH } from "@/lib/site";
 
 const filters = ["All", "Branding", "Motion", "Graphic", "Packaging"];
 
+function WorkCardImage({ project }: { project: Project }) {
+  const [loaded, setLoaded] = useState(false);
+  const [failed, setFailed] = useState(false);
+
+  if (!project.image || failed) {
+    return (
+      <div
+        aria-hidden="true"
+        className="block aspect-[4/3] w-full bg-[linear-gradient(160deg,#52525b_0%,#27272a_60%,#09090b_100%)]"
+      />
+    );
+  }
+
+  return (
+    <>
+      {!loaded && (
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 animate-pulse bg-zinc-200"
+        />
+      )}
+      <Image
+        src={`${BASE_PATH}${project.image}`}
+        alt={project.title}
+        width={800}
+        height={600}
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        onLoad={() => setLoaded(true)}
+        onError={() => setFailed(true)}
+        className={`block aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105 ${
+          loaded ? "opacity-100" : "opacity-0"
+        }`}
+      />
+    </>
+  );
+}
+
 export default function WorkFilters({ projects }: { projects: Project[] }) {
   const [active, setActive] = useState("All");
 
@@ -64,18 +101,7 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
             className="group mb-6 block break-inside-avoid"
           >
             <div className="relative min-h-[120px] overflow-hidden bg-zinc-100 transition duration-500 group-hover:-translate-y-1">
-              {project.image ? (
-                <Image
-                  src={`${BASE_PATH}${project.image}`}
-                  alt={project.title}
-                  width={800}
-                  height={600}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="block aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105"
-                />
-              ) : (
-                <div className="absolute inset-0" />
-              )}
+              <WorkCardImage project={project} />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/50 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
               <span className="absolute left-4 top-4 rounded-none bg-white/90 px-3 py-1 text-xs font-medium text-zinc-900">
                 {project.badge || project.category}
