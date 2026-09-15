@@ -9,6 +9,7 @@ import ScrollFade from "./components/ScrollFade";
 import SiteNav from "./components/SiteNav";
 import SiteFooter from "./components/SiteFooter";
 import CTAButton from "./components/CTAButton";
+import CopyEmailButton from "./components/CopyEmailButton";
 import { ArrowRight } from "./components/Arrows";
 import { projects, featuredProjectTitles } from "../lib/projects";
 import { BASE_PATH, SPARK, EMAIL, mailto as buildMailto } from "../lib/site";
@@ -669,6 +670,7 @@ export default function Home() {
                     >
                       {EMAIL}
                     </CTAButton>
+                    <CopyEmailButton />
                   </div>
                   <p className="mt-4 text-xs leading-5 text-zinc-600">
                     Booking opens Cal.com in a new tab — if unavailable, the

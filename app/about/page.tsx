@@ -6,6 +6,7 @@ import SiteNav from "../components/SiteNav";
 import SiteFooter from "../components/SiteFooter";
 import ContactCTA from "../components/ContactCTA";
 import CTAButton from "../components/CTAButton";
+import CopyEmailButton from "../components/CopyEmailButton";
 import { SPARK, EMAIL, mailto as buildMailto } from "../../lib/site";
 
 export const metadata: Metadata = {
@@ -272,7 +273,10 @@ export default function AboutPage() {
           <ContactCTA
             title="Let's make something lasting."
             actions={
-              <CTAButton href={buildMailto()}>{EMAIL}</CTAButton>
+              <>
+                <CTAButton href={buildMailto()}>{EMAIL}</CTAButton>
+                <CopyEmailButton />
+              </>
             }
             note={
               <>
