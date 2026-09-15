@@ -68,7 +68,7 @@ export default function SiteNav() {
     (href !== "/" && pathname.startsWith(`${href}/`));
 
   return (
-    <header className={`sticky top-0 z-50 mx-auto flex w-full max-w-[1280px] items-center justify-between border-b border-zinc-200 bg-white px-6 pb-3 pt-3 transition-shadow duration-300 lg:px-8 ${scrolled ? "shadow-[0_8px_24px_-12px_rgba(0,0,0,0.25)]" : ""}`}>
+    <header className={`sticky top-0 z-50 mx-auto flex w-full max-w-[1280px] items-center justify-between border-b border-zinc-200 bg-white/90 px-6 pb-3 pt-3 backdrop-blur transition-shadow duration-300 lg:px-8 [@media(prefers-reduced-transparency:reduce)]:bg-white [@media(prefers-reduced-transparency:reduce)]:backdrop-blur-none ${scrolled ? "shadow-[0_8px_24px_-12px_rgba(0,0,0,0.25)]" : ""}`}>
 
       <Link
         href="/"
@@ -115,8 +115,14 @@ export default function SiteNav() {
         aria-label={menuOpen ? "Close menu" : "Open menu"}
         className="flex min-h-[44px] min-w-[44px] flex-col items-end justify-center gap-1.5 p-2 md:hidden"
       >
-        <span aria-hidden="true" className="h-0.5 w-6 bg-zinc-900" />
-        <span aria-hidden="true" className="h-0.5 w-4 bg-zinc-900" />
+        <span
+          aria-hidden="true"
+          className={`h-0.5 bg-zinc-900 transition-all duration-300 ${menuOpen ? "w-6 translate-y-[4px] rotate-45" : "w-6"}`}
+        />
+        <span
+          aria-hidden="true"
+          className={`h-0.5 bg-zinc-900 transition-all duration-300 ${menuOpen ? "w-6 -translate-y-[4px] -rotate-45" : "w-4"}`}
+        />
       </button>
 
       <div
@@ -131,7 +137,7 @@ export default function SiteNav() {
       >
         <nav
           aria-label="Mobile navigation"
-          className="flex flex-col border-b border-zinc-200 bg-white px-6 py-6"
+          className="flex flex-col overscroll-contain border-b border-zinc-200 bg-white px-6 py-6"
         >
           {navLinks.map((link) => (
             <Link
