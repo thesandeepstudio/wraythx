@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -13,6 +13,7 @@ const navLinks = [
 export default function SiteNav() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -20,6 +21,20 @@ export default function SiteNav() {
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = original;
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
     };
   }, [menuOpen]);
 
@@ -66,6 +81,7 @@ export default function SiteNav() {
 
       <button
         type="button"
+        ref={menuButtonRef}
         onClick={() => setMenuOpen((open) => !open)}
         aria-expanded={menuOpen}
         aria-controls="mobile-menu"
