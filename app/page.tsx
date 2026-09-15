@@ -352,22 +352,24 @@ export default function Home() {
         </section>
 
         <section className="border-y border-zinc-200 bg-white">
-          <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-6 px-6 py-8 md:grid-cols-3 lg:px-8">
-            {stats.map((stat) => (
-              <ScrollFade key={stat.label}>
-                <Link
-                  href={stat.href}
-                  aria-label={`${stat.label} — see proof`}
-                  className="block transition duration-300 hover:-translate-y-0.5"
-                >
-                  <AnimatedStat
-                    value={stat.value}
-                    suffix={stat.suffix}
-                    label={stat.label}
-                  />
-                </Link>
-              </ScrollFade>
-            ))}
+          <div className="mx-auto max-w-[1280px] px-6 py-8 lg:px-8">
+            <div className="grid grid-cols-1 gap-px border border-zinc-200 bg-zinc-200 md:grid-cols-3">
+              {stats.map((stat) => (
+                <ScrollFade key={stat.label}>
+                  <Link
+                    href={stat.href}
+                    aria-label={`${stat.label} — see proof`}
+                    className="block bg-white transition duration-300 hover:-translate-y-0.5"
+                  >
+                    <AnimatedStat
+                      value={stat.value}
+                      suffix={stat.suffix}
+                      label={stat.label}
+                    />
+                  </Link>
+                </ScrollFade>
+              ))}
+            </div>
           </div>
         </section>
 
