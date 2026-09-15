@@ -16,8 +16,11 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
       ? projects.length
       : projects.filter((p) => p.category === filter).length;
 
-  const visible =
-    active === "All" ? projects : projects.filter((p) => p.category === active);
+  const visible = (
+    active === "All" ? projects : projects.filter((p) => p.category === active)
+  )
+    .slice()
+    .sort((a, b) => Number(b.year) - Number(a.year));
 
   return (
     <>
@@ -32,9 +35,9 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
             type="button"
             onClick={() => setActive(filter)}
             aria-pressed={active === filter}
-            className={`flex min-h-[44px] items-center px-1 text-sm uppercase tracking-[0.16em] transition duration-300 ${
+            className={`flex min-h-[44px] touch-manipulation items-center px-3 text-sm uppercase tracking-[0.16em] transition duration-300 ${
               active === filter
-                ? "text-brand-700"
+                ? "bg-zinc-900 text-white"
                 : "text-zinc-600 hover:text-zinc-900"
             }`}
           >
