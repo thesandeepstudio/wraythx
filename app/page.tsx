@@ -303,19 +303,19 @@ export default function Home() {
                 </div>
 
                 <h1
-                  className="hero-in mt-7 cursor-none text-4xl font-medium uppercase tracking-[-0.04em] transition duration-300 hover:-translate-y-0.5 md:text-5xl"
+                  className="hero-in mt-7 text-4xl font-medium uppercase tracking-[-0.02em] transition duration-300 hover:-translate-y-0.5 md:text-5xl"
                   style={{ animationDelay: "0.25s" }}
                 >
                   Wraythx
                 </h1>
                 <p
-                  className="hero-in mt-1 cursor-none text-2xl font-light italic tracking-[-0.04em] text-zinc-900 transition duration-300 hover:-translate-y-0.5 md:text-3xl"
+                  className="hero-in mt-1 text-2xl font-light italic tracking-[-0.04em] text-zinc-900 transition duration-300 hover:-translate-y-0.5 md:text-3xl"
                   style={{ animationDelay: "0.35s" }}
                 >
                   Sandeep. C
                 </p>
                 <p
-                  className="hero-in mt-1 cursor-none text-base font-medium uppercase tracking-[0.14em] text-brand-700 transition duration-300 hover:-translate-y-0.5 hover:text-brand-500 md:text-lg"
+                  className="hero-in mt-1 text-base font-medium uppercase tracking-[0.14em] text-brand-700 transition duration-300 hover:-translate-y-0.5 hover:text-brand-500 md:text-lg"
                   style={{ animationDelay: "0.45s" }}
                 >
                   Visual Designer
