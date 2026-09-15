@@ -44,6 +44,13 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
         ))}
       </div>
 
+      <p
+        aria-live="polite"
+        className="mt-4 text-xs uppercase tracking-[0.2em] text-zinc-600"
+      >
+        Showing {visible.length} of {projects.length}
+      </p>
+
       <div className="mt-0 columns-1 gap-6 sm:columns-2 lg:columns-3">
         {visible.map((project) => (
           <a
@@ -93,6 +100,11 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
           </a>
         ))}
       </div>
+      {visible.length === 0 && (
+        <p className="mt-8 border border-zinc-200 bg-white p-8 text-center text-sm text-zinc-600">
+          No projects in this category yet — check back soon.
+        </p>
+      )}
     </>
   );
 }
