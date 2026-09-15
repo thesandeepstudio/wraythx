@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import PageTransitions from "./components/PageTransitions";
+import ServiceWorkerRegister from "./components/ServiceWorkerRegister";
 import { BASE_PATH, SITE_URL, EMAIL } from "@/lib/site";
 
 const geistSans = Geist({
@@ -189,6 +190,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         <PageTransitions />
+        <ServiceWorkerRegister />
         <main id="main-content" tabIndex={-1}>
           {children}
         </main>
