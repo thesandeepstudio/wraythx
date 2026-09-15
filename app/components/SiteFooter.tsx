@@ -66,6 +66,9 @@ export default function SiteFooter() {
           <p className="mt-2 text-xs text-zinc-600">
             © {new Date().getFullYear()} wraythx
           </p>
+          <p className="mt-1 text-xs text-zinc-600">
+            Built with Next.js · Tailwind CSS · GSAP
+          </p>
         </div>
       </div>
     </footer>
