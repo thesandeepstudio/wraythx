@@ -123,7 +123,7 @@ export default async function ProjectPage({
               </a>
             </div>
 
-            <div className="grid h-fit grid-cols-2 gap-6 border-t border-zinc-200 pt-8 sm:grid-cols-3 lg:grid-cols-1">
+            <div className="grid h-fit grid-cols-1 gap-6 border-t border-zinc-200 pt-8 sm:grid-cols-3 lg:grid-cols-1">
               <div>
                 <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
                   Category
