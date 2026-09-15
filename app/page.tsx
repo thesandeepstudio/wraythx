@@ -472,7 +472,7 @@ export default function Home() {
                   <h3 className="mt-2 text-xl font-semibold tracking-[-0.04em] text-zinc-900">
                     {project.title}
                   </h3>
-                  <p className="mt-1 text-sm text-zinc-600">{project.tools}</p>
+                  <p className="mt-1 truncate text-sm text-zinc-600">{project.tools}</p>
                   <p className="mt-2 text-sm leading-6 text-zinc-600">
                     {project.summary}
                   </p>
