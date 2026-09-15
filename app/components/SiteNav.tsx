@@ -86,7 +86,7 @@ export default function SiteNav() {
         aria-expanded={menuOpen}
         aria-controls="mobile-menu"
         aria-label={menuOpen ? "Close menu" : "Open menu"}
-        className="flex flex-col items-end gap-1.5 p-2 md:hidden"
+        className="flex min-h-[44px] min-w-[44px] flex-col items-end justify-center gap-1.5 p-2 md:hidden"
       >
         <span aria-hidden="true" className="h-0.5 w-6 bg-zinc-900" />
         <span aria-hidden="true" className="h-0.5 w-4 bg-zinc-900" />
@@ -112,7 +112,7 @@ export default function SiteNav() {
               href={link.href}
               onClick={() => setMenuOpen(false)}
               aria-current={isActive(link.href) ? "page" : undefined}
-              className={`py-3 text-lg font-medium tracking-[-0.02em] transition duration-300 ${
+              className={`py-4 text-lg font-medium tracking-[-0.02em] transition duration-300 ${
                 isActive(link.href) ? "text-emerald-700" : "text-zinc-900"
               }`}
             >

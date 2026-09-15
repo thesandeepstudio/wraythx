@@ -27,7 +27,7 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
             type="button"
             onClick={() => setActive(filter)}
             aria-pressed={active === filter}
-            className={`pb-3 text-sm uppercase tracking-[0.16em] transition duration-300 ${
+            className={`flex min-h-[44px] items-center px-1 text-sm uppercase tracking-[0.16em] transition duration-300 ${
               active === filter
                 ? "text-emerald-700"
                 : "text-zinc-600 hover:text-zinc-900"
