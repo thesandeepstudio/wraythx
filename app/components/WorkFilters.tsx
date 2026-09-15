@@ -55,7 +55,7 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
                   width={800}
                   height={600}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="block w-full transition duration-700 group-hover:scale-105"
+                  className="block aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-105"
                 />
               ) : (
                 <div className="absolute inset-0" />
