@@ -561,7 +561,7 @@ export default function Home() {
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
                 Testimonials
               </p>
-              <h2 className="mt-6 max-w-xl text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-4xl">
+              <h2 className="mt-6 max-w-xl text-balance text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-4xl">
                 Trusted by brands that move fast
               </h2>
               <p className="mt-4 max-w-lg text-base leading-7 text-zinc-600">
@@ -638,7 +638,7 @@ export default function Home() {
             <div className="mt-8 grid gap-10 lg:grid-cols-[1.05fr_1.35fr] lg:gap-12">
               <ScrollFade>
                 <div>
-                  <h2 className="max-w-xl text-4xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
+                  <h2 className="max-w-xl text-balance text-4xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
                     Start a project
                     <br />
                     <span className="italic font-light text-brand-700">
