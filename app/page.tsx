@@ -352,7 +352,7 @@ export default function Home() {
         </section>
 
         <section className="border-y border-zinc-200 bg-white">
-          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 py-8 md:grid-cols-3 lg:px-8">
+          <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-6 px-6 py-8 md:grid-cols-3 lg:px-8">
             {stats.map((stat) => (
               <ScrollFade key={stat.label}>
                 <Link
@@ -373,7 +373,7 @@ export default function Home() {
 
         <section
           id="about"
-          className="mx-auto max-w-6xl px-6 py-28 md:py-36 lg:px-8"
+          className="mx-auto max-w-[1280px] px-6 py-28 md:py-36 lg:px-8"
         >
           <div className="mx-auto max-w-3xl text-center">
             <ScrollFade>
@@ -422,7 +422,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="work" className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
+        <section id="work" className="mx-auto max-w-[1280px] px-6 py-20 lg:px-8">
           <ScrollFade className="mb-12 flex items-end justify-between gap-6">
             <div>
               <h2 className="text-3xl font-semibold tracking-[-0.04em] text-zinc-900 md:text-4xl">
@@ -482,7 +482,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" className="mx-auto max-w-6xl px-6 py-24 md:py-32 lg:px-8">
+        <section id="services" className="mx-auto max-w-[1280px] px-6 py-24 md:py-32 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.7fr] lg:gap-20">
             <ScrollFade>
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
@@ -517,7 +517,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-6 pb-24 lg:px-8">
+        <section className="mx-auto max-w-[1280px] px-6 pb-24 lg:px-8">
           <ScrollFade className="flex items-end justify-between gap-6">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
               How we&apos;ll work
@@ -556,7 +556,7 @@ export default function Home() {
           id="testimonials"
           className="border-t border-zinc-200 bg-white"
         >
-          <div className="mx-auto max-w-6xl px-6 py-24 md:py-32 lg:px-8">
+          <div className="mx-auto max-w-[1280px] px-6 py-24 md:py-32 lg:px-8">
             <ScrollFade>
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
                 Testimonials
@@ -629,7 +629,7 @@ export default function Home() {
           id="contact"
           className="border-t border-zinc-200 bg-zinc-50/50"
         >
-          <div className="mx-auto max-w-6xl px-6 py-24 md:py-32 lg:px-8">
+          <div className="mx-auto max-w-[1280px] px-6 py-24 md:py-32 lg:px-8">
             <ScrollFade>
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
                 Let&apos;s work together
