@@ -77,7 +77,7 @@ export default function WorkPage() {
                   </p>
                   <p className="mt-6 text-2xl font-medium tracking-[-0.03em] text-zinc-900 md:text-3xl">
                     Let&apos;s make something{" "}
-                    <span className="text-brand-700 italic">lasting</span>.
+                    <span className="text-brand-700 font-display italic">lasting</span>.
                   </p>
                   <a
                     href={`mailto:${EMAIL}`}

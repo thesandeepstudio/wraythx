@@ -309,7 +309,7 @@ export default function Home() {
                   Wraythx
                 </h1>
                 <p
-                  className="hero-in mt-1 text-2xl font-light italic tracking-[-0.04em] text-zinc-900 transition duration-300 hover:-translate-y-0.5 md:text-3xl"
+                  className="hero-in mt-1 font-display text-2xl font-light italic tracking-[-0.04em] text-zinc-900 transition duration-300 hover:-translate-y-0.5 md:text-3xl"
                   style={{ animationDelay: "0.35s" }}
                 >
                   Sandeep. C
@@ -641,7 +641,7 @@ export default function Home() {
                   <h2 className="max-w-xl text-balance text-4xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
                     Start a project
                     <br />
-                    <span className="italic font-light text-brand-700">
+                    <span className="italic font-display font-light text-brand-700">
                       with wraythx
                     </span>
                   </h2>

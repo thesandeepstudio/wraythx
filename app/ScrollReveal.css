@@ -15,4 +15,5 @@
 
 .word--hl {
   font-style: italic;
+  font-family: var(--font-display-serif), Georgia, serif;
 }

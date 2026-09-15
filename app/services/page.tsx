@@ -87,7 +87,7 @@ export default function ServicesPage() {
                 <h1 className="text-4xl font-semibold uppercase leading-[0.95] tracking-[-0.05em] text-zinc-900 md:text-6xl lg:text-7xl pb-1">
                   Design &amp; motion
                   <br />
-                  <span className="text-brand-700 italic normal-case">
+                  <span className="text-brand-700 font-display italic normal-case">
                     for modern brands
                   </span>
                 </h1>
