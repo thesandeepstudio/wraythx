@@ -266,7 +266,7 @@ export default function AboutPage() {
 
         <section
           id="contact"
-          className="mx-auto max-w-[1280px] px-6 pb-24 lg:px-8"
+          className="mx-auto max-w-[1280px] scroll-mt-24 px-6 pb-24 lg:px-8"
         >
           <ScrollFade>
             <div className="border border-zinc-200 bg-[linear-gradient(135deg,_rgba(24,24,27,0.03),_rgba(255,255,255,0.85),_rgba(24,24,27,0.04))] p-8 md:p-12">

@@ -375,7 +375,7 @@ export default function Home() {
 
         <section
           id="about"
-          className="mx-auto max-w-[1280px] px-6 py-20 md:py-28 lg:px-8"
+          className="mx-auto max-w-[1280px] scroll-mt-24 px-6 py-20 md:py-28 lg:px-8"
         >
           <div className="mx-auto max-w-3xl text-center">
             <ScrollFade>
@@ -424,7 +424,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="work" className="mx-auto max-w-[1280px] px-6 py-20 lg:px-8">
+        <section id="work" className="mx-auto max-w-[1280px] scroll-mt-24 px-6 py-20 lg:px-8">
           <ScrollFade className="mb-12 flex items-end justify-between gap-6">
             <div>
               <h2 className="text-3xl font-semibold tracking-[-0.04em] text-zinc-900 md:text-4xl">
@@ -484,7 +484,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" className="mx-auto max-w-[1280px] px-6 py-20 md:py-28 lg:px-8">
+        <section id="services" className="mx-auto max-w-[1280px] scroll-mt-24 px-6 py-20 md:py-28 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.7fr] lg:gap-20">
             <ScrollFade>
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
@@ -629,7 +629,7 @@ export default function Home() {
 
         <section
           id="contact"
-          className="border-t border-zinc-200 bg-zinc-50/50"
+          className="scroll-mt-24 border-t border-zinc-200 bg-zinc-50/50"
         >
           <div className="mx-auto max-w-[1280px] px-6 py-20 md:py-28 lg:px-8">
             <ScrollFade>
