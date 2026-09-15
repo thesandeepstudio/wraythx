@@ -5,6 +5,7 @@ import Link from "next/link";
 import ClickSpark from "@/app/ClickSpark";
 import SiteNav from "@/app/components/SiteNav";
 import SiteFooter from "@/app/components/SiteFooter";
+import CTAButton from "@/app/components/CTAButton";
 import {
   projects,
   getProjectBySlug,
@@ -113,14 +114,13 @@ export default async function ProjectPage({
               <p className="mt-6 text-xl font-medium leading-[1.4] tracking-[-0.03em] text-zinc-900 md:text-2xl">
                 {project.summary}
               </p>
-              <a
+              <CTAButton
                 href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-10 inline-flex w-fit rounded-none bg-zinc-900 px-8 py-4 text-sm font-medium uppercase tracking-[0.14em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-brand-600"
+                external
+                className="mt-10 uppercase tracking-[0.14em]"
               >
                 View on Behance ↗
-              </a>
+              </CTAButton>
             </div>
 
             <div className="grid h-fit grid-cols-1 gap-6 border-t border-zinc-200 pt-8 sm:grid-cols-3 lg:grid-cols-1">

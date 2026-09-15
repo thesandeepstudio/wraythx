@@ -5,6 +5,7 @@ import ScrollFade from "../components/ScrollFade";
 import SiteNav from "../components/SiteNav";
 import SiteFooter from "../components/SiteFooter";
 import WorkFilters from "../components/WorkFilters";
+import CTAButton from "../components/CTAButton";
 import { projects } from "@/lib/projects";
 import { SPARK, EMAIL } from "../../lib/site";
 
@@ -79,12 +80,12 @@ export default function WorkPage() {
                     Let&apos;s make something{" "}
                     <span className="text-brand-700 font-display italic">lasting</span>.
                   </p>
-                  <a
+                  <CTAButton
                     href={`mailto:${EMAIL}`}
-                    className="mt-6 inline-flex w-fit rounded-none bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
+                    className="mt-6"
                   >
                     {EMAIL}
-                  </a>
+                  </CTAButton>
                 </ScrollFade>
               </div>
             </div>

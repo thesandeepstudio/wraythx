@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import ClickSpark from "./ClickSpark";
 import SiteNav from "./components/SiteNav";
 import SiteFooter from "./components/SiteFooter";
+import CTAButton from "./components/CTAButton";
 import { SPARK, EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -32,18 +32,10 @@ export default function NotFound() {
             selected projects or start something new.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href="/work"
-              className="inline-flex rounded-none bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-zinc-700"
-            >
-              View work
-            </Link>
-            <Link
-              href="/services"
-              className="inline-flex rounded-none border border-zinc-200 bg-white px-6 py-3 text-sm font-medium text-zinc-900 transition hover:-translate-y-0.5 hover:border-zinc-300"
-            >
+            <CTAButton href="/work">View work</CTAButton>
+            <CTAButton href="/services" variant="outline">
               Services
-            </Link>
+            </CTAButton>
             <a
               href={`mailto:${EMAIL}`}
               className="inline-flex rounded-none px-6 py-3 text-sm font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-zinc-900"

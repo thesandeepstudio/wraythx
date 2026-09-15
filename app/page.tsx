@@ -8,6 +8,7 @@ import ScrollReveal from "./ScrollReveal";
 import ScrollFade from "./components/ScrollFade";
 import SiteNav from "./components/SiteNav";
 import SiteFooter from "./components/SiteFooter";
+import CTAButton from "./components/CTAButton";
 import { projects, featuredProjectTitles } from "../lib/projects";
 import { BASE_PATH, SPARK, EMAIL, mailto as buildMailto } from "../lib/site";
 
@@ -652,22 +653,21 @@ export default function Home() {
                     building. Replies within 48h (NPT).
                   </p>
                   <div className="mt-8 flex flex-wrap gap-3">
-                    <a
+                    <CTAButton
                       href="https://cal.com/wraythx"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Book a call on Cal.com"
-                      className="inline-flex items-center rounded-none bg-brand-600 px-6 py-3 text-sm font-medium tracking-wide text-white transition duration-300 hover:-translate-y-0.5 hover:bg-brand-700"
+                      variant="accent"
+                      external
+                      ariaLabel="Book a call on Cal.com"
                     >
                       Book a call →
-                    </a>
-                    <a
+                    </CTAButton>
+                    <CTAButton
                       href={`mailto:${EMAIL}`}
-                      aria-label="Email wraythx"
-                      className="inline-flex items-center rounded-none border border-zinc-200 bg-white px-6 py-3 text-sm font-medium tracking-wide text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:border-zinc-300"
+                      variant="outline"
+                      ariaLabel="Email wraythx"
                     >
                       {EMAIL}
-                    </a>
+                    </CTAButton>
                   </div>
                   <p className="mt-4 text-xs leading-5 text-zinc-600">
                     Booking opens Cal.com in a new tab — if unavailable, the

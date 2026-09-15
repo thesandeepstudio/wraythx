@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import ClickSpark from "../ClickSpark";
 import ScrollReveal from "../ScrollReveal";
 import ScrollFade from "../components/ScrollFade";
 import SiteNav from "../components/SiteNav";
 import SiteFooter from "../components/SiteFooter";
-import { SPARK, EMAIL } from "../../lib/site";
+import ContactCTA from "../components/ContactCTA";
+import CTAButton from "../components/CTAButton";
+import { SPARK, EMAIL, mailto as buildMailto } from "../../lib/site";
 
 export const metadata: Metadata = {
   title: "About — Sandeep. C",
@@ -268,21 +269,16 @@ export default function AboutPage() {
           id="contact"
           className="mx-auto max-w-[1280px] scroll-mt-24 px-6 pb-24 lg:px-8"
         >
-          <ScrollFade>
-            <div className="border border-zinc-200 bg-[linear-gradient(135deg,_rgba(24,24,27,0.03),_rgba(255,255,255,0.85),_rgba(24,24,27,0.04))] p-8 md:p-12">
-              <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-                <h2 className="max-w-xl text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
-                  Let&apos;s make something lasting.
-                </h2>
-                <p className="mt-4 text-sm text-zinc-600">
+          <ContactCTA
+            title="Let's make something lasting."
+            actions={
+              <CTAButton href={buildMailto()}>{EMAIL}</CTAButton>
+            }
+            note={
+              <>
+                <p className="text-sm text-zinc-600">
                   Kathmandu, Nepal · NPT (UTC+5:45) · replies within 48h
                 </p>
-                <Link
-                  href={`mailto:${EMAIL}`}
-                  className="inline-flex w-fit bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
-                >
-                  {EMAIL}
-                </Link>
                 <p className="mt-4 text-sm text-zinc-600">
                   Prefer DMs?{" "}
                   <a
@@ -295,9 +291,9 @@ export default function AboutPage() {
                   </a>{" "}
                   — or copy the email above into your app.
                 </p>
-              </div>
-            </div>
-          </ScrollFade>
+              </>
+            }
+          />
         </section>
 
         <SiteFooter />

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import ClickSpark from "../ClickSpark";
 import ScrollReveal from "../ScrollReveal";
 import ScrollFade from "../components/ScrollFade";
 import SiteNav from "../components/SiteNav";
 import SiteFooter from "../components/SiteFooter";
+import ContactCTA from "../components/ContactCTA";
+import CTAButton from "../components/CTAButton";
 import { SPARK, EMAIL, mailto as buildMailto } from "../../lib/site";
 
 export const metadata: Metadata = {
@@ -170,21 +171,12 @@ export default function ServicesPage() {
         </section>
 
         <section className="mx-auto max-w-[1280px] px-6 pb-24 lg:px-8">
-          <ScrollFade>
-            <div className="border border-zinc-200 bg-[linear-gradient(135deg,_rgba(24,24,27,0.03),_rgba(255,255,255,0.85),_rgba(24,24,27,0.04))] p-8 md:p-12">
-              <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-                <h2 className="max-w-xl text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
-                  Give your brand a standout look.
-                </h2>
-                <Link
-                  href={`mailto:${EMAIL}`}
-                  className="inline-flex w-fit rounded-none bg-zinc-900 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-zinc-300 transition hover:-translate-y-0.5 hover:bg-zinc-700"
-                >
-                  {EMAIL}
-                </Link>
-              </div>
-            </div>
-          </ScrollFade>
+          <ContactCTA
+            title="Give your brand a standout look."
+            actions={
+              <CTAButton href={`mailto:${EMAIL}`}>{EMAIL}</CTAButton>
+            }
+          />
         </section>
 
         <SiteFooter />
