@@ -3,6 +3,7 @@ import ClickSpark from "./ClickSpark";
 import SiteNav from "./components/SiteNav";
 import SiteFooter from "./components/SiteFooter";
 import CTAButton from "./components/CTAButton";
+import NotFoundSearch from "./components/NotFoundSearch";
 import { SPARK, EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -43,6 +44,7 @@ export default function NotFound() {
               Contact →
             </a>
           </div>
+          <NotFoundSearch />
         </div>
       </main>
       <SiteFooter />
