@@ -68,6 +68,7 @@ export default function SiteNav() {
     (href !== "/" && pathname.startsWith(`${href}/`));
 
   return (
+    <>
     <header className={`sticky top-0 z-50 mx-auto flex w-full max-w-[1280px] items-center justify-between border-b border-zinc-200 bg-white/90 px-6 pb-3 pt-3 backdrop-blur transition-shadow duration-300 lg:px-8 [@media(prefers-reduced-transparency:reduce)]:bg-white [@media(prefers-reduced-transparency:reduce)]:backdrop-blur-none ${scrolled ? "shadow-[0_8px_24px_-12px_rgba(0,0,0,0.25)]" : ""}`}>
 
       <Link
@@ -100,9 +101,9 @@ export default function SiteNav() {
       <div className="hidden md:block">
         <a
           href={`mailto:${EMAIL}`}
-          className="text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-brand-700"
+          className="inline-flex min-h-[44px] items-center rounded-none bg-zinc-900 px-5 text-sm font-medium text-white transition duration-300 hover:-translate-y-0.5 hover:bg-brand-700"
         >
-          {EMAIL}
+          Hire me →
         </a>
       </div>
 
@@ -182,5 +183,14 @@ export default function SiteNav() {
         </nav>
       </div>
     </header>
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-zinc-200 bg-white/95 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur md:hidden">
+      <a
+        href={`mailto:${EMAIL}`}
+        className="flex min-h-[44px] items-center justify-center rounded-none bg-zinc-900 text-sm font-medium text-white transition hover:bg-brand-700"
+      >
+        Hire me →
+      </a>
+    </div>
+    </>
   );
 }
