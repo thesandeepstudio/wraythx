@@ -84,7 +84,7 @@ export default function ServicesPage() {
               </div>
 
               <div className="mt-10 max-w-3xl">
-                <h1 className="text-4xl font-semibold uppercase leading-[1.05] tracking-[-0.05em] text-zinc-900 md:text-6xl lg:text-7xl">
+                <h1 className="text-4xl font-semibold uppercase leading-[0.95] tracking-[-0.05em] text-zinc-900 md:text-6xl lg:text-7xl pb-1">
                   Design &amp; motion
                   <br />
                   <span className="text-brand-700 italic normal-case">
