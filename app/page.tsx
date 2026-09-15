@@ -466,7 +466,7 @@ export default function Home() {
                   <div className="overflow-hidden border border-zinc-200 bg-zinc-100">
                     {project.image ? (
                       <Image
-                        src={`${BASE_PATH}${project.homeImage ?? project.image}`}
+                        src={`${BASE_PATH}${project.image}`}
                         alt={project.title}
                         width={800}
                         height={600}

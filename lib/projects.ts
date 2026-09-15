@@ -5,9 +5,7 @@ export type Project = {
   tools: string;
   summary: string;
   image?: string;
-  homeImage?: string;
   link: string;
-  cover: string;
   badge: string;
 };
 
@@ -20,10 +18,7 @@ export const projects: Project[] = [
     summary:
       "Motion language and brand film for a lifestyle real-estate brand.",
     image: "/assets/project-thumbnails/lakes-hill-realty.jpg",
-    homeImage: "/assets/project-thumbnails/lakes-hill-realty-v2.jpg",
     link: "https://www.behance.net/gallery/251462951/Motion-Design-for-Lakes-Hill-Realty",
-    cover:
-      "h-[460px] bg-[linear-gradient(160deg,_#2dd4bf_0%,_#0f766e_50%,_#0c4a3e_100%)]",
     badge: "Featured",
   },
   {
@@ -34,8 +29,6 @@ export const projects: Project[] = [
     summary: "Logo system and full brand guidelines for PIPE420 — the Pipe King vape store.",
     image: "/assets/project-thumbnails/pipe420.png",
     link: "https://www.behance.net/gallery/246128103/PIPE420-Brand-Guidelines",
-    cover:
-      "h-80 bg-[linear-gradient(160deg,_#fbbf24_0%,_#92400e_55%,_#292524_100%)]",
     badge: "",
   },
   {
@@ -46,8 +39,6 @@ export const projects: Project[] = [
     summary: "Illustrated tee artwork for LamourFits.",
     image: "/assets/project-thumbnails/lamour-fits.jpg",
     link: "https://www.behance.net/gallery/241271361/Graphic-Tee-Designs",
-    cover:
-      "h-96 bg-[linear-gradient(160deg,_#ef4444_0%,_#7f1d1d_55%,_#1c1917_100%)]",
     badge: "",
   },
   {
@@ -58,8 +49,6 @@ export const projects: Project[] = [
     summary: "Beat-synced edits for NCS releases — cuts, transitions, and kinetic type timed to the drop.",
     image: "/assets/project-thumbnails/ncs.webp",
     link: "https://www.behance.net/gallery/240937921/Video-Editing-NCS",
-    cover:
-      "h-72 bg-[linear-gradient(160deg,_#22d3ee_0%,_#4f46e5_55%,_#172554_100%)]",
     badge: "",
   },
   {
@@ -70,8 +59,6 @@ export const projects: Project[] = [
     summary: "Psychedelic Buddha artwork for HotBox.",
     image: "/assets/project-thumbnails/hotbox.jpg",
     link: "https://www.behance.net/gallery/236697445/HotBox-Buddha-Design",
-    cover:
-      "h-96 bg-[linear-gradient(160deg,_#fb923c_0%,_#b45309_55%,_#431407_100%)]",
     badge: "",
   },
   {
@@ -82,8 +69,6 @@ export const projects: Project[] = [
     summary: "Social content system and templates for Drool — cloud kitchen brand.",
     image: "/assets/project-thumbnails/drool-social-media.jpg",
     link: "https://www.behance.net/gallery/218374849/Drool-Social-Media",
-    cover:
-      "h-80 bg-[linear-gradient(160deg,_#f472b6_0%,_#9d174d_55%,_#4a044e_100%)]",
     badge: "",
   },
   {
@@ -94,8 +79,6 @@ export const projects: Project[] = [
     summary: "Full brand identity for the Plutus Paradox clothing label.",
     image: "/assets/project-thumbnails/plutus-paradox.jpg",
     link: "https://www.behance.net/gallery/202694555/PLUTUS-PARADOX",
-    cover:
-      "h-96 bg-[linear-gradient(160deg,_#a3e635_0%,_#4d7c0f_55%,_#1a2e05_100%)]",
     badge: "",
   },
   {
@@ -106,8 +89,6 @@ export const projects: Project[] = [
     summary: "Logo and identity system for Drool Nepal — Nepal branch of Drool.",
     image: "/assets/project-thumbnails/drool-branding.png",
     link: "https://www.behance.net/gallery/212833621/Drool-Nepal-Branding",
-    cover:
-      "h-80 bg-[linear-gradient(160deg,_#34d399_0%,_#065f46_55%,_#022c22_100%)]",
     badge: "",
   },
   {
@@ -118,8 +99,6 @@ export const projects: Project[] = [
     summary: "Premium label and packaging design for Chimley Orchards.",
     image: "/assets/project-thumbnails/apple.webp",
     link: "https://www.behance.net/gallery/212049903/Chimley-Orchards-Packaging-design",
-    cover:
-      "h-80 bg-[linear-gradient(160deg,_#4ade80_0%,_#166534_55%,_#052e16_100%)]",
     badge: "",
   },
   {
@@ -130,8 +109,6 @@ export const projects: Project[] = [
     summary: "Logo and mark design for the tech brand SONITE.",
     image: "/assets/project-thumbnails/sonite.png",
     link: "https://www.behance.net/gallery/221230439/SONITE-Tech-Logo-Design",
-    cover:
-      "h-72 bg-[linear-gradient(160deg,_#38bdf8_0%,_#0369a1_55%,_#082f49_100%)]",
     badge: "",
   },
   {
@@ -142,8 +119,6 @@ export const projects: Project[] = [
     summary: "Brand and identity design for Urban Crust.",
     image: "/assets/project-thumbnails/urban-crust.webp",
     link: "https://www.behance.net/gallery/193035141/urban-crust",
-    cover:
-      "h-80 bg-[linear-gradient(160deg,_#ea580c_0%,_#7c2d12_55%,_#1c1917_100%)]",
     badge: "",
   },
   {
@@ -154,8 +129,6 @@ export const projects: Project[] = [
     summary: "A curated series of typographic and editorial posters.",
     image: "/assets/project-thumbnails/posters.jpg",
     link: "https://www.behance.net/gallery/197216091/Posters-collection-Poster-design",
-    cover:
-      "h-96 bg-[linear-gradient(160deg,_#d946ef_0%,_#701a75_55%,_#3b0764_100%)]",
     badge: "",
   },
   {
@@ -166,8 +139,6 @@ export const projects: Project[] = [
     summary: "Appetizing ad creatives for Pizza Co.'s social feeds.",
     image: "/assets/project-thumbnails/pizza.webp",
     link: "https://www.behance.net/gallery/177895085/Pizza-Social-Media-Ads-Design",
-    cover:
-      "h-80 bg-[linear-gradient(160deg,_#f97316_0%,_#b45309_55%,_#451a03_100%)]",
     badge: "",
   },
   {
@@ -178,8 +149,6 @@ export const projects: Project[] = [
     summary: "Volume one of an ongoing logo exploration series.",
     image: "/assets/project-thumbnails/logofolio.jpg",
     link: "https://www.behance.net/gallery/189438129/Logofolio-P-001",
-    cover:
-      "h-72 bg-[linear-gradient(160deg,_#3b82f6_0%,_#1e3a8a_55%,_#0b1120_100%)]",
     badge: "",
   },
   {
@@ -190,8 +159,6 @@ export const projects: Project[] = [
     summary: "Tee print artwork for Plutus Paradox.",
     image: "/assets/project-thumbnails/plutus-paradox-logo.jpg",
     link: "https://www.behance.net/gallery/190002351/Tee-Design",
-    cover:
-      "h-96 bg-[linear-gradient(160deg,_#facc15_0%,_#a16207_55%,_#292524_100%)]",
     badge: "",
   },
   {
@@ -202,8 +169,6 @@ export const projects: Project[] = [
     summary: "A bold motion graphic with a playful punch.",
     image: "/assets/project-thumbnails/the-game.png",
     link: "https://www.behance.net/gallery/179208269/THE-GAME",
-    cover:
-      "h-72 bg-[linear-gradient(160deg,_#a855f7_0%,_#6d28d9_55%,_#1e1b4b_100%)]",
     badge: "",
   },
   {
@@ -214,8 +179,6 @@ export const projects: Project[] = [
     summary: "High-impact promo motion for Black Friday.",
     image: "/assets/project-thumbnails/black-friday.jpg",
     link: "https://www.behance.net/gallery/179028623/Black-Friday",
-    cover:
-      "h-80 bg-[linear-gradient(160deg,_#0f172a_0%,_#450a0a_55%,_#000000_100%)]",
     badge: "",
   },
   {
@@ -226,8 +189,6 @@ export const projects: Project[] = [
     summary: "Social design system for Jawaaf Consulting Academy.",
     image: "/assets/project-thumbnails/jawaaf.jpg",
     link: "https://www.behance.net/gallery/240885695/Jawaaf-Consulting-Academy-Social-Media-Design",
-    cover:
-      "h-80 bg-[linear-gradient(160deg,_#6366f1_0%,_#312e81_55%,_#0f172a_100%)]",
     badge: "",
   },
 ];

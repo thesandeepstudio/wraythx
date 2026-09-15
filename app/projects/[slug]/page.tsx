@@ -92,11 +92,7 @@ export default async function ProjectPage({
         </section>
 
         <section className="mx-auto max-w-[1280px] px-6 py-12 lg:px-8">
-          <div
-            className={`relative overflow-hidden ${
-              project.image ? "" : project.cover
-            }`}
-          >
+          <div className="relative overflow-hidden">
             {project.image ? (
               <Image
                 src={`${BASE_PATH}${project.image}`}
@@ -106,12 +102,7 @@ export default async function ProjectPage({
                 sizes="100vw"
                 className="block w-full object-cover"
               />
-            ) : (
-              <div
-                className={`block w-full ${project.cover}`}
-                aria-hidden="true"
-              />
-            )}
+            ) : null}
           </div>
 
           <div className="mt-12 grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-20">

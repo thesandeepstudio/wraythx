@@ -47,11 +47,7 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
             rel="noopener noreferrer"
             className="group mb-6 block break-inside-avoid"
           >
-            <div
-              className={`relative overflow-hidden transition duration-500 group-hover:-translate-y-1 ${
-                project.image ? "" : project.cover
-              }`}
-            >
+            <div className="relative overflow-hidden transition duration-500 group-hover:-translate-y-1">
               {project.image ? (
                 <Image
                   src={`${BASE_PATH}${project.image}`}
