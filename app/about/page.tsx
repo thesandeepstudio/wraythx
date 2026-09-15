@@ -9,7 +9,7 @@ import CTAButton from "../components/CTAButton";
 import { SPARK, EMAIL, mailto as buildMailto } from "../../lib/site";
 
 export const metadata: Metadata = {
-  title: "About — Sandeep. C",
+  title: "About",
   description:
     "About Sandeep. C — a graphic and visual designer shaping brand identities, motion graphics, and visual systems from Nepal.",
 };
