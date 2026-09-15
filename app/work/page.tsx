@@ -62,9 +62,7 @@ export default function WorkPage() {
                   textClassName="mt-8 text-xl font-medium uppercase leading-[1.35] tracking-[-0.03em] text-zinc-900 md:text-2xl"
                   highlightedWords={[
                     "bold",
-                    "thoughtful",
                     "expressive",
-                    "clear",
                     "distinctive",
                     "last",
                   ]}

@@ -136,14 +136,7 @@ export default function AboutPage() {
                     textClassName="mt-8 text-xl font-medium leading-[1.35] tracking-[-0.03em] text-zinc-900 md:text-3xl"
                     highlightedWords={[
                       "bold",
-                      "thoughtful",
                       "expressive",
-                      "identities",
-                      "digital",
-                      "interfaces",
-                      "visual",
-                      "systems",
-                      "clear",
                       "distinctive",
                       "last",
                     ]}

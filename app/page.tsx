@@ -389,17 +389,8 @@ export default function Home() {
               textClassName="mt-7 text-xl font-medium uppercase leading-[1.35] tracking-[-0.03em] text-zinc-900 md:text-2xl"
               highlightedWords={[
                 "bold",
-                "thoughtful",
                 "expressive",
-                "identities",
-                "digital",
-                "interfaces",
-                "visual",
-                "systems",
-                "clear",
                 "distinctive",
-                "made",
-                "to",
                 "last",
               ]}
             >
