@@ -47,7 +47,7 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
             rel="noopener noreferrer"
             className="group mb-6 block break-inside-avoid"
           >
-            <div className="relative overflow-hidden transition duration-500 group-hover:-translate-y-1">
+            <div className="relative min-h-[120px] overflow-hidden bg-zinc-100 transition duration-500 group-hover:-translate-y-1">
               {project.image ? (
                 <Image
                   src={`${BASE_PATH}${project.image}`}
@@ -66,7 +66,7 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
                   {project.badge}
                 </span>
               )}
-              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-zinc-900/85 via-zinc-900/30 to-transparent p-6 opacity-0 transition duration-500 group-hover:opacity-100">
+              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-zinc-900/85 via-zinc-900/30 to-transparent px-6 pb-8 pt-6 opacity-0 transition duration-500 group-hover:opacity-100">
                 <p className="text-xs uppercase tracking-[0.16em] text-brand-300">
                   {project.category}
                 </p>
