@@ -70,7 +70,9 @@ export default function SiteNav() {
             href={link.href}
             aria-current={isActive(link.href) ? "page" : undefined}
             className={`transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900 ${
-              isActive(link.href) ? "text-brand-700" : ""
+              isActive(link.href)
+                ? "text-brand-700 underline decoration-brand-700 decoration-2 underline-offset-8"
+                : ""
             }`}
           >
             {link.label}
@@ -121,7 +123,9 @@ export default function SiteNav() {
               onClick={() => setMenuOpen(false)}
               aria-current={isActive(link.href) ? "page" : undefined}
               className={`py-4 text-lg font-medium tracking-[-0.02em] transition duration-300 ${
-                isActive(link.href) ? "text-brand-700" : "text-zinc-900"
+                isActive(link.href)
+                  ? "text-brand-700 underline decoration-brand-700 decoration-2 underline-offset-8"
+                  : "text-zinc-900"
               }`}
             >
               {link.label}
