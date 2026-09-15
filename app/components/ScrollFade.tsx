@@ -28,12 +28,13 @@ const ScrollFade = ({
         opacity: 1,
         filter: "blur(0px)",
         y: 0,
-        ease: "none",
+        duration: 0.9,
+        ease: "power2.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 92%",
-          end: "top 45%",
-          scrub: true,
+          start: "top 88%",
+          toggleActions: "play none none none",
+          once: true,
         },
       },
     );
