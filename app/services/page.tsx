@@ -101,8 +101,8 @@ export default function ServicesPage() {
                 >
                   A focused set of services for building brands that are clear, distinctive, and made to last.
                 </ScrollReveal>
-              </div>
             </div>
+          </div>
           </div>
         </section>
 
@@ -144,7 +144,7 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          <div className="mt-24">
+          <div className="mt-24 scroll-mt-24" id="process">
             <ScrollFade>
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
                 Process
@@ -164,6 +164,55 @@ export default function ServicesPage() {
                       {item.text}
                     </p>
                   </div>
+                </ScrollFade>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-24 scroll-mt-24" id="niche">
+            <ScrollFade>
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
+                Niche — apparel &amp; print
+              </p>
+              <h2 className="mt-6 max-w-xl text-balance text-3xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-4xl">
+                Print that sells on fabric
+              </h2>
+              <p className="mt-4 max-w-lg text-base leading-7 text-zinc-600">
+                Tee artwork, label systems, and campaign visuals for clothing
+                brands — designed print-ready, proven in stores and feeds.
+              </p>
+            </ScrollFade>
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {[
+                {
+                  name: "Plutus Paradox",
+                  detail: "Full brand identity + tee prints",
+                  href: "https://www.behance.net/gallery/202694555/PLUTUS-PARADOX",
+                },
+                {
+                  name: "LamourFits",
+                  detail: "Illustrated tee artwork",
+                  href: "https://www.behance.net/gallery/241271361/Graphic-Tee-Designs",
+                },
+                {
+                  name: "HotBox",
+                  detail: "Psychedelic Buddha artwork",
+                  href: "https://www.behance.net/gallery/236697445/HotBox-Buddha-Design",
+                },
+              ].map((proof) => (
+                <ScrollFade key={proof.name} className="h-full">
+                  <a
+                    href={proof.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${proof.name} — view on Behance`}
+                    className="block h-full border border-zinc-200 bg-white px-5 py-4 transition duration-300 hover:-translate-y-0.5 hover:border-brand-600 hover:bg-brand-50/50"
+                  >
+                    <p className="text-sm font-semibold tracking-[-0.01em] text-zinc-900">
+                      {proof.name} ↗
+                    </p>
+                    <p className="mt-1 text-sm text-zinc-600">{proof.detail}</p>
+                  </a>
                 </ScrollFade>
               ))}
             </div>
