@@ -9,6 +9,7 @@ import ScrollFade from "./components/ScrollFade";
 import SiteNav from "./components/SiteNav";
 import SiteFooter from "./components/SiteFooter";
 import CTAButton from "./components/CTAButton";
+import { ArrowRight } from "./components/Arrows";
 import { projects, featuredProjectTitles } from "../lib/projects";
 import { BASE_PATH, SPARK, EMAIL, mailto as buildMailto } from "../lib/site";
 
@@ -417,9 +418,9 @@ export default function Home() {
               </div>
               <Link
                 href="/about"
-                className="mt-8 inline-flex text-sm font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-brand-600 hover:text-brand-700"
+                className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-brand-600 hover:text-brand-700"
               >
-                More about me →
+                More about me <ArrowRight />
               </Link>
             </ScrollFade>
           </div>
@@ -527,9 +528,9 @@ export default function Home() {
             </p>
             <Link
               href="/services"
-              className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-brand-700"
+              className="inline-flex shrink-0 items-center gap-2 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-brand-700"
             >
-              Full process →
+              Full process <ArrowRight />
             </Link>
           </ScrollFade>
           <div className="mt-8 grid gap-6 md:grid-cols-3">

@@ -6,6 +6,7 @@ import ClickSpark from "@/app/ClickSpark";
 import SiteNav from "@/app/components/SiteNav";
 import SiteFooter from "@/app/components/SiteFooter";
 import CTAButton from "@/app/components/CTAButton";
+import { ArrowLeft, ArrowRight } from "@/app/components/Arrows";
 import {
   projects,
   getProjectBySlug,
@@ -85,9 +86,9 @@ export default async function ProjectPage({
             </div>
             <Link
               href="/work"
-              className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-brand-700"
+              className="inline-flex shrink-0 items-center gap-2 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-brand-700"
             >
-              ← Back to work
+              <ArrowLeft /> Back to work
             </Link>
           </div>
         </section>
@@ -158,8 +159,8 @@ export default async function ProjectPage({
               href={projectHref(prev.title)}
               className="group max-w-full md:max-w-[60%]"
             >
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
-                ← Previous
+              <p className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
+                <ArrowLeft /> Previous
               </p>
               <p className="mt-2 text-lg font-semibold tracking-[-0.02em] text-zinc-900 transition duration-300 group-hover:text-brand-700 md:text-xl">
                 {prev.title}
@@ -169,8 +170,8 @@ export default async function ProjectPage({
               href={projectHref(next.title)}
               className="group max-w-full md:max-w-[60%] text-right"
             >
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
-                Next →
+              <p className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
+                Next <ArrowRight />
               </p>
               <p className="mt-2 text-lg font-semibold tracking-[-0.02em] text-zinc-900 transition duration-300 group-hover:text-brand-700 md:text-xl">
                 {next.title}
