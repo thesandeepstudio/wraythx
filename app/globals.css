@@ -29,6 +29,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -108,6 +109,23 @@ a {
       opacity: 0;
       transform: translateY(12px);
     }
+  }
+}
+
+@media print {
+  header,
+  canvas,
+  nav[aria-label="Services sections"] {
+    display: none !important;
+  }
+
+  main {
+    color: #000;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
   }
 }
 
