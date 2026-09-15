@@ -76,6 +76,25 @@ export default function ServicesPage() {
     <ClickSpark {...SPARK}>
       <main className="min-h-screen bg-white text-zinc-900">
         <SiteNav />
+        <nav
+          aria-label="Services sections"
+          className="sticky top-[57px] z-30 border-b border-zinc-200 bg-white/90 backdrop-blur"
+        >
+          <div className="mx-auto flex max-w-[1280px] gap-6 overflow-x-auto px-6 py-3 text-xs font-medium uppercase tracking-[0.16em] text-zinc-600 lg:px-8">
+            <a href="#list" className="shrink-0 transition hover:text-zinc-900">
+              Services
+            </a>
+            <a href="#process" className="shrink-0 transition hover:text-zinc-900">
+              Process
+            </a>
+            <a href="#niche" className="shrink-0 transition hover:text-zinc-900">
+              Niche
+            </a>
+            <a href="#contact" className="shrink-0 transition hover:text-zinc-900">
+              Contact
+            </a>
+          </div>
+        </nav>
         <section className="relative overflow-hidden bg-white">
           <div className="relative mx-auto max-w-[1280px]">
             <div className="px-6 py-16 md:px-0 md:py-20">
@@ -106,7 +125,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1280px] px-6 pb-24 lg:px-8">
+        <section id="list" className="mx-auto max-w-[1280px] scroll-mt-32 px-6 pb-24 lg:px-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <ScrollFade key={service.title} className="h-full">
@@ -219,7 +238,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1280px] px-6 pb-24 lg:px-8">
+        <section id="contact" className="mx-auto max-w-[1280px] scroll-mt-32 px-6 pb-24 lg:px-8">
           <ContactCTA
             title="Give your brand a standout look."
             actions={
