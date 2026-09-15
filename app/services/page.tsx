@@ -126,7 +126,7 @@ export default function ServicesPage() {
                       {service.detail}
                     </p>
                     <div className="mt-4 flex items-center justify-between gap-3">
-                      <span className="inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs font-medium tracking-wide text-zinc-700">
+                      <span className="inline-flex items-center rounded-none border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs font-medium tracking-wide text-zinc-700">
                         {service.price}
                       </span>
                       <a
