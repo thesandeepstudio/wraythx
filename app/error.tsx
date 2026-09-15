@@ -9,7 +9,7 @@ export default function Error({
   return (
     <main className="grid min-h-screen place-items-center bg-white px-6 text-center text-zinc-900">
       <div>
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-700">
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-brand-700">
           Something broke
         </p>
         <h1 className="mt-4 text-4xl font-semibold tracking-[-0.04em] md:text-5xl">

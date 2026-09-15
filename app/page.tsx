@@ -176,7 +176,7 @@ function ContactForm() {
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
           Send an enquiry
         </p>
-        <span className="inline-flex items-center border border-emerald-100 bg-emerald-50 px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.12em] text-emerald-700">
+        <span className="inline-flex items-center border border-brand-100 bg-brand-50 px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.12em] text-brand-700">
           48h reply · NPT
         </span>
       </div>
@@ -193,7 +193,7 @@ function ContactForm() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Your name"
-              className="mt-2 w-full rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm text-zinc-900 placeholder:text-zinc-500 focus:border-emerald-600 focus:outline-none focus:ring-0"
+              className="mt-2 w-full rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm text-zinc-900 placeholder:text-zinc-500 focus:border-brand-600 focus:outline-none focus:ring-0"
             />
           </label>
           <label className="block">
@@ -206,7 +206,7 @@ function ContactForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@company.com"
-              className="mt-2 w-full rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm text-zinc-900 placeholder:text-zinc-500 focus:border-emerald-600 focus:outline-none focus:ring-0"
+              className="mt-2 w-full rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm text-zinc-900 placeholder:text-zinc-500 focus:border-brand-600 focus:outline-none focus:ring-0"
             />
           </label>
         </div>
@@ -220,7 +220,7 @@ function ContactForm() {
             onChange={(e) =>
               setProjectType(e.target.value as typeof projectType)
             }
-            className="mt-2 w-full rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm text-zinc-900 focus:border-emerald-600 focus:outline-none focus:ring-0"
+            className="mt-2 w-full rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm text-zinc-900 focus:border-brand-600 focus:outline-none focus:ring-0"
           >
             {PROJECT_TYPES.map((t) => (
               <option key={t} value={t}>
@@ -240,14 +240,14 @@ function ContactForm() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Goals, timeline, budget range…"
-            className="mt-2 w-full resize-none rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm leading-6 text-zinc-900 placeholder:text-zinc-500 focus:border-emerald-600 focus:outline-none focus:ring-0"
+            className="mt-2 w-full resize-none rounded-none border border-zinc-200 bg-white px-3.5 py-3 text-sm leading-6 text-zinc-900 placeholder:text-zinc-500 focus:border-brand-600 focus:outline-none focus:ring-0"
           />
         </label>
 
         <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center">
           <button
             type="submit"
-            className="inline-flex w-full items-center justify-center rounded-none bg-zinc-900 px-6 py-3 text-sm font-medium tracking-wide text-white transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-600 sm:w-auto"
+            className="inline-flex w-full items-center justify-center rounded-none bg-zinc-900 px-6 py-3 text-sm font-medium tracking-wide text-white transition duration-300 hover:-translate-y-0.5 hover:bg-brand-600 sm:w-auto"
           >
             Send enquiry →
           </button>
@@ -315,7 +315,7 @@ export default function Home() {
                   Sandeep. C
                 </p>
                 <p
-                  className="hero-in mt-1 cursor-none text-base font-medium uppercase tracking-[0.14em] text-emerald-700 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-500 md:text-lg"
+                  className="hero-in mt-1 cursor-none text-base font-medium uppercase tracking-[0.14em] text-brand-700 transition duration-300 hover:-translate-y-0.5 hover:text-brand-500 md:text-lg"
                   style={{ animationDelay: "0.45s" }}
                 >
                   Visual Designer
@@ -327,10 +327,10 @@ export default function Home() {
                   Nepal · worldwide
                 </p>
                 <p
-                  className="hero-in mt-4 inline-flex items-center gap-2 border border-emerald-100 bg-emerald-50 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-emerald-700"
+                  className="hero-in mt-4 inline-flex items-center gap-2 border border-brand-100 bg-brand-50 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-brand-700"
                   style={{ animationDelay: "0.55s" }}
                 >
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-500" />
                   Available for new projects
                 </p>
               </div>
@@ -423,7 +423,7 @@ export default function Home() {
               </div>
               <Link
                 href="/about"
-                className="mt-8 inline-flex text-sm font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-emerald-600 hover:text-emerald-700"
+                className="mt-8 inline-flex text-sm font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-brand-600 hover:text-brand-700"
               >
                 More about me →
               </Link>
@@ -441,13 +441,13 @@ export default function Home() {
             <div className="flex shrink-0 gap-6">
               <Link
                 href="/work"
-                className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-700"
+                className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-brand-700"
               >
                 View all work
               </Link>
               <Link
                 href="/services"
-                className="shrink-0 text-sm font-medium text-zinc-600 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-700"
+                className="shrink-0 text-sm font-medium text-zinc-600 transition duration-300 hover:-translate-y-0.5 hover:text-brand-700"
               >
                 View services
               </Link>
@@ -475,7 +475,7 @@ export default function Home() {
                       />
                     ) : null}
                   </div>
-                  <p className="mt-4 text-xs font-medium uppercase tracking-[0.2em] text-emerald-700">
+                  <p className="mt-4 text-xs font-medium uppercase tracking-[0.2em] text-brand-700">
                     {project.category}
                   </p>
                   <h3 className="mt-2 text-xl font-semibold tracking-[-0.04em] text-zinc-900">
@@ -510,10 +510,10 @@ export default function Home() {
               {services.map((service, index) => (
                 <ScrollFade key={service.title}>
                   <div className="group grid gap-1 py-8 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:pl-4 md:grid-cols-[auto_1fr_1.5fr] md:gap-10">
-                    <span className="text-xs font-medium uppercase tracking-[0.2em] text-emerald-700">
+                    <span className="text-xs font-medium uppercase tracking-[0.2em] text-brand-700">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="text-xl font-semibold tracking-[-0.02em] text-zinc-900 transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-emerald-700 md:text-2xl">
+                    <h3 className="text-xl font-semibold tracking-[-0.02em] text-zinc-900 transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-brand-700 md:text-2xl">
                       {service.title}
                     </h3>
                     <p className="mt-2 text-base leading-7 text-zinc-600 md:mt-0">
@@ -533,7 +533,7 @@ export default function Home() {
             </p>
             <Link
               href="/services"
-              className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-700"
+              className="shrink-0 text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-brand-700"
             >
               Full process →
             </Link>
@@ -546,7 +546,7 @@ export default function Home() {
             ].map((item) => (
               <ScrollFade key={item.step}>
                 <div className="border-t-2 border-zinc-900 pt-6">
-                  <p className="text-sm font-medium tabular-nums text-emerald-700">
+                  <p className="text-sm font-medium tabular-nums text-brand-700">
                     {item.step}
                   </p>
                   <h3 className="mt-2 text-lg font-semibold tracking-[-0.02em] text-zinc-900">
@@ -650,7 +650,7 @@ export default function Home() {
                   <h2 className="max-w-xl text-4xl font-semibold tracking-[-0.05em] text-zinc-900 md:text-5xl">
                     Start a project
                     <br />
-                    <span className="italic font-light text-emerald-700">
+                    <span className="italic font-light text-brand-700">
                       with wraythx
                     </span>
                   </h2>
@@ -664,7 +664,7 @@ export default function Home() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Book a call on Cal.com"
-                      className="inline-flex items-center rounded-none bg-emerald-600 px-6 py-3 text-sm font-medium tracking-wide text-white transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-700"
+                      className="inline-flex items-center rounded-none bg-brand-600 px-6 py-3 text-sm font-medium tracking-wide text-white transition duration-300 hover:-translate-y-0.5 hover:bg-brand-700"
                     >
                       Book a call →
                     </a>
@@ -689,7 +689,7 @@ export default function Home() {
                       target="_blank"
                       rel="noopener noreferrer me"
                       aria-label="Behance profile"
-                      className="transition duration-300 hover:-translate-y-0.5 hover:text-emerald-700"
+                      className="transition duration-300 hover:-translate-y-0.5 hover:text-brand-700"
                     >
                       Behance ↗
                     </a>
@@ -698,7 +698,7 @@ export default function Home() {
                       target="_blank"
                       rel="noopener noreferrer me"
                       aria-label="Instagram profile"
-                      className="transition duration-300 hover:-translate-y-0.5 hover:text-emerald-700"
+                      className="transition duration-300 hover:-translate-y-0.5 hover:text-brand-700"
                     >
                       Instagram ↗
                     </a>

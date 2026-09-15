@@ -63,7 +63,7 @@ export default function SiteNav() {
             href={link.href}
             aria-current={isActive(link.href) ? "page" : undefined}
             className={`transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900 ${
-              isActive(link.href) ? "text-emerald-700" : ""
+              isActive(link.href) ? "text-brand-700" : ""
             }`}
           >
             {link.label}
@@ -74,7 +74,7 @@ export default function SiteNav() {
       <div className="hidden md:block">
         <a
           href={`mailto:${EMAIL}`}
-          className="text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-emerald-700"
+          className="text-sm font-medium text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:text-brand-700"
         >
           {EMAIL}
         </a>
@@ -114,7 +114,7 @@ export default function SiteNav() {
               onClick={() => setMenuOpen(false)}
               aria-current={isActive(link.href) ? "page" : undefined}
               className={`py-4 text-lg font-medium tracking-[-0.02em] transition duration-300 ${
-                isActive(link.href) ? "text-emerald-700" : "text-zinc-900"
+                isActive(link.href) ? "text-brand-700" : "text-zinc-900"
               }`}
             >
               {link.label}

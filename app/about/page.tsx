@@ -126,7 +126,7 @@ export default function AboutPage() {
                   <p className="mt-2 text-sm font-medium uppercase tracking-[0.14em] text-zinc-600">
                     Based in Kathmandu, Nepal — working worldwide
                   </p>
-                  <p className="mt-1 text-base font-medium uppercase tracking-[0.14em] text-emerald-700">
+                  <p className="mt-1 text-base font-medium uppercase tracking-[0.14em] text-brand-700">
                     Graphic, Motion & Visual Designer
                   </p>
                   <ScrollReveal
@@ -167,10 +167,10 @@ export default function AboutPage() {
                 <div className="mt-8 space-y-4">
                   {focusAreas.map((area, index) => (
                     <ScrollFade key={area}>
-                      <div className="group relative cursor-default overflow-hidden border-l-2 border-zinc-200 py-3 pl-4 text-xl font-medium tracking-[-0.02em] text-zinc-900 transition-colors duration-500 hover:border-emerald-600">
-                        <span className="pointer-events-none absolute inset-0 origin-left scale-x-0 bg-gradient-to-r from-emerald-50 to-transparent transition-transform duration-500 ease-out group-hover:scale-x-100" />
+                      <div className="group relative cursor-default overflow-hidden border-l-2 border-zinc-200 py-3 pl-4 text-xl font-medium tracking-[-0.02em] text-zinc-900 transition-colors duration-500 hover:border-brand-600">
+                        <span className="pointer-events-none absolute inset-0 origin-left scale-x-0 bg-gradient-to-r from-brand-50 to-transparent transition-transform duration-500 ease-out group-hover:scale-x-100" />
                         <span className="relative z-10 flex items-baseline gap-4">
-                          <span className="text-xs font-normal tabular-nums text-zinc-600 transition-colors duration-500 group-hover:text-emerald-700">
+                          <span className="text-xs font-normal tabular-nums text-zinc-600 transition-colors duration-500 group-hover:text-brand-700">
                             0{index + 1}
                           </span>
                           <span className="transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-2">
@@ -192,7 +192,7 @@ export default function AboutPage() {
                 <div className="mt-8 flex flex-wrap gap-2">
                   {tools.map((tool) => (
                     <ScrollFade key={tool}>
-                      <span className="border border-zinc-200 bg-white px-4 py-2 text-sm text-zinc-700 transition duration-300 hover:-translate-y-0.5 hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-700">
+                      <span className="border border-zinc-200 bg-white px-4 py-2 text-sm text-zinc-700 transition duration-300 hover:-translate-y-0.5 hover:border-brand-600 hover:bg-brand-50 hover:text-brand-700">
                         {tool}
                       </span>
                     </ScrollFade>
@@ -231,7 +231,7 @@ export default function AboutPage() {
                     <h3 className="text-xl font-semibold tracking-[-0.02em] text-zinc-900">
                       {item.role}
                     </h3>
-                    <p className="mt-1 text-sm text-emerald-700">{item.place}</p>
+                    <p className="mt-1 text-sm text-brand-700">{item.place}</p>
                   </div>
                   <p className="text-base leading-7 text-zinc-600">{item.note}</p>
                 </div>
@@ -258,7 +258,7 @@ export default function AboutPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${client.name} — view on Behance`}
-                    className="block border border-zinc-200 bg-white px-5 py-4 transition duration-300 hover:-translate-y-0.5 hover:border-emerald-600 hover:bg-emerald-50/50"
+                    className="block border border-zinc-200 bg-white px-5 py-4 transition duration-300 hover:-translate-y-0.5 hover:border-brand-600 hover:bg-brand-50/50"
                   >
                     <p className="text-sm font-semibold tracking-[-0.01em] text-zinc-900">
                       {client.name} ↗
@@ -296,7 +296,7 @@ export default function AboutPage() {
                     href="https://www.instagram.com/wraythx/"
                     target="_blank"
                     rel="noopener noreferrer me"
-                    className="font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-emerald-600 hover:text-emerald-700"
+                    className="font-medium text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-brand-600 hover:text-brand-700"
                   >
                     Instagram @wraythx
                   </a>{" "}

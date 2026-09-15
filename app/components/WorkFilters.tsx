@@ -29,7 +29,7 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
             aria-pressed={active === filter}
             className={`flex min-h-[44px] items-center px-1 text-sm uppercase tracking-[0.16em] transition duration-300 ${
               active === filter
-                ? "text-emerald-700"
+                ? "text-brand-700"
                 : "text-zinc-600 hover:text-zinc-900"
             }`}
           >
@@ -71,7 +71,7 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
                 </span>
               )}
               <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-zinc-900/85 via-zinc-900/30 to-transparent p-6 opacity-0 transition duration-500 group-hover:opacity-100">
-                <p className="text-xs uppercase tracking-[0.16em] text-emerald-300">
+                <p className="text-xs uppercase tracking-[0.16em] text-brand-300">
                   {project.category}
                 </p>
                 <h3 className="mt-2 text-xl font-semibold tracking-[-0.02em] text-white">

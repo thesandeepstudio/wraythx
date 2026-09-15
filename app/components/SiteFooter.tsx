@@ -19,19 +19,19 @@ export default function SiteFooter() {
           <nav aria-label="Footer" className="flex gap-6 text-zinc-600">
             <a
               href="/about"
-              className="transition duration-300 hover:text-emerald-700"
+              className="transition duration-300 hover:text-brand-700"
             >
               About
             </a>
             <a
               href="/work"
-              className="transition duration-300 hover:text-emerald-700"
+              className="transition duration-300 hover:text-brand-700"
             >
               Work
             </a>
             <a
               href="/services"
-              className="transition duration-300 hover:text-emerald-700"
+              className="transition duration-300 hover:text-brand-700"
             >
               Services
             </a>
@@ -39,7 +39,7 @@ export default function SiteFooter() {
           <a
             href={`mailto:${EMAIL}`}
             aria-label="Email wraythx"
-            className="text-sm font-medium text-zinc-900 transition duration-300 hover:text-emerald-700"
+            className="text-sm font-medium text-zinc-900 transition duration-300 hover:text-brand-700"
           >
             {EMAIL}
           </a>
@@ -49,7 +49,7 @@ export default function SiteFooter() {
               target="_blank"
               rel="noopener noreferrer me"
               aria-label="Behance profile"
-              className="transition duration-300 hover:text-emerald-700"
+              className="transition duration-300 hover:text-brand-700"
             >
               Behance
             </a>
@@ -58,7 +58,7 @@ export default function SiteFooter() {
               target="_blank"
               rel="noopener noreferrer me"
               aria-label="Instagram profile"
-              className="transition duration-300 hover:text-emerald-700"
+              className="transition duration-300 hover:text-brand-700"
             >
               Instagram
             </a>

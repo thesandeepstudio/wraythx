@@ -11,7 +11,7 @@ export default function GlobalError({
       <body className="min-h-screen bg-white text-zinc-900 antialiased">
         <main className="grid min-h-screen place-items-center px-6 text-center">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-700">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-brand-700">
               Something broke
             </p>
             <h1 className="mt-4 text-4xl font-semibold tracking-[-0.04em]">

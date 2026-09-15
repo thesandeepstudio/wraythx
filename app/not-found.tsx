@@ -15,7 +15,7 @@ export default function NotFound() {
     <ClickSpark {...SPARK}>
       <main className="grid min-h-screen place-items-center bg-white px-6 text-center text-zinc-900">
         <div>
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-700">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-brand-700">
             404
           </p>
           <h1 className="mt-4 text-5xl font-semibold uppercase tracking-[-0.04em] md:text-7xl">
