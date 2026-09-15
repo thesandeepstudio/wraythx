@@ -11,6 +11,11 @@ const filters = ["All", "Branding", "Motion", "Graphic", "Packaging"];
 export default function WorkFilters({ projects }: { projects: Project[] }) {
   const [active, setActive] = useState("All");
 
+  const countFor = (filter: string) =>
+    filter === "All"
+      ? projects.length
+      : projects.filter((p) => p.category === filter).length;
+
   const visible =
     active === "All" ? projects : projects.filter((p) => p.category === active);
 
@@ -34,6 +39,7 @@ export default function WorkFilters({ projects }: { projects: Project[] }) {
             }`}
           >
             {filter}
+            <span className="ml-1 tabular-nums">({countFor(filter)})</span>
           </button>
         ))}
       </div>
