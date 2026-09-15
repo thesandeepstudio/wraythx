@@ -77,6 +77,8 @@ const ClickSpark = ({
   );
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -158,6 +160,7 @@ const ClickSpark = ({
     >
       <canvas
         ref={canvasRef}
+        aria-hidden="true"
         style={{
           position: "fixed",
           inset: 0,
