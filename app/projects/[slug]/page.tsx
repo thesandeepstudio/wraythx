@@ -62,8 +62,10 @@ export default async function ProjectPage({
   const index = projects.findIndex(
     (p) => slugify(p.title) === slugify(project.title),
   );
-  const prev = projects[(index - 1 + projects.length) % projects.length];
-  const next = projects[(index + 1) % projects.length];
+  const prev =
+    projects[(index - 1 + projects.length) % projects.length] ?? projects[0];
+  const next = projects[(index + 1) % projects.length] ?? projects[0];
+  if (!prev || !next) notFound();
 
   return (
     <ClickSpark {...SPARK}>
