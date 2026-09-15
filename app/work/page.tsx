@@ -47,7 +47,7 @@ export default function WorkPage() {
           id="about"
           className="border-t border-zinc-200 bg-white"
         >
-          <div className="mx-auto max-w-6xl px-6 py-28 md:py-36 lg:px-8">
+          <div className="mx-auto max-w-[1280px] px-6 py-20 md:py-28 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-20">
               <div>
                 <ScrollFade>

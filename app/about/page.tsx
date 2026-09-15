@@ -149,7 +149,7 @@ export default function AboutPage() {
         </section>
 
         <section className="border-y border-zinc-200 bg-white">
-          <div className="mx-auto max-w-[1280px] px-6 py-24 md:py-32 lg:px-8">
+          <div className="mx-auto max-w-[1280px] px-6 py-20 md:py-28 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
               <div>
                 <ScrollFade>
@@ -204,7 +204,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-[1280px] px-6 py-24 md:py-32 lg:px-8">
+        <section className="mx-auto max-w-[1280px] px-6 py-20 md:py-28 lg:px-8">
           <ScrollFade>
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
               Experience
@@ -236,7 +236,7 @@ export default function AboutPage() {
         <section className="border-t border-zinc-200 bg-white">
           <div
             id="clients"
-            className="mx-auto max-w-[1280px] scroll-mt-24 px-6 py-24 md:py-32 lg:px-8"
+            className="mx-auto max-w-[1280px] scroll-mt-24 px-6 py-20 md:py-28 lg:px-8"
           >
             <ScrollFade>
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-600">
