@@ -108,7 +108,7 @@ export default function ServicesPage() {
         <section className="mx-auto max-w-[1280px] px-6 pb-24 lg:px-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
-              <ScrollFade key={service.title}>
+              <ScrollFade key={service.title} className="h-full">
                 <div className="group flex h-full flex-col justify-between border border-zinc-200 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-300">
                   <div>
                     <p className="text-xs font-normal tabular-nums tracking-[0.2em] text-zinc-600">

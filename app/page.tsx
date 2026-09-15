@@ -572,7 +572,7 @@ export default function Home() {
               </p>
             </ScrollFade>
             <div className="mt-12 grid gap-6 md:grid-cols-3">
-              <ScrollFade>
+              <ScrollFade className="h-full">
                 <figure className="flex h-full flex-col justify-between border border-zinc-200 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-300">
                   <blockquote className="text-base leading-7 text-zinc-700">
                     &ldquo;Wraythx turned a loose streetwear idea into a full
@@ -589,7 +589,7 @@ export default function Home() {
                   </figcaption>
                 </figure>
               </ScrollFade>
-              <ScrollFade>
+              <ScrollFade className="h-full">
                 <figure className="flex h-full flex-col justify-between border border-zinc-200 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-300">
                   <blockquote className="text-base leading-7 text-zinc-700">
                     &ldquo;Needed premium yet approachable branding for real
@@ -606,7 +606,7 @@ export default function Home() {
                   </figcaption>
                 </figure>
               </ScrollFade>
-              <ScrollFade>
+              <ScrollFade className="h-full">
                 <figure className="flex h-full flex-col justify-between border border-zinc-200 bg-white p-8 transition duration-300 hover:-translate-y-1 hover:border-zinc-300">
                   <blockquote className="text-base leading-7 text-zinc-700">
                     &ldquo;From motion promos to print-ready apparel graphics,
