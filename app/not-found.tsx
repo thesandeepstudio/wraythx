@@ -16,7 +16,7 @@ export default function NotFound() {
   return (
     <ClickSpark {...SPARK}>
       <SiteNav />
-      <main className="grid min-h-[70svh] place-items-center bg-white px-6 py-16 text-center text-zinc-900">
+      <main className="grid min-h-[70vh] min-h-[70svh] place-items-center bg-white px-6 py-16 text-center text-zinc-900">
           <div>
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-600">
               wraythx

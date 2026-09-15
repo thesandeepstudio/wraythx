@@ -279,7 +279,7 @@ export default function Home() {
         <SiteNav />
         <section className="relative overflow-hidden bg-white">
           <div className="relative mx-auto max-w-[1280px]">
-            <div className="grid min-h-[70vh] items-center gap-8 px-6 py-16 md:px-0 lg:grid-cols-[1fr_1.2fr_1fr] lg:py-20">
+            <div className="grid min-h-[70vh] min-h-[70svh] items-center gap-8 px-6 py-16 md:px-0 lg:grid-cols-[1fr_1.2fr_1fr] lg:py-20">
               <div className="hidden lg:flex lg:items-center lg:justify-start">
                 <p
                   className="hero-in max-w-[180px] text-sm uppercase leading-[1.7] tracking-[0.06em] text-zinc-700 transition duration-300 hover:-translate-y-0.5 hover:text-zinc-900"
